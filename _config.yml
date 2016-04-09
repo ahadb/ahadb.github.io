@@ -69,6 +69,6 @@ theme: ahads-blog
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/ahadb/ahads-blog.git
+  repo: https://github.com/ahadb/my-blog.git
   branch: gh-pages
   message:
