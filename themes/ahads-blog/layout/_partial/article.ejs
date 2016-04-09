@@ -1,0 +1,58 @@
+<!--<div id="<%= post.layout %>-<%= post.slug %>" class="header" itemscope itemprop="blogPost">-->
+
+<div class="item">
+
+  <div class="right floated content" style="margin-top:5px">
+    <% if (index && post.wordcount){ %>
+    <i><p class="word-count"><%- post.wordcount %> <span style="color:#999">words</span></p></i>
+    <% } if (index && !post.wordcount) { %>
+    <i><span style="color:#111">{ ... }</i>
+    <% } %>
+  </div>
+
+<div class="content">
+
+    <%- partial('post/title', {class_name: 'art'}) %>
+
+  <% if (!index){ %>
+  <div class="meta" style="margin-top: -10px">
+    <%- partial('post/date', {class_name: '', date_format: null}) %>
+    </div>
+
+    <% if (post){ %><div class="article-author"></div><% } %>
+
+  <% } %>
+
+
+
+
+      <% if (index){ %>
+        <%- post.excerpt %>
+      <div class="description"><span class="time" style="
+      float: left; color:#999"><%- post.manualdate %>&nbsp; &#183;</span>
+        <p class="desc-snippet"><%- post.description %></p>
+        </div>
+      <% } else { %>
+  <br/>
+        <%- post.content %>
+      <% } %>
+
+
+    <% if (!(post.excerpt && index)){ %>
+      <%- partial('post/gallery') %>
+    <% } %>
+
+
+  </div>
+  <% if (!index){ %>
+    <%- partial('post/nav') %>
+  <% } %>
+</div>
+
+<% if (!index && post.comments && config.disqus_shortname){ %>
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+<% } %>

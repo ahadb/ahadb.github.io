@@ -1,0 +1,23 @@
+---
+title: Looking Back at Javascript in Early 2014
+description: The language of the web, a novelty, ubiquitous and used extensively on the client side
+manualdate: January, 12, 2014
+wordcount: 423
+---
+
+It's good to be a javascript developer these days and if you aren't then you're really missing out. It's the language of the web, a novelty, ubiquitous and used extensively on the client side. Note, by now we all understand the difference between static and dynamically typed languages and the pros and cons of a loosely typed language - so let's not even go there.
+
+For most front end developers who took pride in IE6(ifying) their site and using FTP back in the day there isn't much to dislike about javascript (backend devs working on the client side might complain as they are used to stricter use of data types) - it can do everything any other programming language can do provided you know how to do it. When it comes to choosing the framework and library that you might need for your next project, there are too many choices it can boggle your brain. Nowadays choosing the right frameowork can be a tedious task, escpecially when choosing methods that aren't really needed by end user — why even bother taking on the bloat?
+
+Anyway this isn't a discussion on Javascript, Javascript frameworks or libraries, lexical and functional programming rather a round-up of some pretty cool articles on topic by some really smart people.
+
+* [Frameworkless Javascript](https://moot.it/blog/technology/frameworkless-javascript.html): A new post by moot discussing how angular, backbone aren't for them.
+* [jQuery is a swiss army knife](http://ajpiano.com/jquery-is-a-swiss-army-knife/): A part of learning is making mistakes. Intelligent people learn from others as well.
+* [Javscript is sexy](http://javascriptissexy.com/): Great site to start exploring Javascript for beginners, intermediates and pros alike Some interesting articles here as well. This isn't an overall article but a resource.
+* [jQuery made me become a programmer](https://medium.com/the-javascript-collection/d9e3f716bb9e): A post on medium caught my eye and reminded me of the past. In this case it was actionscript.
+* [Rich Javascript Applications - The Seven Frameworks](http://blog.stevensanderson.com/2012/08/01/rich-javascript-applications-the-seven-frameworks-throne-of-js-2012/): The throne of js back in 2012, interesting read.
+* [The World's Most Mistunderstood Programming Language has Become the World's Most Popular Programming Language](http://javascript.crockford.com/popular.html): Who would have thought? ;-)
+
+I've included articles most of which I have read myself and thought would provide value within context for most developers or curious minded individuals. I'll be posting more articles here on lsla.net in the near future.
+
+You decide what's good for you and what you want to absorb.

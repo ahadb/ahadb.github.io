@@ -1,0 +1,9 @@
+
+  <a href="<%- url_for(post.path) %>" class="<%= class_name %>"></a>
+</span>
+<span><i class="github icon"></i> Edit</span> &nbsp; &#183; &nbsp;
+  <span style="color: #999">
+        <i><time datetime="<%= date_xml(post.date) %>" itemprop="datePublished"><%= post.manualdate %></time></i>
+</span>
+ <i><span style="float:right; margin-right:15px"><%- post.wordcount %> <span style="color:#999">words</span></i>
+
