@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  
+  <title>Stop Comparing jQuery to AngularJS | Ahad Bokhari - Exploring JavaScript in 2016 &amp; Beyond</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="It&apos;s a debate that begets a debate, one is a library that interacts heavily with the DOM and the other a framework that abstracts away the DOM">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Stop Comparing jQuery to AngularJS">
+<meta property="og:url" content="ahadb.com/2015/07/14/angular-vs-jquery/index.html">
+<meta property="og:site_name" content="Ahad Bokhari - Exploring JavaScript in 2016 & Beyond">
+<meta property="og:description" content="It&apos;s a debate that begets a debate, one is a library that interacts heavily with the DOM and the other a framework that abstracts away the DOM">
+<meta property="og:updated_time" content="2016-03-17T00:38:41.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Stop Comparing jQuery to AngularJS">
+<meta name="twitter:description" content="It&apos;s a debate that begets a debate, one is a library that interacts heavily with the DOM and the other a framework that abstracts away the DOM">
+  
+    <link rel="alternate" href="/atom.xml" title="Ahad Bokhari - Exploring JavaScript in 2016 &amp; Beyond" type="application/atom+xml">
+  
+  
+  
+
+  
+
+
+
+
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/icon.min.css'>
+
+
+  <link rel="stylesheet" href="/css/semantic-ui.css">
+  <link rel="stylesheet" href="/css/site.css">
+  <link rel="stylesheet" href="/css/menu.css">
+  <link rel="stylesheet" href="/css/prism.css">
+  
+
+</head>
+
+
+
+<body>
+<div class="ui text main container">
+  <div class="ui grid">
+    <div class="left floated twelve wide column">
+      <h1 class="me">Ahad Bokhari</h1>
+      <div class="ui dropdown">
+        <div class="text"><i class="sidebar icon"></i><cite style="color:#906;">Exploring JavaScript in 2016 & beyond...</cite></div>
+
+        <div class="menu">
+
+
+          <div class="item">
+            <span class="description">ctrl + o</span><a href="/about"> About</a> </div>
+          <div class="item">
+            <span class="description">ctrl + o</span> <a href="/archives"> Archives</a>
+          </div>
+          <div class="item">
+            <span class="description">ctrl + o</span> <a href="/linkblog"> Linkblog</a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="right floated six wide column">
+
+      <div class="text"></div>
+
+    </div>
+  </div>
+
+
+  <div class="ui divider"></div>
+</div>
+  </div>
+
+
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+</div>
+
+
+<div class="ui text main container">
+    <div class="ui stackable two column divided grid">
+        <!--<div class="blog-header">
+  <h1 class="blog-title">Ahad Bokhari - Exploring JavaScript in 2016 &amp; Beyond</h1>
+  
+</div>
+-->
+        <div class="twelve wide column" style="margin-bottom: 13px">
+            <div class="articles-wrapper">
+                <div class="ui two column divided grid">
+                    <div class="fifteen wide column">
+                <div class="picker">
+                        <div class="ui text menu" style="margin-top: -0.5em">
+                    <div class="header item">CATEGORIES:</div>
+                    <a class="item active" href="categories/JavaScript">
+                        JS</a>
+
+
+                    <a class="item" href="categories/ES5">
+                        ES5
+                    </a>
+                    <a class="item" href="categories/ES6">
+                        ES6
+                    </a>
+                    <a class="item">
+                        ES7
+                    </a>
+                    <a class="item">
+                        Ramblings
+                    </a>
+                            <a class="item">
+                                Other
+                            </a>
+
+                </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="ui relaxed middle aligned divided list">
+
+                    <!--<div id="post-angular-vs-jquery" class="header" itemscope itemprop="blogPost">-->
+
+<div class="item">
+
+  <div class="right floated content" style="margin-top:5px">
+    
+  </div>
+
+<div class="content">
+
+    
+  
+    <h1 class="art" itemprop="name">
+      Stop Comparing jQuery to AngularJS
+    </h1>
+  
+
+
+
+  
+  <div class="meta" style="margin-top: -10px">
+    
+  <a href="/2015/07/14/angular-vs-jquery/" class=""></a>
+</span>
+<span><i class="github icon"></i> Edit</span> &nbsp; &#183; &nbsp;
+  <span style="color: #999">
+        <i><time datetime="2015-07-14T05:00:00.000Z" itemprop="datePublished">July 14, 2015</time></i>
+</span>
+ <i><span style="float:right; margin-right:15px">624 <span style="color:#999">words</span></i>
+
+
+    </div>
+
+    <div class="article-author"></div>
+
+  
+
+
+
+
+      
+  <br/>
+        <p>Note: As an AngularJS developer I’ve kept this post balanced as my short plausible opinion in the wee bit of spare time I have.</p>
+<p>Yes, I know there are two camps these days, but hear me out please :)</p>
+<p>It’s a debate that begets a debate, one is a library that interacts heavily with the DOM and the other a framework that abstracts away the DOM. Some might forget about jQuery when working with Angular and others are infatuated with leveraging the power of both - if you’re using Angular and want to do mundane things like animating or showing and hiding things I feel the approach it the Angular way by by looking at Angular directives like <code>ng-show</code> and <code>ng-animate</code> or <code>ng-class</code>and not loading jQuery (yes, we know you love jQuery’s syntax and have been working with it forever. I admit I felt like a Demi-God the first time I used jQuery).</p>
+<p>You might have run into this type of code before:</p>
+<pre><code class="language-javascript">
+var myApp = angular.module('myApp', []);
+
+myApp.directive('myWidget', function() {
+    var linkFn;
+    linkFn = function(scope, element, attrs) {
+        var animateDown, animateRight, pageOne, pageTwo;
+        pageOne = angular.element(element.children()[0]);
+        pageTwo = angular.element(element.children()[1]);
+
+        animateDown = function() {
+            $(this).animate({
+                top: '+=50'
+            });
+        };
+
+        animateRight = function() {
+            $(this).animate({
+                left: '+=50'
+            });
+        };
+
+        $(pageOne).on('click', animateDown);
+        $(pageTwo).on('click', animateRight);
+    };
+    return {
+        restrict: 'E',
+        link: linkFn
+    };
+});
+</code></pre>
+
+<p>Thanks <a href="http://jsfiddle.net/simpulton/E7xER/" target="_blank" rel="external">JSFiddle for the above code</a>. I still feel it leads to brittle, non reusable and hard to maintain code inside AngularJS. Of course there would be another solution to the above the AngularJs way.</p>
+<p>Anyhow, moving on: Angular is very different to jQuery, comparing them is like comparing apples to oranges - it’s ludicrous to do so yet you hear this all the time in developer circles by the water fountain et cetera. Angular is a full fledged MVC framework and only contains a very light version of jQuery called JQLite; that too only to animate the likes of <code>ng-class</code>. jQuery is a fantastic wrapper for DOM manipulation and enriches our websites thoroughly. AngularJS is an entirely different ballgame, bringing complexity like Ruby and Rails, MVC (DI, routing, scope) and other server side frameworks while extending them on the front end.</p>
+<p>So jQuery is equivalent to swimming, easy to understand and not too difficult to learn - a great and convenient way to cross the Thames river would be to use a library like jQuery. AngularJS is equivalent to a ship, it requires more effort to acquire it and to learn how to operate it. You might even need a whole crew of people to do it - so why bother if swimming is so much easier. I’m not saying folks shouldn’t stick to the easier method, but it’s a mistake to take that a step further and say that nobody ever needs to do anything but swim.</p>
+<p>Manipulating the DOM is definitely part of an application, but not the end-and-b all. I know you feel that frameworks are meant to make things easier in the future and you might argue that Angular isn’t even backwards compatible. With it’s nature Angular is very opinionated, and you’re locked into the Angular way throughout your application development life-cycle (unless you choose to run jQuery along with it).</p>
+<p>Just deal with the fact that jQuery and Angular and entirely different beasts - if you use jQuery to do Angular-y stuff then you’ll end up with lots of unmaintainable spaghetti code. Unfortunately developers fear their apps will be deprecated and Angular 2.0 has become a joke.</p>
+<p>I have opinions about what Google might be thinking about Angular 2.0 and all the radical shocking changes that come with it, I might share it in a next post. I will say that the web evolves and that’s a chance not a tragedy….</p>
+
+      
+
+
+    
+      
+
+    
+
+
+  </div>
+  
+    
+<ul id="article-nav" class="nav nav-pills nav-justified">
+  
+  <li role="presentation">
+    <a href="/2015/05/10/iife/" id="article-nav-older" class="article-nav-link-wrap">
+      <i class="fa fa-chevron-left pull-left"></i>
+      <span class="article-nav-link-title">IIFE Pattern</span>
+    </a>
+  </li>
+  
+  
+  <li role="presentation">
+    <a href="/2015/12/28/let-const/" id="article-nav-newer" class="article-nav-link-wrap">
+      <span class="article-nav-link-title">Let and Const</span>
+      <i class="fa fa-chevron-right pull-right"></i>
+    </a>
+  </li>
+  
+</ul>
+
+
+  
+</div>
+
+
+
+
+
+
+
+
+                </div>
+
+
+            </div>
+        </div>
+        <div class="four wide column" style="background-color: #f2f2f2">
+            <div class="sidebar-wrapper">
+                <a href="/"><img class="ui centered image" src="/images/avatar.png" width="100" height="100"></a>
+                <div class="item">
+                    <br />
+
+                    <div class="content">
+                        <div class="meta">
+                                <span class="intro"><p class="intro">» Web developer inspired by minimalism, and order — I write about modern day JavaScript and ramble on occasion.</p></span>
+                        </div>
+
+                    </div>
+
+
+                </div>
+                <div class="ui hidden divider"></div>
+
+                <div class="ui list">
+                    <h4>» PROJECTS</h4>
+                    <a class="item" href="https://github.com/ahadb/es6"> Intro to ES6</a>
+                    <a class="item" href="https://github.com/ahadb/flat-file-cms"> Flat File CMS</a>
+                </div>
+
+                <div class="ui list">
+                    <h4>» ARTICLES</h4>
+                    <a class="item" href="2010/02/15/ego-information/"> In The Digital World, Information Has No Ego</a>
+                    <a class="item" href="/2015/02/13/why-use-objects/">A Case for Objects {...}</a>
+                    <a class="item" href="/2014/09/29/js-frameworks-libraries/">JavaScript Micro Frameworks, Hypermodularization & Libraries</a>
+                    <a class="item" href="/2014/01/20/fear/">Push Through Fear</a>
+                </div>
+
+                <div class="ui list">
+                    <h4>» MENU</h4>
+                    <a class="item" href="/about">About</a>
+                    <a class="item" href="/linkblog">Linkblog</a>
+                    <a class="item" href="/archives">Archives</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+  <div class="ui text main container footer">
+    <div id="footer-info" class="inner">
+      &copy; 2007 - 2016 &#183; Ahad Bokhari &#183; <a href="mailto:ahadbokhari@gmail.com">ahadbokhari@gmail.com</a>  <br>
+      <i>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>, hosted on <a href="https://github.com/ahadb">Github</a></i>
+    </div>
+  </div>
+</footer>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" integrity="sha384-8gBf6Y4YYq7Jx97PIqmTwLPin4hxIzQw5aDmUg/DDhul9fFpbbLcLh3nTIIDJKhx" crossorigin="anonymous"></script>
+
+<script src="https://use.typekit.net/ncd4ysn.js"></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+
+
+
+<script src="/js/script.js"></script>
+<script src="/js/dropdown.js"></script>
+<script src="/js/custom.js"></script>
+<script src="/js/transition.js"></script>
+<script src="/js/underscore.js"></script>
+<script src="/js/prism.js"></script>
+
+
+</body>
+
+</html>

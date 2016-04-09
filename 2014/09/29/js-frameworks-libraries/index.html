@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  
+  <title>JavaScript Micro Frameworks, Hypermodularization &amp; Libraries | Ahad Bokhari - Exploring JavaScript in 2016 &amp; Beyond</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Lately a trend in the JavaScript world has been moving away from JavaScript libraries and popular frameworks like jQuery to using independent libraries  for parts of your project.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript Micro Frameworks, Hypermodularization & Libraries">
+<meta property="og:url" content="ahadb.com/2014/09/29/js-frameworks-libraries/index.html">
+<meta property="og:site_name" content="Ahad Bokhari - Exploring JavaScript in 2016 & Beyond">
+<meta property="og:description" content="Lately a trend in the JavaScript world has been moving away from JavaScript libraries and popular frameworks like jQuery to using independent libraries  for parts of your project.">
+<meta property="og:updated_time" content="2016-03-16T23:41:55.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JavaScript Micro Frameworks, Hypermodularization & Libraries">
+<meta name="twitter:description" content="Lately a trend in the JavaScript world has been moving away from JavaScript libraries and popular frameworks like jQuery to using independent libraries  for parts of your project.">
+  
+    <link rel="alternate" href="/atom.xml" title="Ahad Bokhari - Exploring JavaScript in 2016 &amp; Beyond" type="application/atom+xml">
+  
+  
+  
+
+  
+
+
+
+
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/icon.min.css'>
+
+
+  <link rel="stylesheet" href="/css/semantic-ui.css">
+  <link rel="stylesheet" href="/css/site.css">
+  <link rel="stylesheet" href="/css/menu.css">
+  <link rel="stylesheet" href="/css/prism.css">
+  
+
+</head>
+
+
+
+<body>
+<div class="ui text main container">
+  <div class="ui grid">
+    <div class="left floated twelve wide column">
+      <h1 class="me">Ahad Bokhari</h1>
+      <div class="ui dropdown">
+        <div class="text"><i class="sidebar icon"></i><cite style="color:#906;">Exploring JavaScript in 2016 & beyond...</cite></div>
+
+        <div class="menu">
+
+
+          <div class="item">
+            <span class="description">ctrl + o</span><a href="/about"> About</a> </div>
+          <div class="item">
+            <span class="description">ctrl + o</span> <a href="/archives"> Archives</a>
+          </div>
+          <div class="item">
+            <span class="description">ctrl + o</span> <a href="/linkblog"> Linkblog</a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="right floated six wide column">
+
+      <div class="text"></div>
+
+    </div>
+  </div>
+
+
+  <div class="ui divider"></div>
+</div>
+  </div>
+
+
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+</div>
+
+
+<div class="ui text main container">
+    <div class="ui stackable two column divided grid">
+        <!--<div class="blog-header">
+  <h1 class="blog-title">Ahad Bokhari - Exploring JavaScript in 2016 &amp; Beyond</h1>
+  
+</div>
+-->
+        <div class="twelve wide column" style="margin-bottom: 13px">
+            <div class="articles-wrapper">
+                <div class="ui two column divided grid">
+                    <div class="fifteen wide column">
+                <div class="picker">
+                        <div class="ui text menu" style="margin-top: -0.5em">
+                    <div class="header item">CATEGORIES:</div>
+                    <a class="item active" href="categories/JavaScript">
+                        JS</a>
+
+
+                    <a class="item" href="categories/ES5">
+                        ES5
+                    </a>
+                    <a class="item" href="categories/ES6">
+                        ES6
+                    </a>
+                    <a class="item">
+                        ES7
+                    </a>
+                    <a class="item">
+                        Ramblings
+                    </a>
+                            <a class="item">
+                                Other
+                            </a>
+
+                </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="ui relaxed middle aligned divided list">
+
+                    <!--<div id="post-js-frameworks-libraries" class="header" itemscope itemprop="blogPost">-->
+
+<div class="item">
+
+  <div class="right floated content" style="margin-top:5px">
+    
+  </div>
+
+<div class="content">
+
+    
+  
+    <h1 class="art" itemprop="name">
+      JavaScript Micro Frameworks, Hypermodularization &amp; Libraries
+    </h1>
+  
+
+
+
+  
+  <div class="meta" style="margin-top: -10px">
+    
+  <a href="/2014/09/29/js-frameworks-libraries/" class=""></a>
+</span>
+<span><i class="github icon"></i> Edit</span> &nbsp; &#183; &nbsp;
+  <span style="color: #999">
+        <i><time datetime="2014-09-29T05:00:00.000Z" itemprop="datePublished">September 29, 2014</time></i>
+</span>
+ <i><span style="float:right; margin-right:15px"> <span style="color:#999">words</span></i>
+
+
+    </div>
+
+    <div class="article-author"></div>
+
+  
+
+
+
+
+      
+  <br/>
+        <p>Lately a trend in the JavaScript world has been moving away from JavaScript libraries and popular frameworks like jQuery to using independent libraries  for parts of your project. I’m not here to answer your questions whether jQuery has become a crutch in our projects or should we use plain JavaScript for DOM related tasks et cetera, thus refactoring our code to native browser extensions and API’s. Let’s just take a moment to revisit some of the libraries that we might have forgotten and can use in our projects that have a smaller footprint.</p>
+<p>You could consider some of the libraries I mention here as alternate libraries to jQuery and for the most part they are fully capabable of achieving most of what you already want, i.e.: selecting and traversing the DOM, events, Ajax, animations and plugin development.</p>
+<p>The concept has been around for a while now, so let’s consider some of the basic pros and cons (although there are many more debatable points):</p>
+<p>##Pros</p>
+<ul>
+<li>Micro-frameworks encourage building smaller components that are tight and loosely coupled and can be assembled by the developer.</li>
+<li>You can avoid spaghetti code or huge chinds of code in the framework with solutions to problems that we aren’t going to utilize.</li>
+<li>Using jQuery for example would have the developer to require the whole library including parts that they wouldn’t use resulting in higher file size with modular solutions that one doesn’t need. Many situations require the developer to only use part of the framework such as animations or Ajax.</li>
+</ul>
+<p>##Cons</p>
+<ul>
+<li>Cross browser compatibility goes first on this list when comparing larger libraries that support the many quirks of different browsers. You or your team might end of debugging or patching your code often.</li>
+<li>In terms of scalability your application and therefore your codebase might grow and in turn the weight of your libraries in micro framework might extend that of a full blow framework.</li>
+<li>Lack of proper documentation and a community coupled with a one man team for the most part can hinder your progress in the learning phase or dealing with common bug fixes.</li>
+</ul>
+<p>##Zepto</p>
+<p>Zepto matches it’s jQuery counterpart and the goal here is to have a small modular library that downloads and executes fairly fast with a flexible and versatile API. It’s lean, a third of the size of jQuery and loads much faster.</p>
+<p> As usual the Zepto collection is an array-like object that has chainable methods for manipulating the DOM nodes it references. The following should look familiar:</p>
+ <figure class="highlight javascript"><figcaption><span>javascript</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'div'</span>)  <span class="comment">//=&gt; all DIV elements on the page</span></span><br><span class="line">$(<span class="string">'#foo'</span>) <span class="comment">//=&gt; element with ID "foo"</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// create element:</span></span><br><span class="line">$(<span class="string">"&lt;p&gt;Hello&lt;/p&gt;"</span>) <span class="comment">//=&gt; the new P element</span></span><br><span class="line"><span class="comment">// create element with attributes:</span></span><br><span class="line">$(<span class="string">"&lt;p /&gt;"</span>, &#123; text:<span class="string">"Hello"</span>, id:<span class="string">"greeting"</span>, css:&#123;color:<span class="string">'darkblue'</span>&#125; &#125;)</span><br><span class="line"><span class="comment">//=&gt; &lt;p id=greeting style="color:darkblue"&gt;Hello&lt;/p&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// execute callback when the page is ready:</span></span><br><span class="line">Zepto(<span class="function"><span class="keyword">function</span>(<span class="params">$</span>)</span>&#123;</span><br><span class="line">  alert(<span class="string">'Ready to Zepto!'</span>)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p> Zepto is good for browser extensions and to develop HTML-based views within native app frameworks, such as PhoneGap. Note that it doesn’t support old Internet Explorer versions &lt; 10.</p>
+<p>##Vanilla JS</p>
+<p>If you’re not using jQuery Vanilla JS is a great alternative with fewer requests and better performance. If you’re building a small to medium sized application this could be a logical choice for you. Note that if you’re reliant on element selectors this would be a good option, whereas jQuery is great for heavy animations. Vanilla JS is really fast, for example retrieving DOM elements when comparing with jQuery makes it worth competitor:</p>
+ <figure class="highlight less"><figcaption><span>javascript</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">document<span class="selector-class">.getElementById</span>(<span class="string">'test-table'</span>);         <span class="comment">// vanilla js in 12,137211 ops / sec</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+  <figure class="highlight elixir"><figcaption><span>javascript</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="variable">$(</span><span class="string">'#test-table'</span>);                             <span class="regexp">//</span> jQuery <span class="keyword">in</span> <span class="number">350</span>, <span class="number">557</span> ops / sec</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>##Micro Libraries</p>
+<p>The choice is yours so you’d want to do what’s right for your team and the scalability of your application. You could progressively enhance your application depending on what side of the debate you stand :) Apart from micro-frameworks there are also a number of micro libraries that you can drop into your project using the tools of your choice.</p>
+<ul>
+<li><a href="http://microjs.com/#" target="_blank" rel="external">Microjs</a></li>
+<li><a href="http://www.javascriptoo.com/" target="_blank" rel="external">JavaScriptOO</a></li>
+</ul>
+<p>By no means is this a comprehensive reference to how to choose a library or framework but a simple reminder that the language of the web we all love can have different implementations which will change as it evolves.</p>
+
+      
+
+
+    
+      
+
+    
+
+
+  </div>
+  
+    
+<ul id="article-nav" class="nav nav-pills nav-justified">
+  
+  <li role="presentation">
+    <a href="/2014/07/24/xiaomi-east/" id="article-nav-older" class="article-nav-link-wrap">
+      <i class="fa fa-chevron-left pull-left"></i>
+      <span class="article-nav-link-title">Xiaomi - The Apple of the East</span>
+    </a>
+  </li>
+  
+  
+  <li role="presentation">
+    <a href="/2015/02/10/node-foundation/" id="article-nav-newer" class="article-nav-link-wrap">
+      <span class="article-nav-link-title">Joyent Moves to Establish Node.js Foundation</span>
+      <i class="fa fa-chevron-right pull-right"></i>
+    </a>
+  </li>
+  
+</ul>
+
+
+  
+</div>
+
+
+
+
+
+
+
+
+                </div>
+
+
+            </div>
+        </div>
+        <div class="four wide column" style="background-color: #f2f2f2">
+            <div class="sidebar-wrapper">
+                <a href="/"><img class="ui centered image" src="/images/avatar.png" width="100" height="100"></a>
+                <div class="item">
+                    <br />
+
+                    <div class="content">
+                        <div class="meta">
+                                <span class="intro"><p class="intro">» Web developer inspired by minimalism, and order — I write about modern day JavaScript and ramble on occasion.</p></span>
+                        </div>
+
+                    </div>
+
+
+                </div>
+                <div class="ui hidden divider"></div>
+
+                <div class="ui list">
+                    <h4>» PROJECTS</h4>
+                    <a class="item" href="https://github.com/ahadb/es6"> Intro to ES6</a>
+                    <a class="item" href="https://github.com/ahadb/flat-file-cms"> Flat File CMS</a>
+                </div>
+
+                <div class="ui list">
+                    <h4>» ARTICLES</h4>
+                    <a class="item" href="2010/02/15/ego-information/"> In The Digital World, Information Has No Ego</a>
+                    <a class="item" href="/2015/02/13/why-use-objects/">A Case for Objects {...}</a>
+                    <a class="item" href="/2014/09/29/js-frameworks-libraries/">JavaScript Micro Frameworks, Hypermodularization & Libraries</a>
+                    <a class="item" href="/2014/01/20/fear/">Push Through Fear</a>
+                </div>
+
+                <div class="ui list">
+                    <h4>» MENU</h4>
+                    <a class="item" href="/about">About</a>
+                    <a class="item" href="/linkblog">Linkblog</a>
+                    <a class="item" href="/archives">Archives</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+  <div class="ui text main container footer">
+    <div id="footer-info" class="inner">
+      &copy; 2007 - 2016 &#183; Ahad Bokhari &#183; <a href="mailto:ahadbokhari@gmail.com">ahadbokhari@gmail.com</a>  <br>
+      <i>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>, hosted on <a href="https://github.com/ahadb">Github</a></i>
+    </div>
+  </div>
+</footer>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" integrity="sha384-8gBf6Y4YYq7Jx97PIqmTwLPin4hxIzQw5aDmUg/DDhul9fFpbbLcLh3nTIIDJKhx" crossorigin="anonymous"></script>
+
+<script src="https://use.typekit.net/ncd4ysn.js"></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+
+
+
+<script src="/js/script.js"></script>
+<script src="/js/dropdown.js"></script>
+<script src="/js/custom.js"></script>
+<script src="/js/transition.js"></script>
+<script src="/js/underscore.js"></script>
+<script src="/js/prism.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  
+  <title>Lexical Scope | Ahad Bokhari - Exploring JavaScript in 2016 &amp; Beyond</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Lexical scope and the `this` object is fundamental to a competent grasp of JavaScript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Lexical Scope">
+<meta property="og:url" content="ahadb.com/2015/03/03/scope/index.html">
+<meta property="og:site_name" content="Ahad Bokhari - Exploring JavaScript in 2016 & Beyond">
+<meta property="og:description" content="Lexical scope and the `this` object is fundamental to a competent grasp of JavaScript">
+<meta property="og:updated_time" content="2016-03-16T02:49:57.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Lexical Scope">
+<meta name="twitter:description" content="Lexical scope and the `this` object is fundamental to a competent grasp of JavaScript">
+  
+    <link rel="alternate" href="/atom.xml" title="Ahad Bokhari - Exploring JavaScript in 2016 &amp; Beyond" type="application/atom+xml">
+  
+  
+  
+
+  
+
+
+
+
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/icon.min.css'>
+
+
+  <link rel="stylesheet" href="/css/semantic-ui.css">
+  <link rel="stylesheet" href="/css/site.css">
+  <link rel="stylesheet" href="/css/menu.css">
+  <link rel="stylesheet" href="/css/prism.css">
+  
+
+</head>
+
+
+
+<body>
+<div class="ui text main container">
+  <div class="ui grid">
+    <div class="left floated twelve wide column">
+      <h1 class="me">Ahad Bokhari</h1>
+      <div class="ui dropdown">
+        <div class="text"><i class="sidebar icon"></i><cite style="color:#906;">Exploring JavaScript in 2016 & beyond...</cite></div>
+
+        <div class="menu">
+
+
+          <div class="item">
+            <span class="description">ctrl + o</span><a href="/about"> About</a> </div>
+          <div class="item">
+            <span class="description">ctrl + o</span> <a href="/archives"> Archives</a>
+          </div>
+          <div class="item">
+            <span class="description">ctrl + o</span> <a href="/linkblog"> Linkblog</a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="right floated six wide column">
+
+      <div class="text"></div>
+
+    </div>
+  </div>
+
+
+  <div class="ui divider"></div>
+</div>
+  </div>
+
+
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+</div>
+
+
+<div class="ui text main container">
+    <div class="ui stackable two column divided grid">
+        <!--<div class="blog-header">
+  <h1 class="blog-title">Ahad Bokhari - Exploring JavaScript in 2016 &amp; Beyond</h1>
+  
+</div>
+-->
+        <div class="twelve wide column" style="margin-bottom: 13px">
+            <div class="articles-wrapper">
+                <div class="ui two column divided grid">
+                    <div class="fifteen wide column">
+                <div class="picker">
+                        <div class="ui text menu" style="margin-top: -0.5em">
+                    <div class="header item">CATEGORIES:</div>
+                    <a class="item active" href="categories/JavaScript">
+                        JS</a>
+
+
+                    <a class="item" href="categories/ES5">
+                        ES5
+                    </a>
+                    <a class="item" href="categories/ES6">
+                        ES6
+                    </a>
+                    <a class="item">
+                        ES7
+                    </a>
+                    <a class="item">
+                        Ramblings
+                    </a>
+                            <a class="item">
+                                Other
+                            </a>
+
+                </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="ui relaxed middle aligned divided list">
+
+                    <!--<div id="post-scope" class="header" itemscope itemprop="blogPost">-->
+
+<div class="item">
+
+  <div class="right floated content" style="margin-top:5px">
+    
+  </div>
+
+<div class="content">
+
+    
+  
+    <h1 class="art" itemprop="name">
+      Lexical Scope
+    </h1>
+  
+
+
+
+  
+  <div class="meta" style="margin-top: -10px">
+    
+  <a href="/2015/03/03/scope/" class=""></a>
+</span>
+<span><i class="github icon"></i> Edit</span> &nbsp; &#183; &nbsp;
+  <span style="color: #999">
+        <i><time datetime="2015-03-03T06:00:00.000Z" itemprop="datePublished">March 03, 2015</time></i>
+</span>
+ <i><span style="float:right; margin-right:15px"> <span style="color:#999">words</span></i>
+
+
+    </div>
+
+    <div class="article-author"></div>
+
+  
+
+
+
+
+      
+  <br/>
+        <p>Grass roots concepts in JavaScript is <a href="https://developer.mozilla.org/en-US/docs/Glossary/Scope" target="_blank" rel="external">scope</a> consisting of global, local and nested scopes as well as closures &amp; hoisting (I’m sure you have heard these terms before). These are core concepts that JavaScript is made of and a fundamental understanding of them is very important. There is no substitute for learning JavaScript at it’s core first, even before you start playing with the shiny new frameworks out there.</p>
+<p>You might be judged on how well you understand just scope, so let’s view some concise examples in terms of variables and not paint with a broad brush leaving excuses for not understanding the basics.</p>
+<h2 id="Global-Scope"><a href="#Global-Scope" class="headerlink" title="Global Scope"></a>Global Scope</h2><p>A simple definition is the global scope is the scope visible in all other scopes:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// a is a global variable</span></span><br><span class="line"><span class="keyword">var</span> a = <span class="number">20</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">b</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">"I am a global function logging "</span> + </span><br><span class="line">               a  + <span class="string">" to the console"</span>); <span class="comment">// access to global var</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">b(); <span class="comment">// execution of a global function which logs 20</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">c</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(a);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">c(); <span class="comment">// 20</span></span><br></pre></td></tr></table></figure>
+<p>In the above example the variable a is accessible from any function; we’re working with variables for the most part but understand that functions also have a global scope and can be access from anywhere in your application. So, there is a global scope in which reside global variables and global functions.</p>
+<h2 id="Local-Scope"><a href="#Local-Scope" class="headerlink" title="Local Scope"></a>Local Scope</h2><p>Local variables can only be accessed within the local scope that they are created in - therefore when scripting with JavaScript the only way can be defined by a function. If you define a variable in a function, you can only get access to it within that function. Else, you will get a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError" target="_blank" rel="external">ReferenceError</a>.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">100</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">b</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> c = <span class="number">200</span>; <span class="comment">// local variable</span></span><br><span class="line">  <span class="built_in">console</span>.log(c);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">b(); <span class="comment">// 200</span></span><br><span class="line"><span class="built_in">console</span>.log(c); <span class="comment">// Reference Error: c is not defined</span></span><br><span class="line"><span class="built_in">console</span>.log(a); <span class="comment">// 100, since in global scope</span></span><br></pre></td></tr></table></figure>
+<p>Let’s take another example but this time we’ll define an <a href="http://stackoverflow.com/questions/6888570/declaring-variables-without-var-keyword" target="_blank" rel="external">implicit global</a> without using <code>var</code>. </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">101</span>;</span><br><span class="line"> <span class="function"><span class="keyword">function</span> <span class="title">b</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"> <span class="keyword">var</span> x = <span class="number">10</span>, <span class="comment">// local</span></span><br><span class="line">     y = <span class="number">20</span>; <span class="comment">// local</span></span><br><span class="line">     z = <span class="number">30</span>; <span class="comment">// implicit global (,)</span></span><br><span class="line"> <span class="built_in">console</span>.log(x, y, z); <span class="comment">// 10, 20, 30</span></span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(x); <span class="comment">// ReferenceError</span></span><br><span class="line"><span class="built_in">console</span>.log(y) <span class="comment">// ReferenceError</span></span><br><span class="line"><span class="built_in">console</span>.log(z); <span class="comment">// 30</span></span><br></pre></td></tr></table></figure>
+<p>We can clearly see in the rare case we use an implicit global we can access it outside it’s scope like any other global variable. It is not recommended to pollute the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript" target="_blank" rel="external">global namespace</a>. What if we have two variables a, one global and one local? How does that get interpreted?</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">55</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">b</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(a);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">c</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> a = <span class="number">50</span>;</span><br><span class="line">  <span class="built_in">console</span>.log(a); </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">b(); <span class="comment">// 55</span></span><br><span class="line">c(); <span class="comment">// 50</span></span><br></pre></td></tr></table></figure>
+<p>As a bonus it’s common to create your code and <a href="https://en.wikipedia.org/wiki/Encapsulation_(object-oriented_programming" target="_blank" rel="external">encapsulate</a> all your variables to a local scope using an <code>IIFE</code> or immediately invoking functional expression - this way you can properly isolate your variables. <code>IIFE’s</code> are a JavaScript design pattern used by popular libraries like Backbone.js, Modernizr and jQuery.</p>
+<p>The syntax is simple:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"><span class="comment">// my code goes here</span></span><br><span class="line">&#125;());</span><br></pre></td></tr></table></figure>
+<p>There are more benefits to an IIFE and you should definitely read more about them.</p>
+<h2 id="Block-Scope"><a href="#Block-Scope" class="headerlink" title="Block Scope"></a>Block Scope</h2><p>There is no block scope in JavaScript, but ES6 introduces <code>let</code>:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">5</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">b</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (<span class="literal">true</span>) &#123;</span><br><span class="line">  <span class="keyword">var</span> a = <span class="number">10</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(a); <span class="comment">// alerts 10, not global var 5</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Multiple-Scope"><a href="#Multiple-Scope" class="headerlink" title="Multiple Scope"></a>Multiple Scope</h2><p>Of course you will have many functions and variables in your program. This creates a scope for each of them as you execute and that execution scope is ultimately linked to global scope. Confused? Let’s learn by example:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">one</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(a);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">two</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(a);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">one(); <span class="comment">// new scope created for execution of fn one</span></span><br><span class="line">two(); <span class="comment">// new scope created for execution of fn two</span></span><br></pre></td></tr></table></figure>
+<p>Here is a simple example of nested scope and can also be called inner functions which lead to <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures" target="_blank" rel="external">closures</a>.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">5</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">b</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> d = <span class="number">30</span>;</span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">c</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(a);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> c(); <span class="comment">// creates a closure</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">d</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(a); </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">b(); <span class="comment">// 5</span></span><br><span class="line">d(); <span class="comment">// 5</span></span><br></pre></td></tr></table></figure>
+<p>What’s interesting to note with the above example is that the <code>b()</code> inner function was returned from the outer function before<br>being executed therefore creating a closure. Closures are not a new phenomenon and are a powerful feature of JavaScript - they do come with performance constraints, therefore it’s appropriate to follow some of these rules:</p>
+<ul>
+<li>Try not to create too deep of a nested scope</li>
+<li>Don’t use a closure if you don’t need a closure</li>
+<li>Memory leaks are caused when you hold excessively large private memory</li>
+</ul>
+<p>A closure is created when you execute a function within a function. Closures save the state of the outer function variables and do not expose those private variables. Look up encapsulation.</p>
+<div class="note">Note: Though not at all comprehensive when speaking of closures, but you should take away that this is what you need to know to understand modern day JavaScript.</div>
+
+<h2 id="How-JavaScript-Sees-Variables"><a href="#How-JavaScript-Sees-Variables" class="headerlink" title="How JavaScript Sees Variables"></a>How JavaScript Sees Variables</h2><p>JavaScript is a <a href="http://stackoverflow.com/questions/1047454/what-is-lexical-scope" target="_blank" rel="external">lexically scoped</a> language. To understand scope, scope execution and the scope chain (which is crucial to understanding closures) better we have to understand how JavaScript sees things. When traversing the scope chain JavaScript follows these steps, every single time:</p>
+<ul>
+<li>Local Scope: JavaScript checks local variables first, if so then JavaScript will go ahead and give it to you. Local scope takes importance.</li>
+<li>Parameters: After checking for the variable locally, JavaScript looks at the parameters.</li>
+<li>Outer Scopes: If nothing is found in local scope, or parameters JavaScript crawls outside of the function via the scope chain of your current scope.</li>
+<li>Window: Any variable that exists in the global scope will be a property of the global ‘window’ object</li>
+<li>Undefined: If your variable doesn’t exist anywhere then JavaScript will respond with “undefined”</li>
+</ul>
+<p>A really fantastic reference that can be found on Github: <a href="https://github.com/getify/You-Dont-Know-JS/blob/master/scope%20&amp;%20closures/README.md#you-dont-know-js-scope--closures" target="_blank" rel="external">You Don’t Know JS: Scope &amp; Closures</a>/. Always give performance and memory importance as a habit when writing code. This can be a whole new topic and I suggest you look it up.</p>
+<h2 id="Hoisting"><a href="#Hoisting" class="headerlink" title="Hoisting"></a>Hoisting</h2><p>As a last concept to grasp, let’s take a brief look at hoisting. You can read more about it but let’s touch base on what it’s all about to get you started. The general definition of hoisting is a device that is used for lifting or lowering a load.</p>
+<p>JavaScript does exactly the same thing, as it hoists (lifts or raises) a variable declaration <code>var a = 15</code> and a function declaration <code>function qux() {..}</code> to the top of the function scope. Let’s take an example and learn from it:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">norf</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(b);</span><br><span class="line">  <span class="keyword">var</span> b = <span class="number">69</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">norf() <span class="comment">// undefined</span></span><br></pre></td></tr></table></figure>
+<p>In the code block above <code>norf()</code> returns undefined where you expect it to have a ReferenceError. The reason here is when the JS engine is creating a context for the function it scans through and brings the entire variable declaration to the top. In this case when the variable declaration is hoisted (not the value) and it automatically gets the default value of undefined.</p>
+<p>In the following days I’ll put up some more interesting examples of hoisting and I hope you retain some of this information and take away some of the most important concepts.</p>
+
+      
+
+
+    
+      
+
+    
+
+
+  </div>
+  
+    
+<ul id="article-nav" class="nav nav-pills nav-justified">
+  
+  <li role="presentation">
+    <a href="/2015/02/26/signal-1/" id="article-nav-older" class="article-nav-link-wrap">
+      <i class="fa fa-chevron-left pull-left"></i>
+      <span class="article-nav-link-title">Signal - The State of JavaScript I</span>
+    </a>
+  </li>
+  
+  
+  <li role="presentation">
+    <a href="/2015/03/09/signal-2/" id="article-nav-newer" class="article-nav-link-wrap">
+      <span class="article-nav-link-title">Signal - The State of JavaScript II</span>
+      <i class="fa fa-chevron-right pull-right"></i>
+    </a>
+  </li>
+  
+</ul>
+
+
+  
+</div>
+
+
+
+
+
+
+
+
+                </div>
+
+
+            </div>
+        </div>
+        <div class="four wide column" style="background-color: #f2f2f2">
+            <div class="sidebar-wrapper">
+                <a href="/"><img class="ui centered image" src="/images/avatar.png" width="100" height="100"></a>
+                <div class="item">
+                    <br />
+
+                    <div class="content">
+                        <div class="meta">
+                                <span class="intro"><p class="intro">» Web developer inspired by minimalism, and order — I write about modern day JavaScript and ramble on occasion.</p></span>
+                        </div>
+
+                    </div>
+
+
+                </div>
+                <div class="ui hidden divider"></div>
+
+                <div class="ui list">
+                    <h4>» PROJECTS</h4>
+                    <a class="item" href="https://github.com/ahadb/es6"> Intro to ES6</a>
+                    <a class="item" href="https://github.com/ahadb/flat-file-cms"> Flat File CMS</a>
+                </div>
+
+                <div class="ui list">
+                    <h4>» ARTICLES</h4>
+                    <a class="item" href="2010/02/15/ego-information/"> In The Digital World, Information Has No Ego</a>
+                    <a class="item" href="/2015/02/13/why-use-objects/">A Case for Objects {...}</a>
+                    <a class="item" href="/2014/09/29/js-frameworks-libraries/">JavaScript Micro Frameworks, Hypermodularization & Libraries</a>
+                    <a class="item" href="/2014/01/20/fear/">Push Through Fear</a>
+                </div>
+
+                <div class="ui list">
+                    <h4>» MENU</h4>
+                    <a class="item" href="/about">About</a>
+                    <a class="item" href="/linkblog">Linkblog</a>
+                    <a class="item" href="/archives">Archives</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+  <div class="ui text main container footer">
+    <div id="footer-info" class="inner">
+      &copy; 2007 - 2016 &#183; Ahad Bokhari &#183; <a href="mailto:ahadbokhari@gmail.com">ahadbokhari@gmail.com</a>  <br>
+      <i>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>, hosted on <a href="https://github.com/ahadb">Github</a></i>
+    </div>
+  </div>
+</footer>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" integrity="sha384-8gBf6Y4YYq7Jx97PIqmTwLPin4hxIzQw5aDmUg/DDhul9fFpbbLcLh3nTIIDJKhx" crossorigin="anonymous"></script>
+
+<script src="https://use.typekit.net/ncd4ysn.js"></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+
+
+
+<script src="/js/script.js"></script>
+<script src="/js/dropdown.js"></script>
+<script src="/js/custom.js"></script>
+<script src="/js/transition.js"></script>
+<script src="/js/underscore.js"></script>
+<script src="/js/prism.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  
+  <title>Let and Const | Ahad Bokhari - Exploring JavaScript in 2016 &amp; Beyond</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="ES6 brings us two new keywords for variables which provide us a way to define block scoped variables and constants">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Let and Const">
+<meta property="og:url" content="ahadb.com/2015/12/28/let-const/index.html">
+<meta property="og:site_name" content="Ahad Bokhari - Exploring JavaScript in 2016 & Beyond">
+<meta property="og:description" content="ES6 brings us two new keywords for variables which provide us a way to define block scoped variables and constants">
+<meta property="og:updated_time" content="2016-03-31T23:58:45.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Let and Const">
+<meta name="twitter:description" content="ES6 brings us two new keywords for variables which provide us a way to define block scoped variables and constants">
+  
+    <link rel="alternate" href="/atom.xml" title="Ahad Bokhari - Exploring JavaScript in 2016 &amp; Beyond" type="application/atom+xml">
+  
+  
+  
+
+  
+
+
+
+
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/icon.min.css'>
+
+
+  <link rel="stylesheet" href="/css/semantic-ui.css">
+  <link rel="stylesheet" href="/css/site.css">
+  <link rel="stylesheet" href="/css/menu.css">
+  <link rel="stylesheet" href="/css/prism.css">
+  
+
+</head>
+
+
+
+<body>
+<div class="ui text main container">
+  <div class="ui grid">
+    <div class="left floated twelve wide column">
+      <h1 class="me">Ahad Bokhari</h1>
+      <div class="ui dropdown">
+        <div class="text"><i class="sidebar icon"></i><cite style="color:#906;">Exploring JavaScript in 2016 & beyond...</cite></div>
+
+        <div class="menu">
+
+
+          <div class="item">
+            <span class="description">ctrl + o</span><a href="/about"> About</a> </div>
+          <div class="item">
+            <span class="description">ctrl + o</span> <a href="/archives"> Archives</a>
+          </div>
+          <div class="item">
+            <span class="description">ctrl + o</span> <a href="/linkblog"> Linkblog</a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="right floated six wide column">
+
+      <div class="text"></div>
+
+    </div>
+  </div>
+
+
+  <div class="ui divider"></div>
+</div>
+  </div>
+
+
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+</div>
+
+
+<div class="ui text main container">
+    <div class="ui stackable two column divided grid">
+        <!--<div class="blog-header">
+  <h1 class="blog-title">Ahad Bokhari - Exploring JavaScript in 2016 &amp; Beyond</h1>
+  
+</div>
+-->
+        <div class="twelve wide column" style="margin-bottom: 13px">
+            <div class="articles-wrapper">
+                <div class="ui two column divided grid">
+                    <div class="fifteen wide column">
+                <div class="picker">
+                        <div class="ui text menu" style="margin-top: -0.5em">
+                    <div class="header item">CATEGORIES:</div>
+                    <a class="item active" href="categories/JavaScript">
+                        JS</a>
+
+
+                    <a class="item" href="categories/ES5">
+                        ES5
+                    </a>
+                    <a class="item" href="categories/ES6">
+                        ES6
+                    </a>
+                    <a class="item">
+                        ES7
+                    </a>
+                    <a class="item">
+                        Ramblings
+                    </a>
+                            <a class="item">
+                                Other
+                            </a>
+
+                </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="ui relaxed middle aligned divided list">
+
+                    <!--<div id="post-let-const" class="header" itemscope itemprop="blogPost">-->
+
+<div class="item">
+
+  <div class="right floated content" style="margin-top:5px">
+    
+  </div>
+
+<div class="content">
+
+    
+  
+    <h1 class="art" itemprop="name">
+      Let and Const
+    </h1>
+  
+
+
+
+  
+  <div class="meta" style="margin-top: -10px">
+    
+  <a href="/2015/12/28/let-const/" class=""></a>
+</span>
+<span><i class="github icon"></i> Edit</span> &nbsp; &#183; &nbsp;
+  <span style="color: #999">
+        <i><time datetime="2015-12-28T06:00:00.000Z" itemprop="datePublished">December 28, 2015</time></i>
+</span>
+ <i><span style="float:right; margin-right:15px"> <span style="color:#999">words</span></i>
+
+
+    </div>
+
+    <div class="article-author"></div>
+
+  
+
+
+
+
+      
+  <br/>
+        <h2 id="Let-and-Const"><a href="#Let-and-Const" class="headerlink" title="Let and Const"></a>Let and Const</h2><p><code>let</code> and <code>const</code> are two new identifiers for storing values in <code>ES6</code> which you can additionally use to declare variables<br>‘let’ and ‘const’ throw more exceptions as they behave more strictly than ‘var’</p>
+<ul>
+<li><code>let</code> is block scoped and is <strong>hoisted</strong> to the top of it’s block, <strong>unlike</strong> <code>var</code> which is hoisted to the top of it’s <strong>function</strong> or <strong>script</strong></li>
+<li><code>const</code> is also block scoped and is also <strong>hoisted</strong> to the top of it’s block<ul>
+<li>it’s worth noting that in ES6 functions are <strong>block scoped</strong> instead of lexically scoped<br>‘var`</li>
+</ul>
+</li>
+<li><code>let</code> does not create a property on the global object</li>
+<li><code>const</code> creates <strong>immutable</strong> variables, whilst <code>let</code> create <strong>mutable</strong> ones</li>
+<li>a duplicate declaration of <code>let</code> will throw a <strong>Reference Error</strong> within a block or function<ul>
+<li>this is also known as <code>TDZ</code> or temporal dead zone</li>
+</ul>
+</li>
+<li><em>Basic rules to follow</em>: <ul>
+<li>don’t use <code>var</code>, or leave it as a signal in untouched legacy code.</li>
+<li>use <code>let</code> when you want to rebind.</li>
+<li>prefer <code>const</code> for variables that never change.</li>
+<li>don’t blindly refactor legacy code when replacing <code>var</code> with <code>let</code> and <code>const</code>.</li>
+</ul>
+</li>
+</ul>
+<p>How <code>let</code> works: </p>
+<pre><code class="language-javascript">function myfunc() {
+   if ( true ) {
+     let x = 54321;
+   }
+   console.log( x ); // => ReferenceError: x is not defined  
+ }
+</code></pre>
+
+<pre><code class="language-javascript">// legacy ES5
+ function myfunc() {
+   if ( true ) {
+     var x = 54321;
+   }
+   console.log( x ); // => 54321 
+ }
+</code></pre>
+
+<p>Using block scoped <code>let</code>:</p>
+<pre><code class="language-javascript">let outer = "outer";
+{
+  let inner = "inner";
+    { 
+      let nested = "nested"
+    }
+  console.log( inner ); // => you can access `inner`
+  console.log( nested ) // => throws error  
+} 
+// you can access `outer` here
+// you cannot access `inner` and `nested` here 
+</code></pre>
+
+<p>More scoping rules for variables declared by <code>let</code>. you can clearly see that when refactoring:</p>
+<pre><code class="language-javascript">function letBlocks {
+  let a = 23;
+  if ( true ) {
+    let a = 56;
+    console.log( a ); // => 56
+  }  
+  console.log( a ); // => 23
+}  
+</code></pre>
+
+<p>How <code>const</code> works. Variables declared with <code>const</code> are immutable, but note that the values aren’t just the declarations:</p>
+<pre><code class="language-javascript">const foo = '123';
+foo = '321';
+console.log( foo ); // TypeError
+
+// changing const values
+const myarr = [1,2,3,4];
+myarr.push(5);
+console.log( myarr ); // => 1, 2, 3, 4, 5
+
+const obj = {};
+obj.prop = 123;
+console.log( obj ); // => { Object: prop: 123 }
+</code></pre>
+      
+
+
+    
+      
+
+    
+
+
+  </div>
+  
+    
+<ul id="article-nav" class="nav nav-pills nav-justified">
+  
+  <li role="presentation">
+    <a href="/2015/07/14/angular-vs-jquery/" id="article-nav-older" class="article-nav-link-wrap">
+      <i class="fa fa-chevron-left pull-left"></i>
+      <span class="article-nav-link-title">Stop Comparing jQuery to AngularJS</span>
+    </a>
+  </li>
+  
+  
+  <li role="presentation">
+    <a href="/2016/01/12/learn-js/" id="article-nav-newer" class="article-nav-link-wrap">
+      <span class="article-nav-link-title">Learn JavaScript in 2016 - Emphasize on Focus</span>
+      <i class="fa fa-chevron-right pull-right"></i>
+    </a>
+  </li>
+  
+</ul>
+
+
+  
+</div>
+
+
+
+
+
+
+
+
+                </div>
+
+
+            </div>
+        </div>
+        <div class="four wide column" style="background-color: #f2f2f2">
+            <div class="sidebar-wrapper">
+                <a href="/"><img class="ui centered image" src="/images/avatar.png" width="100" height="100"></a>
+                <div class="item">
+                    <br />
+
+                    <div class="content">
+                        <div class="meta">
+                                <span class="intro"><p class="intro">» Web developer inspired by minimalism, and order — I write about modern day JavaScript and ramble on occasion.</p></span>
+                        </div>
+
+                    </div>
+
+
+                </div>
+                <div class="ui hidden divider"></div>
+
+                <div class="ui list">
+                    <h4>» PROJECTS</h4>
+                    <a class="item" href="https://github.com/ahadb/es6"> Intro to ES6</a>
+                    <a class="item" href="https://github.com/ahadb/flat-file-cms"> Flat File CMS</a>
+                </div>
+
+                <div class="ui list">
+                    <h4>» ARTICLES</h4>
+                    <a class="item" href="2010/02/15/ego-information/"> In The Digital World, Information Has No Ego</a>
+                    <a class="item" href="/2015/02/13/why-use-objects/">A Case for Objects {...}</a>
+                    <a class="item" href="/2014/09/29/js-frameworks-libraries/">JavaScript Micro Frameworks, Hypermodularization & Libraries</a>
+                    <a class="item" href="/2014/01/20/fear/">Push Through Fear</a>
+                </div>
+
+                <div class="ui list">
+                    <h4>» MENU</h4>
+                    <a class="item" href="/about">About</a>
+                    <a class="item" href="/linkblog">Linkblog</a>
+                    <a class="item" href="/archives">Archives</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+  <div class="ui text main container footer">
+    <div id="footer-info" class="inner">
+      &copy; 2007 - 2016 &#183; Ahad Bokhari &#183; <a href="mailto:ahadbokhari@gmail.com">ahadbokhari@gmail.com</a>  <br>
+      <i>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>, hosted on <a href="https://github.com/ahadb">Github</a></i>
+    </div>
+  </div>
+</footer>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" integrity="sha384-8gBf6Y4YYq7Jx97PIqmTwLPin4hxIzQw5aDmUg/DDhul9fFpbbLcLh3nTIIDJKhx" crossorigin="anonymous"></script>
+
+<script src="https://use.typekit.net/ncd4ysn.js"></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+
+
+
+<script src="/js/script.js"></script>
+<script src="/js/dropdown.js"></script>
+<script src="/js/custom.js"></script>
+<script src="/js/transition.js"></script>
+<script src="/js/underscore.js"></script>
+<script src="/js/prism.js"></script>
+
+
+</body>
+
+</html>

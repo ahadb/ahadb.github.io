@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  
+  <title>Rudimentary Webstorm Tips | Ahad Bokhari - Exploring JavaScript in 2016 &amp; Beyond</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Random thoughts on Webstorm, hands downs the the ultimate IDE for JavaScript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Rudimentary Webstorm Tips">
+<meta property="og:url" content="ahadb.com/2015/04/03/webstorm-tricks/index.html">
+<meta property="og:site_name" content="Ahad Bokhari - Exploring JavaScript in 2016 & Beyond">
+<meta property="og:description" content="Random thoughts on Webstorm, hands downs the the ultimate IDE for JavaScript">
+<meta property="og:updated_time" content="2016-03-16T02:40:59.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Rudimentary Webstorm Tips">
+<meta name="twitter:description" content="Random thoughts on Webstorm, hands downs the the ultimate IDE for JavaScript">
+  
+    <link rel="alternate" href="/atom.xml" title="Ahad Bokhari - Exploring JavaScript in 2016 &amp; Beyond" type="application/atom+xml">
+  
+  
+  
+
+  
+
+
+
+
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/icon.min.css'>
+
+
+  <link rel="stylesheet" href="/css/semantic-ui.css">
+  <link rel="stylesheet" href="/css/site.css">
+  <link rel="stylesheet" href="/css/menu.css">
+  <link rel="stylesheet" href="/css/prism.css">
+  
+
+</head>
+
+
+
+<body>
+<div class="ui text main container">
+  <div class="ui grid">
+    <div class="left floated twelve wide column">
+      <h1 class="me">Ahad Bokhari</h1>
+      <div class="ui dropdown">
+        <div class="text"><i class="sidebar icon"></i><cite style="color:#906;">Exploring JavaScript in 2016 & beyond...</cite></div>
+
+        <div class="menu">
+
+
+          <div class="item">
+            <span class="description">ctrl + o</span><a href="/about"> About</a> </div>
+          <div class="item">
+            <span class="description">ctrl + o</span> <a href="/archives"> Archives</a>
+          </div>
+          <div class="item">
+            <span class="description">ctrl + o</span> <a href="/linkblog"> Linkblog</a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="right floated six wide column">
+
+      <div class="text"></div>
+
+    </div>
+  </div>
+
+
+  <div class="ui divider"></div>
+</div>
+  </div>
+
+
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+</div>
+
+
+<div class="ui text main container">
+    <div class="ui stackable two column divided grid">
+        <!--<div class="blog-header">
+  <h1 class="blog-title">Ahad Bokhari - Exploring JavaScript in 2016 &amp; Beyond</h1>
+  
+</div>
+-->
+        <div class="twelve wide column" style="margin-bottom: 13px">
+            <div class="articles-wrapper">
+                <div class="ui two column divided grid">
+                    <div class="fifteen wide column">
+                <div class="picker">
+                        <div class="ui text menu" style="margin-top: -0.5em">
+                    <div class="header item">CATEGORIES:</div>
+                    <a class="item active" href="categories/JavaScript">
+                        JS</a>
+
+
+                    <a class="item" href="categories/ES5">
+                        ES5
+                    </a>
+                    <a class="item" href="categories/ES6">
+                        ES6
+                    </a>
+                    <a class="item">
+                        ES7
+                    </a>
+                    <a class="item">
+                        Ramblings
+                    </a>
+                            <a class="item">
+                                Other
+                            </a>
+
+                </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="ui relaxed middle aligned divided list">
+
+                    <!--<div id="post-webstorm-tricks" class="header" itemscope itemprop="blogPost">-->
+
+<div class="item">
+
+  <div class="right floated content" style="margin-top:5px">
+    
+  </div>
+
+<div class="content">
+
+    
+  
+    <h1 class="art" itemprop="name">
+      Rudimentary Webstorm Tips
+    </h1>
+  
+
+
+
+  
+  <div class="meta" style="margin-top: -10px">
+    
+  <a href="/2015/04/03/webstorm-tricks/" class=""></a>
+</span>
+<span><i class="github icon"></i> Edit</span> &nbsp; &#183; &nbsp;
+  <span style="color: #999">
+        <i><time datetime="2015-04-03T05:00:00.000Z" itemprop="datePublished">March 04, 2015&#39;</time></i>
+</span>
+ <i><span style="float:right; margin-right:15px">573 <span style="color:#999">words</span></i>
+
+
+    </div>
+
+    <div class="article-author"></div>
+
+  
+
+
+
+
+      
+  <br/>
+        <p>I switched over to Webstorm recently by JetBrains and am in awe of this fantastic IDE for JavaScript. Being well aware of all the classic debates I chose Webstorm mostly because of value, capabilities with ease of use coming in as a close second. Sure Sublime Text has an edge over Webstorm over performance, and it’s a superb editor with some great plugins - that said I don’t feel it’s as assistive an editor in these days of modern front-end development.</p>
+<p>While sublime handles tasks quite well, it really doesn’t offer you much in terms of auto-completion, support for ECMAScript 6 and out of the box support for Node.js and Angular. WS also ships with powerful code completion, support for testing smart code refactoring and lot’s of out of the box goodies (not to mention local history, grunt, and terminal right there waiting for you).</p>
+<p>This post isn’t about comparing the two editors and I’ll happily to pay $49.00 for a personal license. The crux of the matter is how well I know my editor will directly affect and influence my front-end workflow and make me a much savvier developer and help me make less errors.</p>
+<p>Start by using these basic tips (in no such order) and you’ll breeze through some of the more mundane tasks:</p>
+<ul>
+<li><em>Help</em>: The docs are an awesome reference for quick queries about your editor and how to configure stuff, etc.</li>
+<li><em>JetBrains TV &amp; YouTube</em>: these two resources will help you get up to speed with your editor with hundreds of videos of features.</li>
+<li><em>KeyMapper</em>: This is also available under help and will launch a .pdf as a reference. Or you can go into <code>⌘ , &gt; keymap</code> Keyboard shortcuts are usually the first thing that we learn as developers coming into an IDE for the first time.</li>
+<li><em>Export Settings</em>: color schemes, print settings, templates. This feature has some great options when importing as you can tick off certain items.</li>
+<li><em>Auto Completion</em>: As you type you get all sorts of options so pay attention. Use <code>⌘ click</code> on your MAC to be able to find in not only your file, but across your project - therefore you can jump back and forth with ease.<br>Use <code>⌃ space</code> and <code>⌃ double space</code> to get more out of your auto-completion - this works with not just JavaScript, but with everything else.</li>
+<li><em>Preferences</em>: No brainer, of course you’ll want to hit <code>⌘ ,</code></li>
+<li><em>Inspections</em>: Using <code>⌥ enter</code> you can do all kinds of funky stuff including reverse/negate if statements and remove variables. Also, be sure to check out Hector the Inspector on the bottom right (icon)</li>
+<li>Useful commands:<ul>
+<li><code>⌘ e</code>: View Recent Files</li>
+<li><code>⌘ ⇧ a</code>: Find action</li>
+<li><code>double ⇧</code>: Search everywhere</li>
+<li><code>double ⇧</code>: Search everywhere</li>
+</ul>
+</li>
+</ul>
+<p>We’ve probably seen a few of these features in other editors, but Webstorm packs a real punch with it’s built in support for almost everything. One of my favorites is using <code>⌘ ⇧ O</code> to browse for files and then hitting <code>⌘ Y</code> for a quick preview (this works with images as well).</p>
+<p>Invariably, this is the best IDE out there for JavaScript and has even surpassed my use of Sublime Text. No diss on ST2/3 and I’ll keep it there for quick fixes.</p>
+<p>However when I want to grok someone else’s code base I’m using Webstorm (and that in itself says quite alot!). </p>
+
+      
+
+
+    
+      
+
+    
+
+
+  </div>
+  
+    
+<ul id="article-nav" class="nav nav-pills nav-justified">
+  
+  <li role="presentation">
+    <a href="/2015/03/25/signal-3/" id="article-nav-older" class="article-nav-link-wrap">
+      <i class="fa fa-chevron-left pull-left"></i>
+      <span class="article-nav-link-title">Signal - The State of JavaScript III</span>
+    </a>
+  </li>
+  
+  
+  <li role="presentation">
+    <a href="/2015/05/10/iife/" id="article-nav-newer" class="article-nav-link-wrap">
+      <span class="article-nav-link-title">IIFE Pattern</span>
+      <i class="fa fa-chevron-right pull-right"></i>
+    </a>
+  </li>
+  
+</ul>
+
+
+  
+</div>
+
+
+
+
+
+
+
+
+                </div>
+
+
+            </div>
+        </div>
+        <div class="four wide column" style="background-color: #f2f2f2">
+            <div class="sidebar-wrapper">
+                <a href="/"><img class="ui centered image" src="/images/avatar.png" width="100" height="100"></a>
+                <div class="item">
+                    <br />
+
+                    <div class="content">
+                        <div class="meta">
+                                <span class="intro"><p class="intro">» Web developer inspired by minimalism, and order — I write about modern day JavaScript and ramble on occasion.</p></span>
+                        </div>
+
+                    </div>
+
+
+                </div>
+                <div class="ui hidden divider"></div>
+
+                <div class="ui list">
+                    <h4>» PROJECTS</h4>
+                    <a class="item" href="https://github.com/ahadb/es6"> Intro to ES6</a>
+                    <a class="item" href="https://github.com/ahadb/flat-file-cms"> Flat File CMS</a>
+                </div>
+
+                <div class="ui list">
+                    <h4>» ARTICLES</h4>
+                    <a class="item" href="2010/02/15/ego-information/"> In The Digital World, Information Has No Ego</a>
+                    <a class="item" href="/2015/02/13/why-use-objects/">A Case for Objects {...}</a>
+                    <a class="item" href="/2014/09/29/js-frameworks-libraries/">JavaScript Micro Frameworks, Hypermodularization & Libraries</a>
+                    <a class="item" href="/2014/01/20/fear/">Push Through Fear</a>
+                </div>
+
+                <div class="ui list">
+                    <h4>» MENU</h4>
+                    <a class="item" href="/about">About</a>
+                    <a class="item" href="/linkblog">Linkblog</a>
+                    <a class="item" href="/archives">Archives</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+  <div class="ui text main container footer">
+    <div id="footer-info" class="inner">
+      &copy; 2007 - 2016 &#183; Ahad Bokhari &#183; <a href="mailto:ahadbokhari@gmail.com">ahadbokhari@gmail.com</a>  <br>
+      <i>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>, hosted on <a href="https://github.com/ahadb">Github</a></i>
+    </div>
+  </div>
+</footer>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" integrity="sha384-8gBf6Y4YYq7Jx97PIqmTwLPin4hxIzQw5aDmUg/DDhul9fFpbbLcLh3nTIIDJKhx" crossorigin="anonymous"></script>
+
+<script src="https://use.typekit.net/ncd4ysn.js"></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+
+
+
+<script src="/js/script.js"></script>
+<script src="/js/dropdown.js"></script>
+<script src="/js/custom.js"></script>
+<script src="/js/transition.js"></script>
+<script src="/js/underscore.js"></script>
+<script src="/js/prism.js"></script>
+
+
+</body>
+
+</html>

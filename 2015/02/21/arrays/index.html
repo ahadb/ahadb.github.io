@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  
+  <title>Array Surgery - Part 1, The Essentials | Ahad Bokhari - Exploring JavaScript in 2016 &amp; Beyond</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Arrays are used to store multiple values in a single variable. They are list-like objects, yet their elements aren&apos;t fixed; especially when using the `length` property.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Array Surgery - Part 1, The Essentials">
+<meta property="og:url" content="ahadb.com/2015/02/21/arrays/index.html">
+<meta property="og:site_name" content="Ahad Bokhari - Exploring JavaScript in 2016 & Beyond">
+<meta property="og:description" content="Arrays are used to store multiple values in a single variable. They are list-like objects, yet their elements aren&apos;t fixed; especially when using the `length` property.">
+<meta property="og:updated_time" content="2016-03-09T03:30:50.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Array Surgery - Part 1, The Essentials">
+<meta name="twitter:description" content="Arrays are used to store multiple values in a single variable. They are list-like objects, yet their elements aren&apos;t fixed; especially when using the `length` property.">
+  
+    <link rel="alternate" href="/atom.xml" title="Ahad Bokhari - Exploring JavaScript in 2016 &amp; Beyond" type="application/atom+xml">
+  
+  
+  
+
+  
+
+
+
+
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/icon.min.css'>
+
+
+  <link rel="stylesheet" href="/css/semantic-ui.css">
+  <link rel="stylesheet" href="/css/site.css">
+  <link rel="stylesheet" href="/css/menu.css">
+  <link rel="stylesheet" href="/css/prism.css">
+  
+
+</head>
+
+
+
+<body>
+<div class="ui text main container">
+  <div class="ui grid">
+    <div class="left floated twelve wide column">
+      <h1 class="me">Ahad Bokhari</h1>
+      <div class="ui dropdown">
+        <div class="text"><i class="sidebar icon"></i><cite style="color:#906;">Exploring JavaScript in 2016 & beyond...</cite></div>
+
+        <div class="menu">
+
+
+          <div class="item">
+            <span class="description">ctrl + o</span><a href="/about"> About</a> </div>
+          <div class="item">
+            <span class="description">ctrl + o</span> <a href="/archives"> Archives</a>
+          </div>
+          <div class="item">
+            <span class="description">ctrl + o</span> <a href="/linkblog"> Linkblog</a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="right floated six wide column">
+
+      <div class="text"></div>
+
+    </div>
+  </div>
+
+
+  <div class="ui divider"></div>
+</div>
+  </div>
+
+
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+</div>
+
+
+<div class="ui text main container">
+    <div class="ui stackable two column divided grid">
+        <!--<div class="blog-header">
+  <h1 class="blog-title">Ahad Bokhari - Exploring JavaScript in 2016 &amp; Beyond</h1>
+  
+</div>
+-->
+        <div class="twelve wide column" style="margin-bottom: 13px">
+            <div class="articles-wrapper">
+                <div class="ui two column divided grid">
+                    <div class="fifteen wide column">
+                <div class="picker">
+                        <div class="ui text menu" style="margin-top: -0.5em">
+                    <div class="header item">CATEGORIES:</div>
+                    <a class="item active" href="categories/JavaScript">
+                        JS</a>
+
+
+                    <a class="item" href="categories/ES5">
+                        ES5
+                    </a>
+                    <a class="item" href="categories/ES6">
+                        ES6
+                    </a>
+                    <a class="item">
+                        ES7
+                    </a>
+                    <a class="item">
+                        Ramblings
+                    </a>
+                            <a class="item">
+                                Other
+                            </a>
+
+                </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="ui relaxed middle aligned divided list">
+
+                    <!--<div id="post-arrays" class="header" itemscope itemprop="blogPost">-->
+
+<div class="item">
+
+  <div class="right floated content" style="margin-top:5px">
+    
+  </div>
+
+<div class="content">
+
+    
+  
+    <h1 class="art" itemprop="name">
+      Array Surgery - Part 1, The Essentials
+    </h1>
+  
+
+
+
+  
+  <div class="meta" style="margin-top: -10px">
+    
+  <a href="/2015/02/21/arrays/" class=""></a>
+</span>
+<span><i class="github icon"></i> Edit</span> &nbsp; &#183; &nbsp;
+  <span style="color: #999">
+        <i><time datetime="2015-02-21T06:00:00.000Z" itemprop="datePublished">February, 21 2015</time></i>
+</span>
+ <i><span style="float:right; margin-right:15px"> <span style="color:#999">words</span></i>
+
+
+    </div>
+
+    <div class="article-author"></div>
+
+  
+
+
+
+
+      
+  <br/>
+        <p>Arrays are used to store multiple values in a single variable. They are list-like objects, yet their elements aren’t fixed; especially when using the <code>length</code> property. They are zero-indexed, meaning the first element of an array is at an <code>index</code> of 0. Therefore the last element will always be the value of the length property minus 1.</p>
+<div class="note">Note: The Array.prototype has methods to perform traversal and mutation operations.</div>
+
+<h2 id="Arrays-vs-Objects"><a href="#Arrays-vs-Objects" class="headerlink" title="Arrays vs. Objects"></a>Arrays vs. Objects</h2><p>Saving yourself some trouble down the road, understanding when to use an array or an object is important. As a start remember that we usually want to find a value in an array vs a property of an object. This can be done with <code>indexOf()</code> in an array and <code>hasOwnProperty()</code> in an object. That said, perhaps the most valuable lesson that you should know is that arrays have order and objects don’t. </p>
+<p>If you want a more elaborate explanation <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" target="_blank" rel="external">find out more on MDN</a></p>
+<h2 id="Creating-an-Array"><a href="#Creating-an-Array" class="headerlink" title="Creating an Array"></a>Creating an Array</h2><p>There are two ways to create an array, via a constructor and using a literal. </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// create an array using a constructor met</span></span><br><span class="line"><span class="keyword">var</span> myArr = <span class="keyword">new</span> <span class="built_in">Array</span>(); <span class="comment">// notice the new operator</span></span><br><span class="line"><span class="built_in">console</span>.log(myArr);</span><br><span class="line"></span><br><span class="line"><span class="comment">// create an array using the array literal</span></span><br><span class="line"><span class="keyword">var</span> myArr = []</span><br><span class="line"><span class="built_in">console</span>.log(myArr);</span><br></pre></td></tr></table></figure>
+<h2 id="Use-instead"><a href="#Use-instead" class="headerlink" title="Use [ ] instead"></a>Use [ ] instead</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> myNumbers = <span class="keyword">new</span> <span class="built_in">Array</span>(); <span class="comment">// bad</span></span><br><span class="line"><span class="keyword">var</span> myNumbers = []; <span class="comment">// good</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> myNumbers = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="number">100</span>, <span class="number">200</span>, <span class="number">300</span>, <span class="number">400</span>, <span class="number">500</span>); <span class="comment">// bad</span></span><br><span class="line"><span class="keyword">var</span> myNumbers = [<span class="number">100</span>, <span class="number">200</span>, <span class="number">300</span>, <span class="number">400</span>, <span class="number">500</span>]; <span class="comment">//good</span></span><br></pre></td></tr></table></figure>
+<p>While both do exactly the same thing, for readability, execution and speed the array literal method is preferred so just use that.</p>
+<p>To access elements of an array is trivial:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> myArr = [<span class="string">"I'm"</span>, <span class="string">"learning"</span>, <span class="string">"how"</span>, <span class="string">"to"</span>, <span class="string">"create"</span>, <span class="string">"arrays"</span>];</span><br><span class="line">myArr[<span class="number">1</span>]; <span class="comment">//==&gt; "learning"</span></span><br><span class="line"><span class="built_in">console</span>.log(myArr); <span class="comment">// ["I'm", "learning", "how", "to", "create", "arrays"]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// we'll see later that we can even have variables of different types in an array!</span></span><br></pre></td></tr></table></figure>
+<h2 id="Array-Properties-Adding-Elements-amp-Looping-Through-an-Array"><a href="#Array-Properties-Adding-Elements-amp-Looping-Through-an-Array" class="headerlink" title="Array Properties, Adding Elements &amp; Looping Through an Array"></a>Array Properties, Adding Elements &amp; Looping Through an Array</h2><p>The real power of an array lies in-built properties and methods. The first property you encounter is the <code>length</code> property:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> myArr = [<span class="string">"Hello"</span>, <span class="string">"Hi"</span>, <span class="string">"Bonjeur"</span>, <span class="string">"Ola"</span>, <span class="string">"Ciao'"</span>];</span><br><span class="line"><span class="built_in">console</span>.log(myArr.length); <span class="comment">//==&gt; 5</span></span><br></pre></td></tr></table></figure>
+<p>You can also add elements to an array:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">myArr[<span class="number">20</span>] = <span class="string">"Yo!"</span>; </span><br><span class="line"><span class="comment">//==&gt; [ 'Hello', 'Hi', 'Bonjeur', 'Ola', 'Ciao\'', , , , , , , , , , , , , , , , 'Yo!' ]</span></span><br></pre></td></tr></table></figure>
+<p>Beware of using the length property as it could be misleading:</p>
+<ul>
+<li>Use right index to insert positive integers, use positive integers as an index</li>
+<li>Don’t randomly insert by index unless you are inserting the element in the right place. This will save you alot of memory as your programs grow</li>
+<li>When adding elements to an array be wary as it creates a hole that is undefined as you see above </li>
+</ul>
+<p>Things start getting interesting when you loop through an array - there are quite a few concepts that you can apply but the best use would be a sequential for loop. Try to avoid using <code>for-in</code> as that is used to enumerate over object properties. </p>
+<p>An extremely useful article on this topic can be found on Stack Overflow: <a href="http://stackoverflow.com/questions/3010840/loop-through-array-in-javascript" target="_blank" rel="external">Looping through an Array</a></p>
+<p>A simple for loop can be demonstrated below:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var seasons = ["Summer", "Autumn, "Spring", "Winter"];</span><br><span class="line">var seasonsLength = seasons.length;</span><br><span class="line">for (for var i = 0; i &lt; seasonsLength; i++) &#123;</span><br><span class="line">console.log(seasonsLength[i]);</span><br><span class="line">// do something cool</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>In this example note that (a) the order is guaranteed and (b) inherited properties are not also enumerated.</p>
+<h2 id="Extra-Stuff"><a href="#Extra-Stuff" class="headerlink" title="Extra Stuff"></a>Extra Stuff</h2><p>Recognizing an array using <code>typeOf()</code>:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> names = [<span class="string">"Moe"</span>, <span class="string">"Shandy"</span>, <span class="string">"Michelle"</span>, <span class="string">"Omar"</span>];</span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> names); <span class="comment">// returns [object] because a JavaScript array is an object</span></span><br></pre></td></tr></table></figure>
+<p>Using <code>indexOf()</code> to search an array for a specified item and return it’s position. The <code>indexOf()</code> method will start at the specified position, or at the beginning if no start position is specified, and end the search at the end of the array:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> names = [<span class="string">"Moe"</span>, <span class="string">"Shandy"</span>, <span class="string">"Michelle"</span>, <span class="string">"Omar"</span>, <span class="string">"Mohammad"</span>];</span><br><span class="line"><span class="built_in">console</span>.log(names.indexOf(<span class="string">"Shandy"</span>)); <span class="comment">// ==&gt; outputs 1</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//another example below</span></span><br><span class="line"><span class="keyword">var</span> arr = [<span class="number">2</span>, <span class="number">5</span>, <span class="number">9</span>];</span><br><span class="line">arr.indexOf(<span class="number">2</span>);     <span class="comment">// 0</span></span><br><span class="line">arr.indexOf(<span class="number">7</span>);     <span class="comment">// -1</span></span><br><span class="line">arr.indexOf(<span class="number">9</span>, <span class="number">2</span>);  <span class="comment">// 2</span></span><br><span class="line">arr.indexOf(<span class="number">2</span>, <span class="number">-1</span>); <span class="comment">// -1</span></span><br><span class="line">arr.indexOf(<span class="number">2</span>, <span class="number">-3</span>); <span class="comment">// 0</span></span><br></pre></td></tr></table></figure>
+<p>Even though this is a method I wanted to introduce it here first, before we move onto the next section.</p>
+<p>Another little obscurity in arrays, delete doesn’t actually delete. Remember being wary of the length property?</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> myArr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>];</span><br><span class="line"><span class="keyword">delete</span> myArr[<span class="number">3</span>];</span><br><span class="line"><span class="built_in">console</span>.log(myArr); <span class="comment">// ==&gt; [ 1, 2, 3, , 5, 6, 7, 8, 9 ]</span></span><br><span class="line"><span class="built_in">console</span>.log(myArr.length) <span class="comment">//==&gt; outputs 9</span></span><br></pre></td></tr></table></figure>
+<h2 id="Methods-of-An-Array"><a href="#Methods-of-An-Array" class="headerlink" title="Methods of An Array"></a>Methods of An Array</h2><p>Fantastic, you’ve gotten way beyond the fold. Continuing dissecting our arrays we move onto interesting default methods of the array. This is where the strength of JavaScript arrays lies; remember that arrays are the top 3 most used data structures in the language which makes it a must to master them.</p>
+<p>Let’s start out with the basic methods <code>pop()</code>, <code>push()</code>, <code>slice()</code>, <code>splice()</code>, <code>shift()</code> and <code>unshift()</code> and then in part two we build our way up with callback functions with the cast of <code>map()</code>, <code>filter()</code> and <code>forEach()</code>.</p>
+<p>First, let’s think about converting arrays to strings, which can be common when working with the DOM. For JavaScript arrays, valueOf() and toString() are equal as in they both return an array as a string.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> animals = [<span class="string">"Cow"</span>, <span class="string">"Rabbit"</span>, <span class="string">"Pig"</span>, <span class="string">"Horse"</span>, <span class="string">"Giraffe"</span>];</span><br><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">"my-array"</span>).innerHTML = animals.valueOf();</span><br><span class="line"></span><br><span class="line"><span class="comment">// we can use the same &lt;code&gt;toString()&lt;/code&gt; to achieve the same results.</span></span><br><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">"my-array"</span>).innerHTML = animals.toString();</span><br><span class="line"><span class="comment">//==&gt; outputs Cow, Rabbit, Pig, Horse, Giraffe</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// The join() method also joins all array elements into a string</span></span><br></pre></td></tr></table></figure>
+<p>When you’re working with an array, you need to be able to remove and add elements. You can do that with simple methods like <code>pop()</code> and <code>push()</code>. </p>
+<p>The <code>pop</code> method simply removes the last element in the array and returns that value to the caller:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> animals = [<span class="string">"Cow"</span>, <span class="string">"Rabbit"</span>, <span class="string">"Pig"</span>, <span class="string">"Horse"</span>, <span class="string">"Giraffe"</span>, <span class="string">"Monkey"</span>];</span><br><span class="line"><span class="keyword">var</span> animalsPopped = animals.pop();</span><br><span class="line"><span class="built_in">console</span>.log(animalsPopped); <span class="comment">// ["Cow", "Rabbit", "Pig", "Horse", "Giraffe"];</span></span><br></pre></td></tr></table></figure>
+<p>Similarily, the <code>push()</code> method appends values to an array and relies on the <code>length</code> property to determine where to start inserting values.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> animals = [<span class="string">"Cow"</span>, <span class="string">"Rabbit"</span>, <span class="string">"Pig"</span>, <span class="string">"Horse"</span>, <span class="string">"Giraffe"</span>, <span class="string">"Monkey"</span>];</span><br><span class="line"><span class="keyword">var</span> total = animals.push(<span class="string">"Rhinoceros"</span>, <span class="string">"Cat"</span>);</span><br><span class="line">  </span><br><span class="line"><span class="built_in">console</span>.log(animals); <span class="comment">// ["Cow", "Rabbit", "Pig", "Horse", "Giraffe", "Monkey"]</span></span><br><span class="line"><span class="built_in">console</span>.log(total); <span class="comment">// 8</span></span><br></pre></td></tr></table></figure>
+<div class="note">Note: the methods described here are all inherited from <code>Array.Prototype</code> and all of them listed below can be used with <code>call()</code> and <code>apply()</code> on arrays that are similar to objects.</div>
+
+<p>The <code>shift()</code> and <code>unshift()</code> methods also both work on first element of the array - using some variables and concatenation, let’s explore the difference between the two:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> myDogs = [<span class="string">'Alex'</span>, <span class="string">'Marley'</span>, <span class="string">'Ziggy'</span>, <span class="string">'Doggy'</span>];</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'myDogs before: '</span> + myDogs);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> myDogsShifted = myDogs.shift();</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'myDogs after: '</span> + myDogs);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'Removed this element: '</span> + myDogsShifted);</span><br><span class="line"></span><br><span class="line"><span class="comment">//==&gt; </span></span><br><span class="line">myDogs before: Alex,Marley,Ziggy,Doggy</span><br><span class="line">myDogs after: Marley,Ziggy,Doggy</span><br><span class="line">Removed <span class="keyword">this</span> element: Alex</span><br></pre></td></tr></table></figure>
+<p>A simple example of the <code>unshift()</code> method:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> myArr = [<span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span>];</span><br><span class="line"></span><br><span class="line">myArr.unshift(<span class="number">0</span>); </span><br><span class="line"><span class="comment">// [0, 10, 20, 30]</span></span><br><span class="line"></span><br><span class="line">myArr.unshift(<span class="number">-10</span>, <span class="number">-20</span>);</span><br><span class="line"><span class="comment">// [ -10, -20, 0, 10, 20, 30 ]</span></span><br><span class="line"></span><br><span class="line">myArr.unshift([<span class="number">-5</span>]);</span><br><span class="line"><span class="comment">// [ [ -5 ], -10, -20, 0, 10, 20, 30 ]</span></span><br></pre></td></tr></table></figure>
+<p>We’ve defined an array and listed quite a few array methods to get you started off with. As noted there are more basic methods that we can use: <code>map</code>, <code>filter</code> and <code>forEach</code> and we can discuss those in another post. </p>
+
+      
+
+
+    
+      
+
+    
+
+
+  </div>
+  
+    
+<ul id="article-nav" class="nav nav-pills nav-justified">
+  
+  <li role="presentation">
+    <a href="/2015/02/19/fizzbuzz/" id="article-nav-older" class="article-nav-link-wrap">
+      <i class="fa fa-chevron-left pull-left"></i>
+      <span class="article-nav-link-title">The Lowest Level of JavaScript Comprehension</span>
+    </a>
+  </li>
+  
+  
+  <li role="presentation">
+    <a href="/2015/02/26/signal-1/" id="article-nav-newer" class="article-nav-link-wrap">
+      <span class="article-nav-link-title">Signal - The State of JavaScript I</span>
+      <i class="fa fa-chevron-right pull-right"></i>
+    </a>
+  </li>
+  
+</ul>
+
+
+  
+</div>
+
+
+
+
+
+
+
+
+                </div>
+
+
+            </div>
+        </div>
+        <div class="four wide column" style="background-color: #f2f2f2">
+            <div class="sidebar-wrapper">
+                <a href="/"><img class="ui centered image" src="/images/avatar.png" width="100" height="100"></a>
+                <div class="item">
+                    <br />
+
+                    <div class="content">
+                        <div class="meta">
+                                <span class="intro"><p class="intro">» Web developer inspired by minimalism, and order — I write about modern day JavaScript and ramble on occasion.</p></span>
+                        </div>
+
+                    </div>
+
+
+                </div>
+                <div class="ui hidden divider"></div>
+
+                <div class="ui list">
+                    <h4>» PROJECTS</h4>
+                    <a class="item" href="https://github.com/ahadb/es6"> Intro to ES6</a>
+                    <a class="item" href="https://github.com/ahadb/flat-file-cms"> Flat File CMS</a>
+                </div>
+
+                <div class="ui list">
+                    <h4>» ARTICLES</h4>
+                    <a class="item" href="2010/02/15/ego-information/"> In The Digital World, Information Has No Ego</a>
+                    <a class="item" href="/2015/02/13/why-use-objects/">A Case for Objects {...}</a>
+                    <a class="item" href="/2014/09/29/js-frameworks-libraries/">JavaScript Micro Frameworks, Hypermodularization & Libraries</a>
+                    <a class="item" href="/2014/01/20/fear/">Push Through Fear</a>
+                </div>
+
+                <div class="ui list">
+                    <h4>» MENU</h4>
+                    <a class="item" href="/about">About</a>
+                    <a class="item" href="/linkblog">Linkblog</a>
+                    <a class="item" href="/archives">Archives</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+  <div class="ui text main container footer">
+    <div id="footer-info" class="inner">
+      &copy; 2007 - 2016 &#183; Ahad Bokhari &#183; <a href="mailto:ahadbokhari@gmail.com">ahadbokhari@gmail.com</a>  <br>
+      <i>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>, hosted on <a href="https://github.com/ahadb">Github</a></i>
+    </div>
+  </div>
+</footer>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" integrity="sha384-8gBf6Y4YYq7Jx97PIqmTwLPin4hxIzQw5aDmUg/DDhul9fFpbbLcLh3nTIIDJKhx" crossorigin="anonymous"></script>
+
+<script src="https://use.typekit.net/ncd4ysn.js"></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+
+
+
+<script src="/js/script.js"></script>
+<script src="/js/dropdown.js"></script>
+<script src="/js/custom.js"></script>
+<script src="/js/transition.js"></script>
+<script src="/js/underscore.js"></script>
+<script src="/js/prism.js"></script>
+
+
+</body>
+
+</html>

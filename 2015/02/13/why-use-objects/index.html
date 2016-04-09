@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  
+  <title>How / Why Use Objects in JavaScript? | Ahad Bokhari - Exploring JavaScript in 2016 &amp; Beyond</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Object oriented Programming (OOP) in JavaScript is based on a simple object-based paradigm. The name shouldn&apos;t intimidate you as an understanding of objects is cruicial to understanding JavaScript as">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How / Why Use Objects in JavaScript?">
+<meta property="og:url" content="ahadb.com/2015/02/13/why-use-objects/index.html">
+<meta property="og:site_name" content="Ahad Bokhari - Exploring JavaScript in 2016 & Beyond">
+<meta property="og:description" content="Object oriented Programming (OOP) in JavaScript is based on a simple object-based paradigm. The name shouldn&apos;t intimidate you as an understanding of objects is cruicial to understanding JavaScript as">
+<meta property="og:updated_time" content="2016-03-10T06:55:03.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="How / Why Use Objects in JavaScript?">
+<meta name="twitter:description" content="Object oriented Programming (OOP) in JavaScript is based on a simple object-based paradigm. The name shouldn&apos;t intimidate you as an understanding of objects is cruicial to understanding JavaScript as">
+  
+    <link rel="alternate" href="/atom.xml" title="Ahad Bokhari - Exploring JavaScript in 2016 &amp; Beyond" type="application/atom+xml">
+  
+  
+  
+
+  
+
+
+
+
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/icon.min.css'>
+
+
+  <link rel="stylesheet" href="/css/semantic-ui.css">
+  <link rel="stylesheet" href="/css/site.css">
+  <link rel="stylesheet" href="/css/menu.css">
+  <link rel="stylesheet" href="/css/prism.css">
+  
+
+</head>
+
+
+
+<body>
+<div class="ui text main container">
+  <div class="ui grid">
+    <div class="left floated twelve wide column">
+      <h1 class="me">Ahad Bokhari</h1>
+      <div class="ui dropdown">
+        <div class="text"><i class="sidebar icon"></i><cite style="color:#906;">Exploring JavaScript in 2016 & beyond...</cite></div>
+
+        <div class="menu">
+
+
+          <div class="item">
+            <span class="description">ctrl + o</span><a href="/about"> About</a> </div>
+          <div class="item">
+            <span class="description">ctrl + o</span> <a href="/archives"> Archives</a>
+          </div>
+          <div class="item">
+            <span class="description">ctrl + o</span> <a href="/linkblog"> Linkblog</a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="right floated six wide column">
+
+      <div class="text"></div>
+
+    </div>
+  </div>
+
+
+  <div class="ui divider"></div>
+</div>
+  </div>
+
+
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+</div>
+
+
+<div class="ui text main container">
+    <div class="ui stackable two column divided grid">
+        <!--<div class="blog-header">
+  <h1 class="blog-title">Ahad Bokhari - Exploring JavaScript in 2016 &amp; Beyond</h1>
+  
+</div>
+-->
+        <div class="twelve wide column" style="margin-bottom: 13px">
+            <div class="articles-wrapper">
+                <div class="ui two column divided grid">
+                    <div class="fifteen wide column">
+                <div class="picker">
+                        <div class="ui text menu" style="margin-top: -0.5em">
+                    <div class="header item">CATEGORIES:</div>
+                    <a class="item active" href="categories/JavaScript">
+                        JS</a>
+
+
+                    <a class="item" href="categories/ES5">
+                        ES5
+                    </a>
+                    <a class="item" href="categories/ES6">
+                        ES6
+                    </a>
+                    <a class="item">
+                        ES7
+                    </a>
+                    <a class="item">
+                        Ramblings
+                    </a>
+                            <a class="item">
+                                Other
+                            </a>
+
+                </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="ui relaxed middle aligned divided list">
+
+                    <!--<div id="post-why-use-objects" class="header" itemscope itemprop="blogPost">-->
+
+<div class="item">
+
+  <div class="right floated content" style="margin-top:5px">
+    
+  </div>
+
+<div class="content">
+
+    
+  
+    <h1 class="art" itemprop="name">
+      How / Why Use Objects in JavaScript?
+    </h1>
+  
+
+
+
+  
+  <div class="meta" style="margin-top: -10px">
+    
+  <a href="/2015/02/13/why-use-objects/" class=""></a>
+</span>
+<span><i class="github icon"></i> Edit</span> &nbsp; &#183; &nbsp;
+  <span style="color: #999">
+        <i><time datetime="2015-02-13T06:00:00.000Z" itemprop="datePublished">February 13, 2015</time></i>
+</span>
+ <i><span style="float:right; margin-right:15px"> <span style="color:#999">words</span></i>
+
+
+    </div>
+
+    <div class="article-author"></div>
+
+  
+
+
+
+
+      
+  <br/>
+        <p>Object oriented Programming (<code>OOP</code>) in JavaScript is based on a simple object-based paradigm. The name shouldn’t intimidate you as an understanding of objects is cruicial to understanding JavaScript as a whole. Almost everything in JavaScript is an object, functions are objects to and can be passed around as a reference. </p>
+<p>We use objects as building blocks for our applications that allow us to adopt valuable industry standard techniques like <code>encapsulation</code>, <code>inheritance</code>, <code>polymorphism</code>. These techniques aren’t new, just like <code>closures</code> aren’t a new phenomenon - they have been around for a while!</p>
+<p>Much like variables are containers for data values, objects are data written as name: value pairs and are extremely useful for making a single unit out of values that are related or belong together. A JavaScript object has properties that are associated with it and the properties of an object succinctly define the characteristics of the object.</p>
+<p>Note: Objects don’t have classes like Java, however one way to create and use objects is the constructor pattern. To put it simply an Object is ultimately a function in JavaScript.</p>
+<p>Assuming you don’t know much about OOP it’s best to try and understand some of the concepts below while conceptualizing features of an object using the table below:</p>
+<table><br>  <thead><br>    <tr><br>      <th>Object Feature</th><br>      <th>Concept</th><br>    </tr><br>  </thead><br>  <tbody><br>     <tr><br>      <td>Alex is a human</td><br>      <td>Object(s)</td><br>    </tr><br>    <tr><br>      <td>Alex has black hair, is 6 feet tall and is a female</td><br>      <td>Object Properties</td><br>    </tr><br>    <tr><br>      <td>Alex can walk, speak and run</td><br>      <td>Methods</td><br>    </tr><br>    <tr><br>      <td>Alex is an instace of a class homo sapien</td><br>      <td>Classical class in OOP</td><br>    </tr><br>    <tr><br>      <td>Alex is also based on another object, called creature</td><br>      <td>Prototype</td><br>    </tr><br>  </tbody><br></table>
+
+<p>By using a simple example, lets create this object with it’s <code>properties</code>, <code>methods</code> and a <code>prototype</code> (which other instances can inherit from):</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Human</span>(<span class="params">firstName, lastName, gender, age</span>) </span>&#123;</span><br><span class="line"> <span class="comment">// we use the this keyword to set context to reference our object: Human</span></span><br><span class="line"> <span class="comment">// a fundamental understand of context is vital to understand objects, expecially</span></span><br><span class="line"> <span class="comment">// when invoking. Don;t confuse context with scope (which is used for functions)</span></span><br><span class="line">  <span class="keyword">this</span>.firstName = firstName; </span><br><span class="line">  <span class="keyword">this</span>.lastName = lastName;</span><br><span class="line">  <span class="keyword">this</span>.gender = gender;</span><br><span class="line">  <span class="keyword">this</span>.age = age;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Human.prototype = &#123;</span><br><span class="line"><span class="comment">// let's use our Human object's prototype to add some methods to that all</span></span><br><span class="line"><span class="comment">// instances of our object can share! An method is simply a function within</span></span><br><span class="line"><span class="comment">// an object</span></span><br><span class="line">  getFullName: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; </span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.firstName + <span class="string">' '</span> + <span class="keyword">this</span>.lastName;</span><br><span class="line">    &#125;,</span><br><span class="line">  isMale: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; </span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.gender == <span class="string">'Male'</span>; </span><br><span class="line">    &#125;,</span><br><span class="line">  isFemale: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; </span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.gender == <span class="string">'Female'</span>; </span><br><span class="line">  &#125;,</span><br><span class="line">  getFullNameReversed: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.lastName + <span class="string">', '</span> + <span class="keyword">this</span>.firstName;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// create some instances and store them in a variable using the new keyword</span></span><br><span class="line"><span class="keyword">var</span> jose = <span class="keyword">new</span> Human(<span class="string">'Jose'</span>, <span class="string">'Carlos'</span>, <span class="string">"Male"</span>, <span class="string">"25"</span>);</span><br><span class="line"><span class="keyword">var</span> jennifer = <span class="keyword">new</span> Human(<span class="string">'Jennifer'</span>, <span class="string">'Dewitt'</span>, <span class="string">'Female'</span>, <span class="number">43</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// view are newly created instances of our object Human</span></span><br><span class="line"><span class="built_in">console</span>.log(jose);</span><br><span class="line"><span class="built_in">console</span>.log(jennifer);</span><br><span class="line"></span><br><span class="line"><span class="comment">// now let's use some of our methods from prototype:</span></span><br><span class="line"><span class="built_in">console</span>.log(jennifer.getFullName()); <span class="comment">//==&gt; Jennifer Dewitt</span></span><br><span class="line"><span class="built_in">console</span>.log(jose.getFullName()); <span class="comment">//==&gt; Jose Carlos</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// checking our object and instances using typeof and instanceof</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> jose, <span class="keyword">typeof</span> jennifer); <span class="comment">//=&gt; [object object]</span></span><br><span class="line"><span class="built_in">console</span>.log(jose <span class="keyword">instanceof</span> Human, jennifer <span class="keyword">instanceof</span> Human); <span class="comment">//==&gt; [true true]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// testing to see whether our getFullNameReversed method works!</span></span><br><span class="line"><span class="built_in">console</span>.log(jose.getFullNameReversed()); <span class="comment">//==&gt; Carlos, Jose</span></span><br></pre></td></tr></table></figure>
+<p>So this works as expected - it might look daunting but if you actually try a practical example and work your way through it, it’s quite easy to understand. Take for example a handful of data elements that pretty much do the same thing but a more functional approach to relatively the same code:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getFullName</span>(<span class="params">firstName, lastName</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> firstName + <span class="string">' '</span> + lastName;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">isMale</span>(<span class="params">gender</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> gender == <span class="string">'Male'</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">isFemale</span>(<span class="params">gender</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> gender == <span class="string">'Female'</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> joseFirstName = <span class="string">'Jose'</span>;</span><br><span class="line"><span class="keyword">var</span> joseLastName = <span class="string">'Carlos'</span>;</span><br><span class="line"><span class="keyword">var</span> jenniferGender = <span class="string">'Jennifer'</span>;</span><br><span class="line"><span class="keyword">var</span> jenniferAge = <span class="number">43</span>;</span><br><span class="line"><span class="keyword">var</span> jeffGender = <span class="string">'Male'</span>;</span><br><span class="line"><span class="keyword">var</span> jeffLastName = <span class="string">'Doe'</span>;</span><br><span class="line"><span class="keyword">var</span> jeffFirstName = <span class="string">'John'</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(getFullName(joseFirstName, joseLastName));</span><br><span class="line"><span class="built_in">console</span>.log(isMale(jeffGender));</span><br></pre></td></tr></table></figure>
+<p>Our first example using object s doesn’t inherently provide organizaton, but is extremely useful for orgainzing one’s information (think about hundreds, maybe thousands of instances or functions which result in too much code).</p>
+<p>It makes sense to organize your data if can be encapsulated and represented as whole objects rather than just a handful of data elements. Learning how to create and use objects is the first step to OOP, first understand and tackle this and then move on to inheritence.</p>
+
+      
+
+
+    
+      
+
+    
+
+
+  </div>
+  
+    
+<ul id="article-nav" class="nav nav-pills nav-justified">
+  
+  <li role="presentation">
+    <a href="/2015/02/11/rev-str/" id="article-nav-older" class="article-nav-link-wrap">
+      <i class="fa fa-chevron-left pull-left"></i>
+      <span class="article-nav-link-title">Reversing a String With JavaScript</span>
+    </a>
+  </li>
+  
+  
+  <li role="presentation">
+    <a href="/2015/02/19/fizzbuzz/" id="article-nav-newer" class="article-nav-link-wrap">
+      <span class="article-nav-link-title">The Lowest Level of JavaScript Comprehension</span>
+      <i class="fa fa-chevron-right pull-right"></i>
+    </a>
+  </li>
+  
+</ul>
+
+
+  
+</div>
+
+
+
+
+
+
+
+
+                </div>
+
+
+            </div>
+        </div>
+        <div class="four wide column" style="background-color: #f2f2f2">
+            <div class="sidebar-wrapper">
+                <a href="/"><img class="ui centered image" src="/images/avatar.png" width="100" height="100"></a>
+                <div class="item">
+                    <br />
+
+                    <div class="content">
+                        <div class="meta">
+                                <span class="intro"><p class="intro">» Web developer inspired by minimalism, and order — I write about modern day JavaScript and ramble on occasion.</p></span>
+                        </div>
+
+                    </div>
+
+
+                </div>
+                <div class="ui hidden divider"></div>
+
+                <div class="ui list">
+                    <h4>» PROJECTS</h4>
+                    <a class="item" href="https://github.com/ahadb/es6"> Intro to ES6</a>
+                    <a class="item" href="https://github.com/ahadb/flat-file-cms"> Flat File CMS</a>
+                </div>
+
+                <div class="ui list">
+                    <h4>» ARTICLES</h4>
+                    <a class="item" href="2010/02/15/ego-information/"> In The Digital World, Information Has No Ego</a>
+                    <a class="item" href="/2015/02/13/why-use-objects/">A Case for Objects {...}</a>
+                    <a class="item" href="/2014/09/29/js-frameworks-libraries/">JavaScript Micro Frameworks, Hypermodularization & Libraries</a>
+                    <a class="item" href="/2014/01/20/fear/">Push Through Fear</a>
+                </div>
+
+                <div class="ui list">
+                    <h4>» MENU</h4>
+                    <a class="item" href="/about">About</a>
+                    <a class="item" href="/linkblog">Linkblog</a>
+                    <a class="item" href="/archives">Archives</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+  <div class="ui text main container footer">
+    <div id="footer-info" class="inner">
+      &copy; 2007 - 2016 &#183; Ahad Bokhari &#183; <a href="mailto:ahadbokhari@gmail.com">ahadbokhari@gmail.com</a>  <br>
+      <i>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>, hosted on <a href="https://github.com/ahadb">Github</a></i>
+    </div>
+  </div>
+</footer>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" integrity="sha384-8gBf6Y4YYq7Jx97PIqmTwLPin4hxIzQw5aDmUg/DDhul9fFpbbLcLh3nTIIDJKhx" crossorigin="anonymous"></script>
+
+<script src="https://use.typekit.net/ncd4ysn.js"></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+
+
+
+<script src="/js/script.js"></script>
+<script src="/js/dropdown.js"></script>
+<script src="/js/custom.js"></script>
+<script src="/js/transition.js"></script>
+<script src="/js/underscore.js"></script>
+<script src="/js/prism.js"></script>
+
+
+</body>
+
+</html>
