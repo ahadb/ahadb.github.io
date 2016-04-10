@@ -139,7 +139,7 @@ header .room {
 
 h2.post-title {
     font-size: 25px;
-    color: #906;
+    color: #484848;
     font-weight: 600;
 
 }
@@ -253,7 +253,7 @@ p.desc-snippet {
 h1.me {
 
     margin-bottom: -2px;
-
+    font-weight: 600;
     font-size: 2em;
 }
 
