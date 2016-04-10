@@ -4,18 +4,18 @@
   <meta charset="utf-8">
 
   
-  <title>Link Blog | Ahad Bokhari - Exploring JavaScript in 2016 &amp; Beyond</title>
+  <title>ES6 - Destructuring | Ahad Bokhari - Exploring JavaScript in 2016 &amp; Beyond</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="I’ve maintained a link blog for some time and have finally decided to forge both my personal blog and linkblog together in one. I’m starting all over again here ( importing previous snippets requires">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Link Blog">
-<meta property="og:url" content="ahadb.com/linkblog/index.html">
+  <meta name="description" content="Just like an object literal is a convenient way to construct an object, ES6 destructing allows you to extract values from data stored in objects or arrays">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ES6 - Destructuring">
+<meta property="og:url" content="ahadb.com/2016/04/09/destructuring/index.html">
 <meta property="og:site_name" content="Ahad Bokhari - Exploring JavaScript in 2016 & Beyond">
-<meta property="og:description" content="I’ve maintained a link blog for some time and have finally decided to forge both my personal blog and linkblog together in one. I’m starting all over again here ( importing previous snippets requires">
-<meta property="og:updated_time" content="2016-04-09T23:50:44.000Z">
+<meta property="og:description" content="Just like an object literal is a convenient way to construct an object, ES6 destructing allows you to extract values from data stored in objects or arrays">
+<meta property="og:updated_time" content="2016-04-10T00:00:15.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Link Blog">
-<meta name="twitter:description" content="I’ve maintained a link blog for some time and have finally decided to forge both my personal blog and linkblog together in one. I’m starting all over again here ( importing previous snippets requires">
+<meta name="twitter:title" content="ES6 - Destructuring">
+<meta name="twitter:description" content="Just like an object literal is a convenient way to construct an object, ES6 destructing allows you to extract values from data stored in objects or arrays">
   
     <link rel="alternate" href="/atom.xml" title="Ahad Bokhari - Exploring JavaScript in 2016 &amp; Beyond" type="application/atom+xml">
   
@@ -123,7 +123,7 @@
                 </div>
                 <div class="ui relaxed middle aligned divided list">
 
-                    <!--<div id="page-undefined" class="header" itemscope itemprop="blogPost">-->
+                    <!--<div id="post-destructuring" class="header" itemscope itemprop="blogPost">-->
 
 <div class="item">
 
@@ -136,7 +136,7 @@
     
   
     <h1 class="art" itemprop="name">
-      Link Blog
+      ES6 - Destructuring
     </h1>
   
 
@@ -145,11 +145,11 @@
   
   <div class="meta" style="margin-top: -10px">
     
-  <a href="/linkblog/index.html" class=""></a>
+  <a href="/2016/04/09/destructuring/" class=""></a>
 </span>
 <span><i class="github icon"></i> Edit</span> &nbsp; &#183; &nbsp;
   <span style="color: #999">
-        <i><time datetime="2016-03-05T03:28:29.000Z" itemprop="datePublished">undefined</time></i>
+        <i><time datetime="2016-04-09T05:00:00.000Z" itemprop="datePublished">April 09, 2016</time></i>
 </span>
  <i><span style="float:right; margin-right:15px"> <span style="color:#999">words</span></i>
 
@@ -165,20 +165,47 @@
 
       
   <br/>
-        <p>I’ve maintained a link blog for some time and have finally decided to forge both my personal blog and linkblog together in one. I’m starting all over again here ( importing previous snippets requires alot more work than I have the time for now ).</p>
-<p>This is what I’m reading…</p>
-<h4 style="margin-bottom: 15px; color:#222">APRIL 08, 2016</h4>
+        <h2 id="Destructuring"><a href="#Destructuring" class="headerlink" title="Destructuring"></a>Destructuring</h2><p>Just like an object literal is a convenient way to construct an object, ES6 destructing allows you to extract values from data stored in objects or arrays.</p>
+<ul>
+<li>You can assign to more than just <strong>variables</strong></li>
+<li>Destructuring can be used in <strong>assignments</strong>, <strong>variable declarations</strong> and <strong>parameters</strong></li>
+<li><code>spread</code> and <code>rest</code> operators work with destructuring</li>
+<li>You can destructure a <code>for-of</code> loop</li>
+</ul>
+<p>Objects:</p>
+<pre><code class="language-javascript">const myObj = { firstname: 'Ahad', lastname: 'Bokhari' };
+const { firstName: fname, lastName: lname }; = myObj
+console.log( fname, lname ); // => Ahad Bokhari
 
-<h3 class"quote"="" style="margin-bottom:7px"><a href="https://stratechery.com/2016/its-a-tesla/" target="_blank" rel="external">It’s a Tesla</a></h3>
+let a, b;
+({ a, b } = {a: 1, b: 2});
+console.log(a, b);
 
-<p>Tesla, known for it’s late delivery gets an astounding 115,000 pre-orders by people who don’t even know what the car will look like:</p>
-<blockquote><p>Let’s start with the caveats: no, Tesla did not sell 276,000 Model 3’s in three days; that is the number of fully refundable pre-orders that required a deposit of “only” $1,000.  <i style="color: #222">— Ben Thompson</i></p>
-</blockquote>
-<h3 class"quote"="" style="margin-bottom:7px"><a href="http://www.wired.com/2016/04/senates-draft-encryption-bill-privacy-nightmare/" target="_blank" rel="external">Security experts say Burr-Feinstein draft encryption bill is flawed and dangerous </a></h3>
+// deeper objects
+const {
+  prop1: z,
+  prop2: {
+    prop2: {
+      nested: [ , , c]
+    }
+  }
+} = { prop1: "Hello", prop2: { prop2: { nested: ["a", "b", "c"] }}};
+console.log(z, c);
+</code></pre>
 
-<p>Killing end to end encryption:</p>
-<blockquote><p>In other words, the bill would make illegal the sort of user-controlled encryption that’s in every modern iPhone, in all billion devices that run Whatsapp’s messaging service, and in dozens of other tech products<i style="color: #222">— Wired</i></p>
-</blockquote>
+<p>Arrays:</p>
+<pre><code class="language-javascript">
+const myArr = [ 'y', 'z'];
+const [ a, b ] = myArr;
+console.log( a, b ); // => y, z
+
+let [ a, , b ] = [ 'x', 'y', 'z' ];
+console.log( a, b );
+
+// deeper arrays
+const [ a, [b, [c, d]]] = [1, [2, [[[3, 4], 5], 6 ]]];
+console.log("a:", a, "b:", b, "c:", c, "d:", d); // => a: 1 b: 2 c: [ [ 3, 4 ], 5 ] d: 6
+</code></pre>
 
       
 
@@ -192,9 +219,22 @@
   </div>
   
     
+<ul id="article-nav" class="nav nav-pills nav-justified">
+  
+  <li role="presentation">
+    <a href="/2016/03/20/shiny-new/" id="article-nav-older" class="article-nav-link-wrap">
+      <i class="fa fa-chevron-left pull-left"></i>
+      <span class="article-nav-link-title">Le Brillant Nouvel Objet (The Shiny New Object)</span>
+    </a>
+  </li>
+  
+  
+</ul>
+
 
   
 </div>
+
 
 
 
