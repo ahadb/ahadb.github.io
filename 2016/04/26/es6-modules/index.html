@@ -4,17 +4,18 @@
   <meta charset="utf-8">
 
   
-  <title>Archives: 2016/4 | Ahad Bokhari - Exploring JavaScript in 2016 &amp; Beyond</title>
+  <title>ES6 - Modules | Ahad Bokhari - Exploring JavaScript in 2016 &amp; Beyond</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Ahad Bokhari - Exploring JavaScript in 2016 & Beyond">
-<meta property="og:url" content="ahadb.com/archives/2016/04/index.html">
+  <meta name="description" content="The beginnings of modules native to the browser environment is one of the most exciting ex6 features. Here are the basics">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ES6 - Modules">
+<meta property="og:url" content="ahadb.com/2016/04/26/es6-modules/index.html">
 <meta property="og:site_name" content="Ahad Bokhari - Exploring JavaScript in 2016 & Beyond">
-<meta property="og:description">
+<meta property="og:description" content="The beginnings of modules native to the browser environment is one of the most exciting ex6 features. Here are the basics">
+<meta property="og:updated_time" content="2016-04-27T02:07:16.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ahad Bokhari - Exploring JavaScript in 2016 & Beyond">
-<meta name="twitter:description">
+<meta name="twitter:title" content="ES6 - Modules">
+<meta name="twitter:description" content="The beginnings of modules native to the browser environment is one of the most exciting ex6 features. Here are the basics">
   
     <link rel="alternate" href="/atom.xml" title="Ahad Bokhari - Exploring JavaScript in 2016 &amp; Beyond" type="application/atom+xml">
   
@@ -125,31 +126,29 @@
                 </div>
                 <div class="ui relaxed middle aligned divided list">
 
-                    
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <header class="archive-article-header">
-    
-  
+                    <!--<div id="post-es6-modules" class="header" itemscope itemprop="blogPost">-->
 
-      <a class="<header" href="/2016/04/26/es6-modules/"><h2 class="post-title">ES6 - Modules</h2></a>
+<div class="item">
 
+  <div class="right floated content" style="margin-top:5px">
+    
+  </div>
+
+<div class="content">
+
+    
+  
+    <h1 class="art" itemprop="name">
+      ES6 - Modules
+    </h1>
   
 
 
+
+  
+  <div class="meta" style="margin-top: -10px">
     
-  <a href="/2016/04/26/es6-modules/" class="archive-article-date"></a>
+  <a href="/2016/04/26/es6-modules/" class=""></a>
 </span>
 <span><i class="github icon"></i> Edit</span> &nbsp; &#183; &nbsp;
   <span style="color: #999">
@@ -158,91 +157,105 @@
  <i><span style="float:right; margin-right:15px"> <span style="color:#999">words</span></i>
 
 
-  </header>
-</article>
+    </div>
 
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <header class="archive-article-header">
-    
-  
-
-      <a class="<header" href="/2016/04/21/bikeshedding/"><h2 class="post-title">Bikeshedding</h2></a>
+    <div class="article-author"></div>
 
   
 
 
+
+
+      
+  <br/>
+        <p>At the core of modularity developers need a module system — a way to spread their work across numerous files and directories with access to each other. Without support for modules natively in ECMAScript there has been a community created effort to implement work-arounds — CommonJS and AMD being the most prevelant as<br>they both have communities that rally around them, but are incompatible with each other. The good news is ES6, ( TC39 group ) has finalized a module syntax which developers can greatly benefit from using the best from both worlds.</p>
+<ul>
+<li>The goal of modules in <code>ES6</code> is to keep <strong>both</strong> <code>CommonJS</code> and <code>AMD</code> user happy with a single format and borrows the best from both worlds<ul>
+<li><code>ES6</code> modules will have a compact syntax with a preference for a single exports ( such as CommonJS )</li>
+<li>direct support for asynchronous and configurable module loading is supported</li>
+</ul>
+</li>
+<li>There are two types of exports, <code>named</code> exports and <code>default</code> exports<ul>
+<li><strong>named exports</strong> can be used to export multiple things using the keyword <code>export</code></li>
+<li><strong>default exports</strong> used to export a default single value</li>
+</ul>
+</li>
+<li>To import functions, objects and primitives that have been exported from an external module use the <code>import</code> statement<ul>
+<li>you may <code>import</code> an entire modules contents, a single member or multiple members in a module</li>
+</ul>
+</li>
+</ul>
+<p>A convenient way to specify <code>named</code> exports as below:</p>
+<pre><code class="language-javascript">// lib.js
+// -------
+export const quux = Math.sqrt( 2 ); // => exports a constant
+export function multiply( x, y ) {
+  return x * y;
+} // => exports a function
+
+
+export function addContact( id, callback ) {
+  callback();
+} // => exports a function
+
+export function refreshContact() {
+  alert( `Hello ES6 Modules` );
+} // => exports a function
+</code></pre>
+
+<p>And of course <code>import</code> them into another file:</p>
+<pre><code class="language-javascript">// main.js
+// -------
+import quux from 'lib';
+import { multiply, addContact, refreshContact } from 'lib';
+
+console.log( quux ); // => 1.4142135623730951
+console.log( multiply(10, 10); // => 1000
+console.log(addContact(1, refreshContact)); // => alerts `Hello ES6 Modules`
+// app.js
+// ------
+// import the whole module
+import * as lib from 'lib'
+
+console.log( lib.quux ); // => 1.4142135623730951
+console.log( lib.refreshContact() ); // => alerts `Hello ES6 Modules`
+</code></pre>
+
+<p>Another technique in a module, we could use the following:</p>
+<pre><code class="language-javascript">const quatro = 10 * 10 * 10 * 10;
+export { quatro }; 
+</code></pre>
+
+<p><code>default</code> exports is simple one module that you want to export as the default ( like CommonJS ) and it turns out you can use <code>default</code> exports and <code>named</code> exports both in your module. There is alot more on <code>modules</code> in <code>ES6</code> including <code>script</code> tags, using <code>promises</code> and <code>module loading</code> which is an API that allows you to programmatically work with modules and configure module loading. </p>
+
+      
+
+
     
-  <a href="/2016/04/21/bikeshedding/" class="archive-article-date"></a>
-</span>
-<span><i class="github icon"></i> Edit</span> &nbsp; &#183; &nbsp;
-  <span style="color: #999">
-        <i><time datetime="2016-04-21T05:00:00.000Z" itemprop="datePublished">April 21, 2016</time></i>
-</span>
- <i><span style="float:right; margin-right:15px">160 <span style="color:#999">words</span></i>
+      
+
+    
 
 
-  </header>
-</article>
-
+  </div>
   
     
-    
-    <article class="archive-article archive-type-post">
-  <header class="archive-article-header">
-    
+<ul id="article-nav" class="nav nav-pills nav-justified">
   
-
-      <a class="<header" href="/2016/04/10/node-thoughts/"><h2 class="post-title">Thoughts on Node</h2></a>
-
-  
-
-
-    
-  <a href="/2016/04/10/node-thoughts/" class="archive-article-date"></a>
-</span>
-<span><i class="github icon"></i> Edit</span> &nbsp; &#183; &nbsp;
-  <span style="color: #999">
-        <i><time datetime="2016-04-10T05:00:00.000Z" itemprop="datePublished">April 10, 2016</time></i>
-</span>
- <i><span style="float:right; margin-right:15px">1,009 <span style="color:#999">words</span></i>
-
-
-  </header>
-</article>
-
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <header class="archive-article-header">
-    
-  
-
-      <a class="<header" href="/2016/04/09/es-destructuring/"><h2 class="post-title">ES6 - Destructuring</h2></a>
-
-  
-
-
-    
-  <a href="/2016/04/09/es-destructuring/" class="archive-article-date"></a>
-</span>
-<span><i class="github icon"></i> Edit</span> &nbsp; &#183; &nbsp;
-  <span style="color: #999">
-        <i><time datetime="2016-04-09T05:00:00.000Z" itemprop="datePublished">April 09, 2016</time></i>
-</span>
- <i><span style="float:right; margin-right:15px"> <span style="color:#999">words</span></i>
-
-
-  </header>
-</article>
-
+  <li role="presentation">
+    <a href="/2016/04/21/bikeshedding/" id="article-nav-older" class="article-nav-link-wrap">
+      <i class="fa fa-chevron-left pull-left"></i>
+      <span class="article-nav-link-title">Bikeshedding</span>
+    </a>
+  </li>
   
   
-    </div></section>
+</ul>
+
+
   
+</div>
+
 
 
 

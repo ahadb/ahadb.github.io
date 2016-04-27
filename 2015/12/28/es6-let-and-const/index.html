@@ -4,17 +4,18 @@
   <meta charset="utf-8">
 
   
-  <title>Archives: 2016/4 | Ahad Bokhari - Exploring JavaScript in 2016 &amp; Beyond</title>
+  <title>ES6 - Let and Const | Ahad Bokhari - Exploring JavaScript in 2016 &amp; Beyond</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Ahad Bokhari - Exploring JavaScript in 2016 & Beyond">
-<meta property="og:url" content="ahadb.com/archives/2016/04/index.html">
+  <meta name="description" content="ES6 brings us two new keywords for variables which provide us a way to define block scoped variables and constants">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ES6 - Let and Const">
+<meta property="og:url" content="ahadb.com/2015/12/28/es6-let-and-const/index.html">
 <meta property="og:site_name" content="Ahad Bokhari - Exploring JavaScript in 2016 & Beyond">
-<meta property="og:description">
+<meta property="og:description" content="ES6 brings us two new keywords for variables which provide us a way to define block scoped variables and constants">
+<meta property="og:updated_time" content="2016-04-09T23:57:51.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ahad Bokhari - Exploring JavaScript in 2016 & Beyond">
-<meta name="twitter:description">
+<meta name="twitter:title" content="ES6 - Let and Const">
+<meta name="twitter:description" content="ES6 brings us two new keywords for variables which provide us a way to define block scoped variables and constants">
   
     <link rel="alternate" href="/atom.xml" title="Ahad Bokhari - Exploring JavaScript in 2016 &amp; Beyond" type="application/atom+xml">
   
@@ -125,124 +126,162 @@
                 </div>
                 <div class="ui relaxed middle aligned divided list">
 
-                    
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <header class="archive-article-header">
-    
-  
+                    <!--<div id="post-es6-let-and-const" class="header" itemscope itemprop="blogPost">-->
 
-      <a class="<header" href="/2016/04/26/es6-modules/"><h2 class="post-title">ES6 - Modules</h2></a>
+<div class="item">
 
+  <div class="right floated content" style="margin-top:5px">
+    
+  </div>
+
+<div class="content">
+
+    
+  
+    <h1 class="art" itemprop="name">
+      ES6 - Let and Const
+    </h1>
   
 
 
+
+  
+  <div class="meta" style="margin-top: -10px">
     
-  <a href="/2016/04/26/es6-modules/" class="archive-article-date"></a>
+  <a href="/2015/12/28/es6-let-and-const/" class=""></a>
 </span>
 <span><i class="github icon"></i> Edit</span> &nbsp; &#183; &nbsp;
   <span style="color: #999">
-        <i><time datetime="2016-04-26T05:00:00.000Z" itemprop="datePublished">April 26, 2016</time></i>
+        <i><time datetime="2015-12-28T06:00:00.000Z" itemprop="datePublished">December 28, 2015</time></i>
 </span>
  <i><span style="float:right; margin-right:15px"> <span style="color:#999">words</span></i>
 
 
-  </header>
-</article>
+    </div>
 
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <header class="archive-article-header">
-    
-  
-
-      <a class="<header" href="/2016/04/21/bikeshedding/"><h2 class="post-title">Bikeshedding</h2></a>
+    <div class="article-author"></div>
 
   
 
 
+
+
+      
+  <br/>
+        <h2 id="Let-and-Const"><a href="#Let-and-Const" class="headerlink" title="Let and Const"></a>Let and Const</h2><p><code>let</code> and <code>const</code> are two new identifiers for storing values in <code>ES6</code> which you can additionally use to declare variables<br>‘let’ and ‘const’ throw more exceptions as they behave more strictly than ‘var’</p>
+<ul>
+<li><code>let</code> is block scoped and is <strong>hoisted</strong> to the top of it’s block, <strong>unlike</strong> <code>var</code> which is hoisted to the top of it’s <strong>function</strong> or <strong>script</strong></li>
+<li><code>const</code> is also block scoped and is also <strong>hoisted</strong> to the top of it’s block<ul>
+<li>it’s worth noting that in ES6 functions are <strong>block scoped</strong> instead of lexically scoped<br>‘var`</li>
+</ul>
+</li>
+<li><code>let</code> does not create a property on the global object</li>
+<li><code>const</code> creates <strong>immutable</strong> variables, whilst <code>let</code> create <strong>mutable</strong> ones</li>
+<li>a duplicate declaration of <code>let</code> will throw a <strong>Reference Error</strong> within a block or function<ul>
+<li>this is also known as <code>TDZ</code> or temporal dead zone</li>
+</ul>
+</li>
+<li><em>Basic rules to follow</em>: <ul>
+<li>don’t use <code>var</code>, or leave it as a signal in untouched legacy code.</li>
+<li>use <code>let</code> when you want to rebind.</li>
+<li>prefer <code>const</code> for variables that never change.</li>
+<li>don’t blindly refactor legacy code when replacing <code>var</code> with <code>let</code> and <code>const</code>.</li>
+</ul>
+</li>
+</ul>
+<p>How <code>let</code> works: </p>
+<pre><code class="language-javascript">function myfunc() {
+   if ( true ) {
+     let x = 54321;
+   }
+   console.log( x ); // => ReferenceError: x is not defined  
+ }
+</code></pre>
+
+<pre><code class="language-javascript">// legacy ES5
+ function myfunc() {
+   if ( true ) {
+     var x = 54321;
+   }
+   console.log( x ); // => 54321 
+ }
+</code></pre>
+
+<p>Using block scoped <code>let</code>:</p>
+<pre><code class="language-javascript">let outer = "outer";
+{
+  let inner = "inner";
+    { 
+      let nested = "nested"
+    }
+  console.log( inner ); // => you can access `inner`
+  console.log( nested ) // => throws error  
+} 
+// you can access `outer` here
+// you cannot access `inner` and `nested` here 
+</code></pre>
+
+<p>More scoping rules for variables declared by <code>let</code>. you can clearly see that when refactoring:</p>
+<pre><code class="language-javascript">function letBlocks {
+  let a = 23;
+  if ( true ) {
+    let a = 56;
+    console.log( a ); // => 56
+  }  
+  console.log( a ); // => 23
+}  
+</code></pre>
+
+<p>How <code>const</code> works. Variables declared with <code>const</code> are immutable, but note that the values aren’t just the declarations:</p>
+<pre><code class="language-javascript">const foo = '123';
+foo = '321';
+console.log( foo ); // TypeError
+
+// changing const values
+const myarr = [1,2,3,4];
+myarr.push(5);
+console.log( myarr ); // => 1, 2, 3, 4, 5
+
+const obj = {};
+obj.prop = 123;
+console.log( obj ); // => { Object: prop: 123 }
+</code></pre>
+
+      
+
+
     
-  <a href="/2016/04/21/bikeshedding/" class="archive-article-date"></a>
-</span>
-<span><i class="github icon"></i> Edit</span> &nbsp; &#183; &nbsp;
-  <span style="color: #999">
-        <i><time datetime="2016-04-21T05:00:00.000Z" itemprop="datePublished">April 21, 2016</time></i>
-</span>
- <i><span style="float:right; margin-right:15px">160 <span style="color:#999">words</span></i>
+      
+
+    
 
 
-  </header>
-</article>
-
+  </div>
   
     
-    
-    <article class="archive-article archive-type-post">
-  <header class="archive-article-header">
-    
+<ul id="article-nav" class="nav nav-pills nav-justified">
   
-
-      <a class="<header" href="/2016/04/10/node-thoughts/"><h2 class="post-title">Thoughts on Node</h2></a>
-
-  
-
-
-    
-  <a href="/2016/04/10/node-thoughts/" class="archive-article-date"></a>
-</span>
-<span><i class="github icon"></i> Edit</span> &nbsp; &#183; &nbsp;
-  <span style="color: #999">
-        <i><time datetime="2016-04-10T05:00:00.000Z" itemprop="datePublished">April 10, 2016</time></i>
-</span>
- <i><span style="float:right; margin-right:15px">1,009 <span style="color:#999">words</span></i>
-
-
-  </header>
-</article>
-
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <header class="archive-article-header">
-    
-  
-
-      <a class="<header" href="/2016/04/09/es-destructuring/"><h2 class="post-title">ES6 - Destructuring</h2></a>
-
-  
-
-
-    
-  <a href="/2016/04/09/es-destructuring/" class="archive-article-date"></a>
-</span>
-<span><i class="github icon"></i> Edit</span> &nbsp; &#183; &nbsp;
-  <span style="color: #999">
-        <i><time datetime="2016-04-09T05:00:00.000Z" itemprop="datePublished">April 09, 2016</time></i>
-</span>
- <i><span style="float:right; margin-right:15px"> <span style="color:#999">words</span></i>
-
-
-  </header>
-</article>
-
+  <li role="presentation">
+    <a href="/2015/07/14/angular-vs-jquery/" id="article-nav-older" class="article-nav-link-wrap">
+      <i class="fa fa-chevron-left pull-left"></i>
+      <span class="article-nav-link-title">Stop Comparing jQuery to AngularJS</span>
+    </a>
+  </li>
   
   
-    </div></section>
+  <li role="presentation">
+    <a href="/2016/01/12/learn-js/" id="article-nav-newer" class="article-nav-link-wrap">
+      <span class="article-nav-link-title">Learn JavaScript in 2016 - Emphasize on Focus</span>
+      <i class="fa fa-chevron-right pull-right"></i>
+    </a>
+  </li>
   
+</ul>
+
+
+  
+</div>
+
 
 
 
