@@ -4,17 +4,18 @@
   <meta charset="utf-8">
 
   
-  <title>Archives: 2015/2 | Ahad Bokhari - Exploring JavaScript in 2016 &amp; Beyond</title>
+  <title>ES6 - String &amp; Template Literals | Ahad Bokhari - Exploring JavaScript in 2016 &amp; Beyond</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Ahad Bokhari - Exploring JavaScript in 2016 & Beyond">
-<meta property="og:url" content="ahadb.com/archives/2015/02/index.html">
+  <meta name="description" content="A personal favorite, template strings are a nifty addition in ES6 to the string object">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ES6 - String & Template Literals">
+<meta property="og:url" content="ahadb.com/2016/01/02/string-literals/index.html">
 <meta property="og:site_name" content="Ahad Bokhari - Exploring JavaScript in 2016 & Beyond">
-<meta property="og:description">
+<meta property="og:description" content="A personal favorite, template strings are a nifty addition in ES6 to the string object">
+<meta property="og:updated_time" content="2016-05-08T20:14:38.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ahad Bokhari - Exploring JavaScript in 2016 & Beyond">
-<meta name="twitter:description">
+<meta name="twitter:title" content="ES6 - String & Template Literals">
+<meta name="twitter:description" content="A personal favorite, template strings are a nifty addition in ES6 to the string object">
   
     <link rel="alternate" href="/atom.xml" title="Ahad Bokhari - Exploring JavaScript in 2016 &amp; Beyond" type="application/atom+xml">
   
@@ -125,176 +126,113 @@
                 </div>
                 <div class="ui relaxed middle aligned divided list">
 
-                    
-  
-  
+                    <!--<div id="post-string-literals" class="header" itemscope itemprop="blogPost">-->
+
+<div class="item">
+
+  <div class="right floated content" style="margin-top:5px">
     
+  </div>
+
+<div class="content">
+
+    
+  
+    <h1 class="art" itemprop="name">
+      ES6 - String &amp; Template Literals
+    </h1>
+  
+
+
+
+  
+  <div class="meta" style="margin-top: -10px">
+    
+  <a href="/2016/01/02/string-literals/" class=""></a>
+</span>
+<span><i class="github icon"></i> Edit</span> &nbsp; &#183; &nbsp;
+  <span style="color: #999">
+        <i><time datetime="2016-01-02T06:00:00.000Z" itemprop="datePublished">January 02, 2016</time></i>
+</span>
+ <i><span style="float:right; margin-right:15px"> <span style="color:#999">words</span></i>
+
+
+    </div>
+
+    <div class="article-author"></div>
+
+  
+
+
+
+
+      
+  <br/>
+        <p>We all know that JavaScript <code>strings</code> are limited and lacking in capabality, especially if you’re coming from <strong>Ruby</strong> or <strong>Python</strong>. Template literals are a feature that developers will love and are basically just <code>string literals</code> allowing <code>embedded expressions</code>.</p>
+<ul>
+<li><code>ES6</code> introduces <code>string interpolation</code>, <code>string formatting</code>, <code>multiline strings</code> and <code>embedded expressions</code> with template literals</li>
+<li>Template strings use (``) rather than single or double quotes used with regular strings</li>
+<li>Placeholders using the <code>${ }</code> syntax are used from string substition and works fine with any kind of <strong>expression</strong><ul>
+<li>expressions in between the placeholders (${expression}) and text b/w them get passed to a function</li>
+</ul>
+</li>
+</ul>
+<p>Familiarizing yourself with the <code>syntax</code>:</p>
+<pre><code class="language-javascript">const a = `this is a template literal`;
+console.log( typeof a ); // => string
+
+const b = `You can use template literals in multiline
+statements without using \\n`;
+console.log( b ); // => yup, it works!
+
+const c = `Some string text ${expression}`;
+</code></pre>
+
+<p>Use the following syntax to <code>embed</code> expressions within template literals</p>
+<pre><code class="language-javascript">const a = 100,
+      b = 100;
+console.log(`The sum of ${a} * ${b} is ${a * b}`); 
+// => The sum of 100 * 100 is 1000
+
+const user = { name: `Ahad Bokhari` };
+console.log(`You are now logged in, ${ user.name.toUpperCase() }. `);
+// => You are now logged in AHAD BOKHARI
+</code></pre>
+      
+
+
     
       
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2015" class="archive-year">2015</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <header class="archive-article-header">
-    
-  
-
-      <a class="<header" href="/2015/02/26/signal-1/"><h2 class="post-title">Signal - The State of JavaScript I</h2></a>
-
-  
-
 
     
-  <a href="/2015/02/26/signal-1/" class="archive-article-date"></a>
-</span>
-<span><i class="github icon"></i> Edit</span> &nbsp; &#183; &nbsp;
-  <span style="color: #999">
-        <i><time datetime="2015-02-26T06:00:00.000Z" itemprop="datePublished">February 26, 2015</time></i>
-</span>
- <i><span style="float:right; margin-right:15px">371 <span style="color:#999">words</span></i>
 
 
-  </header>
-</article>
-
+  </div>
   
     
-    
-    <article class="archive-article archive-type-post">
-  <header class="archive-article-header">
-    
+<ul id="article-nav" class="nav nav-pills nav-justified">
   
-
-      <a class="<header" href="/2015/02/21/arrays/"><h2 class="post-title">Array Surgery - Part 1, The Essentials</h2></a>
-
-  
-
-
-    
-  <a href="/2015/02/21/arrays/" class="archive-article-date"></a>
-</span>
-<span><i class="github icon"></i> Edit</span> &nbsp; &#183; &nbsp;
-  <span style="color: #999">
-        <i><time datetime="2015-02-21T06:00:00.000Z" itemprop="datePublished">February, 21 2015</time></i>
-</span>
- <i><span style="float:right; margin-right:15px"> <span style="color:#999">words</span></i>
-
-
-  </header>
-</article>
-
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <header class="archive-article-header">
-    
-  
-
-      <a class="<header" href="/2015/02/19/fizzbuzz/"><h2 class="post-title">The Lowest Level of JavaScript Comprehension</h2></a>
-
-  
-
-
-    
-  <a href="/2015/02/19/fizzbuzz/" class="archive-article-date"></a>
-</span>
-<span><i class="github icon"></i> Edit</span> &nbsp; &#183; &nbsp;
-  <span style="color: #999">
-        <i><time datetime="2015-02-19T06:00:00.000Z" itemprop="datePublished">February 19, 2015</time></i>
-</span>
- <i><span style="float:right; margin-right:15px">200 <span style="color:#999">words</span></i>
-
-
-  </header>
-</article>
-
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <header class="archive-article-header">
-    
-  
-
-      <a class="<header" href="/2015/02/13/why-use-objects/"><h2 class="post-title">How / Why Use Objects in JavaScript?</h2></a>
-
-  
-
-
-    
-  <a href="/2015/02/13/why-use-objects/" class="archive-article-date"></a>
-</span>
-<span><i class="github icon"></i> Edit</span> &nbsp; &#183; &nbsp;
-  <span style="color: #999">
-        <i><time datetime="2015-02-13T06:00:00.000Z" itemprop="datePublished">February 13, 2015</time></i>
-</span>
- <i><span style="float:right; margin-right:15px"> <span style="color:#999">words</span></i>
-
-
-  </header>
-</article>
-
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <header class="archive-article-header">
-    
-  
-
-      <a class="<header" href="/2015/02/11/rev-str/"><h2 class="post-title">Reversing a String With JavaScript</h2></a>
-
-  
-
-
-    
-  <a href="/2015/02/11/rev-str/" class="archive-article-date"></a>
-</span>
-<span><i class="github icon"></i> Edit</span> &nbsp; &#183; &nbsp;
-  <span style="color: #999">
-        <i><time datetime="2015-02-11T06:00:00.000Z" itemprop="datePublished">February 11, 2015</time></i>
-</span>
- <i><span style="float:right; margin-right:15px"> <span style="color:#999">words</span></i>
-
-
-  </header>
-</article>
-
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <header class="archive-article-header">
-    
-  
-
-      <a class="<header" href="/2015/02/10/node-foundation/"><h2 class="post-title">Joyent Moves to Establish Node.js Foundation</h2></a>
-
-  
-
-
-    
-  <a href="/2015/02/10/node-foundation/" class="archive-article-date"></a>
-</span>
-<span><i class="github icon"></i> Edit</span> &nbsp; &#183; &nbsp;
-  <span style="color: #999">
-        <i><time datetime="2015-02-10T06:00:00.000Z" itemprop="datePublished">January 10, 2015</time></i>
-</span>
- <i><span style="float:right; margin-right:15px">104 <span style="color:#999">words</span></i>
-
-
-  </header>
-</article>
-
+  <li role="presentation">
+    <a href="/2015/12/28/es6-let-and-const/" id="article-nav-older" class="article-nav-link-wrap">
+      <i class="fa fa-chevron-left pull-left"></i>
+      <span class="article-nav-link-title">ES6 - Let and Const</span>
+    </a>
+  </li>
   
   
-    </div></section>
+  <li role="presentation">
+    <a href="/2016/01/12/learn-js/" id="article-nav-newer" class="article-nav-link-wrap">
+      <span class="article-nav-link-title">Learn JavaScript in 2016 - Emphasize on Focus</span>
+      <i class="fa fa-chevron-right pull-right"></i>
+    </a>
+  </li>
   
+</ul>
+
+
+  
+</div>
+
 
 
 
