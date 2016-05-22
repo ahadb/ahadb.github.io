@@ -4,17 +4,18 @@
   <meta charset="utf-8">
 
   
-  <title>Archives: 2015/3 | Ahad Bokhari - Exploring JavaScript in 2016 &amp; Beyond</title>
+  <title>ES6 - Arrow Functions | Ahad Bokhari - Exploring JavaScript in 2016 &amp; Beyond</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Ahad Bokhari - Exploring JavaScript in 2016 & Beyond">
-<meta property="og:url" content="ahadb.com/archives/2015/03/index.html">
+  <meta name="description" content="Arrow functions are always anonymous functions and have a shorter syntax then their ES5 counterpart">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ES6 - Arrow Functions">
+<meta property="og:url" content="ahadb.com/2015/05/22/arrow-functions/index.html">
 <meta property="og:site_name" content="Ahad Bokhari - Exploring JavaScript in 2016 & Beyond">
-<meta property="og:description">
+<meta property="og:description" content="Arrow functions are always anonymous functions and have a shorter syntax then their ES5 counterpart">
+<meta property="og:updated_time" content="2016-05-22T19:44:38.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ahad Bokhari - Exploring JavaScript in 2016 & Beyond">
-<meta name="twitter:description">
+<meta name="twitter:title" content="ES6 - Arrow Functions">
+<meta name="twitter:description" content="Arrow functions are always anonymous functions and have a shorter syntax then their ES5 counterpart">
   
     <link rel="alternate" href="/atom.xml" title="Ahad Bokhari - Exploring JavaScript in 2016 &amp; Beyond" type="application/atom+xml">
   
@@ -126,98 +127,137 @@
                 </div>
                 <div class="ui relaxed middle aligned divided list">
 
-                    
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2015" class="archive-year">2015</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <header class="archive-article-header">
-    
-  
+                    <!--<div id="post-arrow-functions" class="header" itemscope itemprop="blogPost">-->
 
-      <a class="<header" href="/2015/03/25/signal-3/"><h2 class="post-title">Signal - The State of JavaScript III</h2></a>
+<div class="item">
 
+  <div class="right floated content" style="margin-top:5px">
+    
+  </div>
+
+<div class="content">
+
+    
+  
+    <h1 class="art" itemprop="name">
+      ES6 - Arrow Functions
+    </h1>
   
 
 
+
+  
+  <div class="meta" style="margin-top: -10px">
     
-  <a href="/2015/03/25/signal-3/" class="archive-article-date"></a>
+  <a href="/2015/05/22/arrow-functions/" class=""></a>
 </span>
 <span><i class="github icon"></i> Edit</span> &nbsp; &#183; &nbsp;
   <span style="color: #999">
-        <i><time datetime="2015-03-25T05:00:00.000Z" itemprop="datePublished">03/25/15&#39;</time></i>
-</span>
- <i><span style="float:right; margin-right:15px">188 <span style="color:#999">words</span></i>
-
-
-  </header>
-</article>
-
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <header class="archive-article-header">
-    
-  
-
-      <a class="<header" href="/2015/03/09/signal-2/"><h2 class="post-title">Signal - The State of JavaScript II</h2></a>
-
-  
-
-
-    
-  <a href="/2015/03/09/signal-2/" class="archive-article-date"></a>
-</span>
-<span><i class="github icon"></i> Edit</span> &nbsp; &#183; &nbsp;
-  <span style="color: #999">
-        <i><time datetime="2015-03-09T05:00:00.000Z" itemprop="datePublished">January 03, 2015</time></i>
-</span>
- <i><span style="float:right; margin-right:15px">453 <span style="color:#999">words</span></i>
-
-
-  </header>
-</article>
-
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <header class="archive-article-header">
-    
-  
-
-      <a class="<header" href="/2015/03/03/scope/"><h2 class="post-title">Lexical Scope</h2></a>
-
-  
-
-
-    
-  <a href="/2015/03/03/scope/" class="archive-article-date"></a>
-</span>
-<span><i class="github icon"></i> Edit</span> &nbsp; &#183; &nbsp;
-  <span style="color: #999">
-        <i><time datetime="2015-03-03T06:00:00.000Z" itemprop="datePublished">March 03, 2015</time></i>
+        <i><time datetime="2015-05-22T05:00:00.000Z" itemprop="datePublished">May 22, 2015</time></i>
 </span>
  <i><span style="float:right; margin-right:15px"> <span style="color:#999">words</span></i>
 
 
-  </header>
-</article>
+    </div>
+
+    <div class="article-author"></div>
 
   
+
+
+
+
+      
+  <br/>
+        <p>Arrow functions are one of the more popular features of <code>ES6</code> saving developer time and simplifying function scope. </p>
+<ul>
+<li>The arrow <code>(=&gt;)</code> or <code>fat arrow</code> provides a shorthand for the function keyword with lexical <code>this</code> binding<ul>
+<li>Arrow functions change the way <code>this</code> binds in functions</li>
+<li>They work much like <code>lambdas</code> in languages like <code>C#</code> or <code>Python</code><ul>
+<li><code>lambda</code> expressions are are often passed as arguments to <strong>higher order functions</strong></li>
+</ul>
+</li>
+<li>we avoid the <code>function</code> keyword, <code>return</code> keyword and <code>curly brackets</code> when using arrow functions</li>
+</ul>
+</li>
+<li>Arrow functions allow developers to remove boilerplate, however you shouldn’t remain ignorant of how ‘lexical<code>scoping</code>this` works </li>
+<li>Be careful when using <code>arrow functions</code> as they aren’t applicable everywhere, <strong>use cases</strong> will depend from situation to situation</li>
+</ul>
+<p>For the sake of simplicity, we could do the following:</p>
+<pre><code class="language-javascript">const msg = () => alert("Hello Arrow Function");
+console.log(msg());
+</code></pre>
+
+<pre><code class="language-javascript">let square = ( a, b ) => a * b; 
+console.log(square(5, 5)); // 25
+</code></pre>
+
+<pre><code class="language-javascript">
+let x = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let z = x.map(x => x); 
+console.log(z); // [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]
+</code></pre>
+
+<p>Every new function defines it’s own <code>this</code> value, yet <code>arrow</code> functions <strong>close</strong> over the <code>this</code> value</p>
+<pre><code class="language-javascript">// in ES5
+function Tree() {
+  that = this;
+  that.age = 0;
+
+  setInterval(function growOld() {
+    that.age++;
+  }, 1000);  
+}
+
+var t = new Tree();
+
+// in ES6
+function Tree() {
+  this.age = 0;
+
+  setInterval(() => {
+    this.age++;
+     5000);
+  }
+}
+
+var t = new Tree();
+</code></pre>
+      
+
+
+    
+      
+
+    
+
+
+  </div>
   
-    </div></section>
+    
+<ul id="article-nav" class="nav nav-pills nav-justified">
   
+  <li role="presentation">
+    <a href="/2015/05/10/iife/" id="article-nav-older" class="article-nav-link-wrap">
+      <i class="fa fa-chevron-left pull-left"></i>
+      <span class="article-nav-link-title">IIFE Pattern</span>
+    </a>
+  </li>
+  
+  
+  <li role="presentation">
+    <a href="/2015/07/14/angular-vs-jquery/" id="article-nav-newer" class="article-nav-link-wrap">
+      <span class="article-nav-link-title">Stop Comparing jQuery to AngularJS</span>
+      <i class="fa fa-chevron-right pull-right"></i>
+    </a>
+  </li>
+  
+</ul>
+
+
+  
+</div>
+
 
 
 
