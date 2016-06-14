@@ -4,18 +4,18 @@
   <meta charset="utf-8">
 
   
-  <title>Modern JavaScript Madness | Ahad Bokhari - Exploring JavaScript in 2016 &amp; Beyond</title>
+  <title>ES6 - Arrays | Ahad Bokhari - Exploring JavaScript in 2016 &amp; Beyond</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="JavaScript fatigue">
+  <meta name="description" content="Exploring some very useful smaller additions to ES6&apos;s array.prototype.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Modern JavaScript Madness">
-<meta property="og:url" content="ahadb.com/2016/05/21/modern-js-madness/index.html">
+<meta property="og:title" content="ES6 - Arrays">
+<meta property="og:url" content="ahadb.com/2016/06/05/es6-arrays/index.html">
 <meta property="og:site_name" content="Ahad Bokhari - Exploring JavaScript in 2016 & Beyond">
-<meta property="og:description" content="JavaScript fatigue">
-<meta property="og:updated_time" content="2016-06-14T02:41:27.000Z">
+<meta property="og:description" content="Exploring some very useful smaller additions to ES6&apos;s array.prototype.">
+<meta property="og:updated_time" content="2016-06-14T04:18:35.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Modern JavaScript Madness">
-<meta name="twitter:description" content="JavaScript fatigue">
+<meta name="twitter:title" content="ES6 - Arrays">
+<meta name="twitter:description" content="Exploring some very useful smaller additions to ES6&apos;s array.prototype.">
   
     <link rel="alternate" href="/atom.xml" title="Ahad Bokhari - Exploring JavaScript in 2016 &amp; Beyond" type="application/atom+xml">
   
@@ -127,7 +127,7 @@
                 </div>
                 <div class="ui relaxed middle aligned divided list">
 
-                    <!--<div id="post-modern-js-madness" class="header" itemscope itemprop="blogPost">-->
+                    <!--<div id="post-es6-arrays" class="header" itemscope itemprop="blogPost">-->
 
 <div class="item">
 
@@ -140,7 +140,7 @@
     
   
     <h1 class="art" itemprop="name">
-      Modern JavaScript Madness
+      ES6 - Arrays
     </h1>
   
 
@@ -149,13 +149,13 @@
   
   <div class="meta" style="margin-top: -10px">
     
-  <a href="/2016/05/21/modern-js-madness/" class=""></a>
+  <a href="/2016/06/05/es6-arrays/" class=""></a>
 </span>
 <span><i class="github icon"></i> Edit</span> &nbsp; &#183; &nbsp;
   <span style="color: #999">
-        <i><time datetime="2016-05-21T05:00:00.000Z" itemprop="datePublished">May 22, 2016</time></i>
+        <i><time datetime="2016-06-05T05:00:00.000Z" itemprop="datePublished">June 05, 2016</time></i>
 </span>
- <i><span style="float:right; margin-right:15px">850 <span style="color:#999">words</span></i>
+ <i><span style="float:right; margin-right:15px"> <span style="color:#999">words</span></i>
 
 
     </div>
@@ -169,18 +169,54 @@
 
       
   <br/>
-        <p>The state of JavaScript development is advancing rapidly, so rapidly that in-fact my people can’t help but feel overwhelmed, fatigued and exasperated trying to keep up with the ebb and flow of the churn rate. For those not persistent enough, this can zap your productivity and hinder your progression. Let’s try and describe our beloved ecosystem with as slew of familiar words: </p>
-<p>Node, ES6, NPM, React, Angular 2.0, Mocha, Chai, Closures, Prototype, Classes, Require, Bowserify, WebPack, SystemJS, Exports, modules, package managers - the list is long and distinguished. </p>
-<p><em>Are you feeling fatigued already?</em></p>
-<h2 id="Beginnings-of-Madness"><a href="#Beginnings-of-Madness" class="headerlink" title="Beginnings of Madness"></a>Beginnings of Madness</h2><p>So what is all this madness and where has it come from you might ask. Part of the answer comes from it’s bad design and a fragmented ecosytem. JS is one language that has no native built in support for modules - on a language level there is a distinct problem and it’s the fact that you have to know the three, four, five different ways to do something. If you want to author a library, you’d need to let your users consume your code in different environments and you’ll always get into a situation where someone or other will complain about the portability of your code. On the bright side however if someone desperately wants your code, they’ll find a way to consume it.</p>
-<p>On an API level things play much nicer where packages contain small bytes of code and you have reasonable amounts of choice and control whilst developing. NPM has thousands and thousands of modules for us to achieve what is missing in the core of the language - need extensive array or string methods, no problem. Awesome. </p>
-<p>So… We can derive that JavaScript design has some flaws, the ecoysystem is fragmented and there are many ways to do achieve something. If you’re working on a team, each member needs to know all of those ways - the more ways to do something, the more likely a team member could get it wrong (not to mention more pointless arguments over syntax, style, et al) </p>
-<h2 id="Overengineering"><a href="#Overengineering" class="headerlink" title="Overengineering"></a>Overengineering</h2><p>Let’s talk about overengineering for a moment, a common phenomenon in software development. Creating a web application can also be maddening within the context of the modern workflow - not only can the approach be convoluted and contain steps that can easily be overlooked, your single source of truth might be coming in at over 20K+ lines of code and you only had to install webpack, babelify and react for your simple “Hello World” application ( according to modern day front end dev standards ). I can bet that if you took your little Hello World application and wrote it in plain JavaScript you wouldn’t exceed 35 lines of code. </p>
-<p>Here’s the rub: the applications that you will be working on throughout your career will most likely fall between 4,000 - 6,000 lines of code. If you’ve already started with a full React stack, chances are in the real world you have already over-engineered your application. Most of the tools that we use you really don’t even need, and if you’re not savvy with those tools chances are that they will cause you more problems instead of solving the problems you set out to solve in the first place.</p>
-<p>Experience counts and finding the equilibrium to start JavaScript applications by structuring them correctly takes practice - we’ve all seen the trend to use NPM’s package.json ( npm run build ++ minify + concat, npm run test )for dead simple build commands instead of Gulp. Do I need to use Angular or React, should I use npm/require/babelify/webpack/browserify can all be answered if you understand and learn how to structure your application correctly.</p>
-<h2 id="Enter-ES6"><a href="#Enter-ES6" class="headerlink" title="Enter ES6"></a>Enter ES6</h2><p>The whole situation I’ve describe can be bad enough, but it gets more complicated once you add ES6 to the mix. Till date we have no implementation of modules across evergreen broswers, which should be the “future proof” way of authoring JavaScript. Most folks use Babel in their build or Node which supports 96% of ES6 features - this still doesn’t make the transition any easier as you still need to translate between Node and browser code - supporting all this comes with it’s own frustrations. Some users know Bower and not NPM and might not even understand the difference between the two.</p>
-<p>On the bright side the community has taken up the transition to ES6 and the web is abundant with tutorials, opinions and resources to learn. ES6 featurees will eventually be implemented by a significant enough base for actual use - the question is simplly when that will happen. Edge has already implemented an exprimental flag for modules and common syntax can be found in Firefox and Chrome already (minus modules of course!).</p>
-<p>Personally, I feel ES6 brings alot of great new features and minimizes the “so many ways to do one thing” syndrome. Many features will help developers repeat mundane tasks and with time standardize a way to author JavaScript. With the new specification on the horizon, we need to brace ourselves for the future and hope our wonderful little language takes a step towards maturity and standardization.</p>
+        <h2 id="Arrays"><a href="#Arrays" class="headerlink" title="Arrays"></a>Arrays</h2><p><code>ES6</code> brings an abundance of new Array methods:</p>
+<ul>
+<li>Array: <code>from</code>, <code>of</code></li>
+<li>Array.prototype: <code>findIndex()</code>, <code>fill()</code>, <code>find()</code>, <code>copyWithin()</code>, <code>keys()</code>, <code>values()</code>, <code>entries()</code></li>
+</ul>
+<p>Using <code>Array.from</code> we create a new array instance from an <code>array-like</code> or <code>iterable object</code> </p>
+<pre><code class="language-javascript">var doc = document.querySelectorAll('*');
+Array.from(doc).forEach(function(nodes) {
+  console.log(nodes);
+});
+</code></pre>
+
+<p>Using <code>Array.of</code> we create an array of variable arguments passed to the function</p>
+<pre><code class="language-javascript">var arr = Array.of(true, null, undefined, `some message`, 50);
+console.log( arr ); //[ true, null, undefined, "some message", 50]
+</code></pre>
+
+<p>Examples of additional <code>array</code> methods:</p>
+<pre><code class="language-javascript">// copyWithin()
+[1, 2, 3, 4, 5].copyWithin(0, 3); // => [4, 5, 3, 4, 5]
+
+let letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"];
+letters.copyWithin(4, 0); // => there is an optional parameter copyWithin(4, 0, 2)
+console.log(letters); // ["A", "B", "C", "D", "A", "B", "C", "D", "E", "F"]
+
+// find()
+let cities = ["Beirut", "Karachi", "Islamabad", "Athens", "Kabul", "Tapei", "Bucharest"];
+
+let t = cities.find(char => char.endsWith("t"));
+console.log( t ); 
+
+// keys()
+let people = ["Ahad", "Moe", "Zoey", "Snaey"];
+
+for( let entry of fruits.entries() ) {
+  console.log(entry[0]);
+  // 0
+  // 1
+  // 2
+  // 3
+
+  console.log(entry[1]);
+  // Ahad
+  // Moe
+  // Zoey
+  // Snaey
+}
+</code></pre>
 
       
 
@@ -197,16 +233,16 @@
 <ul id="article-nav" class="nav nav-pills nav-justified">
   
   <li role="presentation">
-    <a href="/2016/05/11/some-laws/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2016/05/21/modern-js-madness/" id="article-nav-older" class="article-nav-link-wrap">
       <i class="fa fa-chevron-left pull-left"></i>
-      <span class="article-nav-link-title">Some Laws of Software Development</span>
+      <span class="article-nav-link-title">Modern JavaScript Madness</span>
     </a>
   </li>
   
   
   <li role="presentation">
-    <a href="/2016/06/05/es6-arrays/" id="article-nav-newer" class="article-nav-link-wrap">
-      <span class="article-nav-link-title">ES6 - Arrays</span>
+    <a href="/2016/06/13/path-to-javascript-progression/" id="article-nav-newer" class="article-nav-link-wrap">
+      <span class="article-nav-link-title">An 18 Point Path to JavaScript Progression</span>
       <i class="fa fa-chevron-right pull-right"></i>
     </a>
   </li>
