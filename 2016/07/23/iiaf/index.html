@@ -12,7 +12,7 @@
 <meta property="og:url" content="ahadb.com/2016/07/23/iiaf/index.html">
 <meta property="og:site_name" content="Ahad Bokhari - Exploring JavaScript in 2016 & Beyond">
 <meta property="og:description" content="A common pattern seen in ES5 were IIFE&apos;s, but this pattern isn&apos;t dead in ES6 which introduces the IIAF">
-<meta property="og:updated_time" content="2016-07-23T15:13:49.000Z">
+<meta property="og:updated_time" content="2016-07-23T15:20:39.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="IIAF - Immediately Invoked Arrow Function">
 <meta name="twitter:description" content="A common pattern seen in ES5 were IIFE&apos;s, but this pattern isn&apos;t dead in ES6 which introduces the IIAF">
@@ -170,10 +170,27 @@
       
   <br/>
         <p>In ES5 we used IIFE’s for block scope and preventing global scope creep, this was quite a common pattern with code in the wild. ES6 has morphed that pattern in conjunction with the arrow function for an even less verbose syntax, the IIAF or Immediately Invoked Arrow Function.</p>
-<pre><code class="language-javascript">(() => {
+<pre><code class="language-javascript"> // basic sytnax
+(() => {
   console.log('Immediately Invoked Arrow Function', this)
 })();
 / => 'Immediately Invoked Arrow Function', window
+</code></pre>
+
+<p>Do something a little more useful:</p>
+<pre><code class="language-javascript">(() => {
+  'use strict'
+  const xhr = new XMLHttpRequest()
+  xhr.open('GET', 'http://api.randomuser.me/portraits/')
+  xhr.send(null)
+
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState !== 4 ) { return }
+    if (xhr.status !== 200) { return console.log('Error: ' + xhr.status) }
+
+    console.log(xhr.responseText)
+  }
+})()
 </code></pre>
 
 <p>In ES6, tou can easily use a block statement to keep a variable local as well, or better yet a module.</p>
