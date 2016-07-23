@@ -4,18 +4,18 @@
   <meta charset="utf-8">
 
   
-  <title>Pumpers and Dumpers | Ahad Bokhari - Exploring JavaScript in 2016 &amp; Beyond</title>
+  <title>IIAF - Immediately Invoked Arrow Function | Ahad Bokhari - Exploring JavaScript in 2016 &amp; Beyond</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="An annoying behavior seen by internet users to gain the appearance of popularity on any given social platform">
+  <meta name="description" content="A common pattern seen in ES5 were IIFE&apos;s, but this pattern isn&apos;t dead in ES6 which introduces the IIAF">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Pumpers and Dumpers">
-<meta property="og:url" content="ahadb.com/2016/07/20/pumping-dumping/index.html">
+<meta property="og:title" content="IIAF - Immediately Invoked Arrow Function">
+<meta property="og:url" content="ahadb.com/2016/07/23/iiaf/index.html">
 <meta property="og:site_name" content="Ahad Bokhari - Exploring JavaScript in 2016 & Beyond">
-<meta property="og:description" content="An annoying behavior seen by internet users to gain the appearance of popularity on any given social platform">
-<meta property="og:updated_time" content="2016-07-21T01:10:49.000Z">
+<meta property="og:description" content="A common pattern seen in ES5 were IIFE&apos;s, but this pattern isn&apos;t dead in ES6 which introduces the IIAF">
+<meta property="og:updated_time" content="2016-07-23T15:11:53.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Pumpers and Dumpers">
-<meta name="twitter:description" content="An annoying behavior seen by internet users to gain the appearance of popularity on any given social platform">
+<meta name="twitter:title" content="IIAF - Immediately Invoked Arrow Function">
+<meta name="twitter:description" content="A common pattern seen in ES5 were IIFE&apos;s, but this pattern isn&apos;t dead in ES6 which introduces the IIAF">
   
     <link rel="alternate" href="/atom.xml" title="Ahad Bokhari - Exploring JavaScript in 2016 &amp; Beyond" type="application/atom+xml">
   
@@ -127,7 +127,7 @@
                 </div>
                 <div class="ui relaxed middle aligned divided list">
 
-                    <!--<div id="post-pumping-dumping" class="header" itemscope itemprop="blogPost">-->
+                    <!--<div id="post-iiaf" class="header" itemscope itemprop="blogPost">-->
 
 <div class="item">
 
@@ -140,7 +140,7 @@
     
   
     <h1 class="art" itemprop="name">
-      Pumpers and Dumpers
+      IIAF - Immediately Invoked Arrow Function
     </h1>
   
 
@@ -149,13 +149,13 @@
   
   <div class="meta" style="margin-top: -10px">
     
-  <a href="/2016/07/20/pumping-dumping/" class=""></a>
+  <a href="/2016/07/23/iiaf/" class=""></a>
 </span>
 <span><i class="github icon"></i> Edit</span> &nbsp; &#183; &nbsp;
   <span style="color: #999">
-        <i><time datetime="2016-07-20T05:00:00.000Z" itemprop="datePublished">July 18, 2016</time></i>
+        <i><time datetime="2016-07-23T05:00:00.000Z" itemprop="datePublished">June 13, 2016</time></i>
 </span>
- <i><span style="float:right; margin-right:15px">268 <span style="color:#999">words</span></i>
+ <i><span style="float:right; margin-right:15px"> <span style="color:#999">words</span></i>
 
 
     </div>
@@ -169,12 +169,44 @@
 
       
   <br/>
-        <p>This is a random post, rather more of a rant than anything else and it’s about a certain type of people who create the illusion of popularity with many foloowers on any given online social site. You’ll see them on Twitter, Instagram, and yes, even Github. </p>
-<p>The idea is to mass follow people, wait for a while to see if they follow you back and then dump those who don’t. I first noticed this behavior on Twitter some years back, but see that it’s perpetuated to platforms like Github as well.</p>
-<p>It’s as effective a technique as it is detrimental, and  can easily land you oodles of followers within weeks - the problem is that with so many dead followers your signal and influence weakens considerably.</p>
-<p>It’s rampant on Twitter, but I’ve been noticing lately annoyingly so on Github as well where users sole purpose is to follow those who they feel are lower in the pecking order knowing that many newbies jump at the chance to follow back a stronger developer. Perhaps some are genuine in their quest to find like-minded people to share their code and stuff with, but for the most part I see it as a malicious act of trolling.</p>
-<p>We all want a vibrant community around our stuff / code, but there are genuine ways to do so, ways that can lead to a much stronger community, signal and output of contributers. </p>
-<p>Yes, I agree it’s tough to find the right group of people but pumping and dumping with the knowledge that most of your followers are dead on the platform is down right annoying. </p>
+        <p>In ES5 we used IIFE’s for block scope and preventing global scope creep, this was quite a common pattern with code in the wild. ES6 has morphed that pattern in conjunction with the arrow function for an even less verbose syntax, the IIAF or Immediately Invoked Arrow Function.</p>
+<pre><code class="language-javascript">(() => {
+  console.log('Immediately Invoked Arrow Function', this)
+})();
+/ => 'Immediately Invoked Arrow Function', window
+</code></pre>
+
+<p>In ES6, tou can easily use a block statement to keep a variable local as well, or better yet a module.</p>
+<pre><code class="language-javascript">// block
+{ 
+const foo = 'block scope'
+}
+console.log(foo)
+/ => RefereceError
+
+/* Module */
+
+// lib.js
+export default = 3.14
+export const obj = { foo: bar };
+export function hello() { ... };
+
+// main.js
+import * as module from './lib';
+console.log(lib.default);
+console.log(lib.obj);
+console.log(lib.hello);
+</code></pre>
+
+<p>That said you can still use an IIAF in ES6 to invoke a sequence of statements; beware of loosely binding as not having parens around the arrow function will throw an error.</p>
+<p>Just use this sytax:<br> <pre><code class="language-javascript">(() =&gt; {})();<br> </code></pre></p>
+<p>It’s worth noting that a paramaterized version will still work:</p>
+<pre><code class="language-javascript">((x) => {
+  console.log('Works fine');
+})();
+</code></pre>
+
+
 
       
 
@@ -191,19 +223,12 @@
 <ul id="article-nav" class="nav nav-pills nav-justified">
   
   <li role="presentation">
-    <a href="/2016/06/13/path-to-javascript-progression/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2016/07/20/pumping-dumping/" id="article-nav-older" class="article-nav-link-wrap">
       <i class="fa fa-chevron-left pull-left"></i>
-      <span class="article-nav-link-title">A 21 Point Path to JavaScript Progression</span>
+      <span class="article-nav-link-title">Pumpers and Dumpers</span>
     </a>
   </li>
   
-  
-  <li role="presentation">
-    <a href="/2016/07/23/iiaf/" id="article-nav-newer" class="article-nav-link-wrap">
-      <span class="article-nav-link-title">IIAF - Immediately Invoked Arrow Function</span>
-      <i class="fa fa-chevron-right pull-right"></i>
-    </a>
-  </li>
   
 </ul>
 
