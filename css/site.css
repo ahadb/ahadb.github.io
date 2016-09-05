@@ -254,7 +254,8 @@ h1.me {
 
     margin-bottom: -2px;
     font-weight: 600;
-    font-size: 2em;
+    font-size: 2.2em;
+    color: #333;
 }
 
 .picker {
@@ -268,4 +269,9 @@ h1.me {
 
 h1.art {
     font-size: 31px;
+}
+
+a.title {
+    color: #906;
+    color: #484848;
 }
