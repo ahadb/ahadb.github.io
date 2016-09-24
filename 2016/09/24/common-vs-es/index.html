@@ -4,17 +4,18 @@
   <meta charset="utf-8">
 
   
-  <title>Category: Javascript | Ahad Bokhari - Exploring JavaScript in 2016 &amp; Beyond</title>
+  <title>CommonJS Require vs ES6 Import | Ahad Bokhari - Exploring JavaScript in 2016 &amp; Beyond</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Ahad Bokhari - Exploring JavaScript in 2016 & Beyond">
-<meta property="og:url" content="ahadb.com/categories/Javascript/index.html">
+  <meta name="description" content="CommonJs&apos;s require syntax will be around for a while, but will we see ES6 modules in Node.js. Explore a little history as you go forth...">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CommonJS Require vs ES6 Import">
+<meta property="og:url" content="ahadb.com/2016/09/24/common-vs-es/index.html">
 <meta property="og:site_name" content="Ahad Bokhari - Exploring JavaScript in 2016 & Beyond">
-<meta property="og:description">
+<meta property="og:description" content="CommonJs&apos;s require syntax will be around for a while, but will we see ES6 modules in Node.js. Explore a little history as you go forth...">
+<meta property="og:updated_time" content="2016-09-24T21:37:33.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ahad Bokhari - Exploring JavaScript in 2016 & Beyond">
-<meta name="twitter:description">
+<meta name="twitter:title" content="CommonJS Require vs ES6 Import">
+<meta name="twitter:description" content="CommonJs&apos;s require syntax will be around for a while, but will we see ES6 modules in Node.js. Explore a little history as you go forth...">
   
     <link rel="alternate" href="/atom.xml" title="Ahad Bokhari - Exploring JavaScript in 2016 &amp; Beyond" type="application/atom+xml">
   
@@ -130,134 +131,97 @@
                 </div>
                 <div class="ui relaxed middle aligned divided list">
 
-                    
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <header class="archive-article-header">
-    
-  
+                    <!--<div id="post-common-vs-es" class="header" itemscope itemprop="blogPost">-->
 
-      <a class="<header" href="/2016/04/10/node-thoughts/"><h2 class="post-title">Thoughts on Node</h2></a>
+<div class="item">
 
+  <div class="right floated content" style="margin-top:5px">
+    
+  </div>
+
+<div class="content">
+
+    
+  
+    <h1 class="art" itemprop="name">
+      CommonJS Require vs ES6 Import
+    </h1>
   
 
 
+
+  
+  <div class="meta" style="margin-top: -10px">
     
-  <a href="/2016/04/10/node-thoughts/" class="archive-article-date"></a>
+  <a href="/2016/09/24/common-vs-es/" class=""></a>
 </span>
 <span><i class="github icon"></i> Edit</span> &nbsp; &#183; &nbsp;
   <span style="color: #999">
-        <i><time datetime="2016-04-10T05:00:00.000Z" itemprop="datePublished">April 10, 2016</time></i>
+        <i><time datetime="2016-09-24T05:00:00.000Z" itemprop="datePublished">Sept. 24, 2016</time></i>
 </span>
- <i><span style="float:right; margin-right:15px">1,009 <span style="color:#999">words</span></i>
+ <i><span style="float:right; margin-right:15px">367 <span style="color:#999">words</span></i>
 
 
-  </header>
-</article>
+    </div>
 
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <header class="archive-article-header">
-    
-  
-
-      <a class="<header" href="/2016/01/12/learn-js/"><h2 class="post-title">Learn JavaScript in 2016 - Emphasize on Focus</h2></a>
+    <div class="article-author"></div>
 
   
 
 
-    
-  <a href="/2016/01/12/learn-js/" class="archive-article-date"></a>
-</span>
-<span><i class="github icon"></i> Edit</span> &nbsp; &#183; &nbsp;
-  <span style="color: #999">
-        <i><time datetime="2016-01-12T06:00:00.000Z" itemprop="datePublished">January 02, 2016</time></i>
-</span>
- <i><span style="float:right; margin-right:15px">683 <span style="color:#999">words</span></i>
 
 
-  </header>
-</article>
+      
+  <br/>
+        <p>Currently Node.js uses CommonJS syntax to load modules by the way of require, exports and module.exports. ES6 module syntax excites me and probably you as well if you’re tired of writing the same old JavaScript. Node’s module loading syntax is here to stay and I can pretty much guarantee that the require statement is going anywhere soon.</p>
+<p>When Node came into existence there wasn’t a proposal for ES modules and of course they decided to use CommonJS modules - the syntax has been adopted by a very large JavaScript audience and the ecosystem recently has see interoperability with the likes of Browserify and Webpack.</p>
+<p> The question arises with how to deal with interoperability between CommonJS-style and ES Modules within a vast ecosystem (at the moment CommonJS is widely adopted and used extensively in the JavaScript community). It’s worth nothing that Browserify and WebPack bridge the gap between server and browser, but if we lose interoperability we in turn then increase the intricacies between the current ecosystem and new standar - imagine what would happen if front-end developers decided to use ES6 modules as their default while server-side engineers kept embracing Node’s CommonJS. Clearly the gap will only widen.</p>
+<p>This has been a hot topic for quite some time, and the bottom line is that yes, Node will eventually support the ES2015 syntax for importing/exporting modules - most likely this will happen when the<a href="https://github.com/whatwg/loader" target="_blank" rel="external"> spec for loading modules</a> is finalized and agreed upon. Presently Node.js supports 96% of ES6 features:</p>
+<pre><code class="language-bash">$ node --v8-options | grep harmony 
+> --harmony_modules (enable "harmony modules" (in progress))
+</code></pre>
 
-  
-    
+<p>Presently, nobody knows for sure but there are a couple of proposals on how Node might achieve this:</p>
+<ul>
+<li><a href="https://github.com/dherman/defense-of-dot-js/blob/master/proposal.md" target="_blank" rel="external">In Defense of .js</a></li>
+<li><a href="https://github.com/nodejs/node-eps/blob/master/002-es6-modules.md" target="_blank" rel="external">.mjs modules</a></li>
+<li><a href="https://github.com/whatwg/loader/issues/54" target="_blank" rel="external">Node core dev thinks loader will not work for Node</a> </li>
+</ul>
+<p>I won’t provide an opinion on the aforementioned, but read through to get more acquainted with the possibilities. If i took a stab at what Node.js might do at a high level they would support import/export for static loading in addition the the new System.import for dynamic loading, while retaining require for legacy code.</p>
+<p>Note: there are ways to start using ES2015 modules in Node right now, but for me it isn’t worth it - Im going to stick to require, Browserify and WebPack for now. If you’re curious:</p>
+<ul>
+<li>es6-module-loader -S</li>
+<li>ES6 Traceur compiler</li>
+</ul>
+
+      
+
+
     
       
-        </div></section>
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2015" class="archive-year">2015</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <header class="archive-article-header">
-    
-  
-
-      <a class="<header" href="/2015/03/25/signal-3/"><h2 class="post-title">Signal - The State of JavaScript III</h2></a>
-
-  
-
 
     
-  <a href="/2015/03/25/signal-3/" class="archive-article-date"></a>
-</span>
-<span><i class="github icon"></i> Edit</span> &nbsp; &#183; &nbsp;
-  <span style="color: #999">
-        <i><time datetime="2015-03-25T05:00:00.000Z" itemprop="datePublished">03/25/15&#39;</time></i>
-</span>
- <i><span style="float:right; margin-right:15px">188 <span style="color:#999">words</span></i>
 
 
-  </header>
-</article>
-
+  </div>
   
     
-    
-    <article class="archive-article archive-type-post">
-  <header class="archive-article-header">
-    
+<ul id="article-nav" class="nav nav-pills nav-justified">
   
-
-      <a class="<header" href="/2015/03/09/signal-2/"><h2 class="post-title">Signal - The State of JavaScript II</h2></a>
-
-  
-
-
-    
-  <a href="/2015/03/09/signal-2/" class="archive-article-date"></a>
-</span>
-<span><i class="github icon"></i> Edit</span> &nbsp; &#183; &nbsp;
-  <span style="color: #999">
-        <i><time datetime="2015-03-09T05:00:00.000Z" itemprop="datePublished">January 03, 2015</time></i>
-</span>
- <i><span style="float:right; margin-right:15px">453 <span style="color:#999">words</span></i>
-
-
-  </header>
-</article>
-
+  <li role="presentation">
+    <a href="/2016/09/11/repos/" id="article-nav-older" class="article-nav-link-wrap">
+      <i class="fa fa-chevron-left pull-left"></i>
+      <span class="article-nav-link-title">Lesser Known Github Repositories &amp; Node Modules You Should Know About</span>
+    </a>
+  </li>
   
   
-    </div></section>
+</ul>
+
+
   
+</div>
+
 
 
 
@@ -313,40 +277,6 @@
                 </div>
             </div>
         </div>
-    </div>
-</div>
-
-<footer class="footer">
-  <div class="ui text main container footer">
-    <div id="footer-info" class="inner">
-      &copy; 2007 - 2016 &#183; Ahad Bokhari &#183; <a href="mailto:ahadbokhari@gmail.com">ahadbokhari@gmail.com</a>  <br>
-      <i>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>, hosted on <a href="https://github.com/ahadb">Github</a></i>
-    </div>
-  </div>
-</footer>
-
-
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" integrity="sha384-8gBf6Y4YYq7Jx97PIqmTwLPin4hxIzQw5aDmUg/DDhul9fFpbbLcLh3nTIIDJKhx" crossorigin="anonymous"></script>
-
-<script src="https://use.typekit.net/ncd4ysn.js"></script>
-<script>try{Typekit.load({ async: true });}catch(e){}</script>
-
-
-
-
-<script src="/js/script.js"></script>
-<script src="/js/dropdown.js"></script>
-<script src="/js/custom.js"></script>
-<script src="/js/transition.js"></script>
-<script src="/js/underscore.js"></script>
-<script src="/js/prism.js"></script>
-
-
-</body>
-
-</html>
-iv>
     </div>
 </div>
 
