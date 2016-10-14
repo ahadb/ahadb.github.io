@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  
+  <title>Async | Ahad Bokhari - Exploring JavaScript in 2016 &amp; Beyond</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="A recollection of different asynchronous techniques in modern day JavaScript with plenty of examples to reflect upon">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Async">
+<meta property="og:url" content="ahadb.com/2016/10/12/async-js/index.html">
+<meta property="og:site_name" content="Ahad Bokhari - Exploring JavaScript in 2016 & Beyond">
+<meta property="og:description" content="A recollection of different asynchronous techniques in modern day JavaScript with plenty of examples to reflect upon">
+<meta property="og:updated_time" content="2016-10-14T01:46:07.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Async">
+<meta name="twitter:description" content="A recollection of different asynchronous techniques in modern day JavaScript with plenty of examples to reflect upon">
+  
+    <link rel="alternate" href="/atom.xml" title="Ahad Bokhari - Exploring JavaScript in 2016 &amp; Beyond" type="application/atom+xml">
+  
+  
+  
+
+  
+
+
+
+
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/icon.min.css'>
+
+
+  <link rel="stylesheet" href="/css/semantic-ui.css">
+  <link rel="stylesheet" href="/css/table.min.css">
+  <link rel="stylesheet" href="/css/site.css">
+  <link rel="stylesheet" href="/css/menu.css">
+  <link rel="stylesheet" href="/css/prism.css">
+  
+
+</head>
+
+
+
+<body>
+
+<a href="https://github.com/ahadb"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/a6677b08c955af8400f44c6298f40e7d19cc5b2d/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677261795f3664366436642e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png"></a>
+
+<div class="ui text main container">
+  <div class="ui grid">
+    <div class="left floated twelve wide column">
+      <h1 class="me"><a class="title" href="/">Ahad Bokhari</a></h1>
+      <div class="ui dropdown">
+        <div class="text"><i class="sidebar icon"></i>{<cite style="color:#906;"> Exploring JavaScript, Software and Beyond </cite>} ...</div>
+
+        <div class="menu">
+
+
+          <div class="item">
+            <span class="description">ctrl + o</span><a href="/about"> About</a> </div>
+          <div class="item">
+            <span class="description">ctrl + o</span> <a href="/archives"> Archives</a>
+          </div>
+          <div class="item">
+            <span class="description">ctrl + o</span> <a href="/linkblog"> Linkblog</a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="right floated six wide column">
+
+      <div class="text"></div>
+
+    </div>
+  </div>
+
+
+  <div class="ui divider"></div>
+</div>
+  </div>
+
+
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+</div>
+
+
+<div class="ui text main container">
+    <div class="ui stackable two column divided grid">
+        <!--<div class="blog-header">
+  <h1 class="blog-title">Ahad Bokhari - Exploring JavaScript in 2016 &amp; Beyond</h1>
+  
+</div>
+-->
+        <div class="twelve wide column" style="margin-bottom: 13px">
+            <div class="articles-wrapper">
+                <div class="ui two column divided grid">
+                    <div class="fifteen wide column">
+                <div class="picker">
+                        <div class="ui text menu" style="margin-top: -0.5em">
+                    <div class="header item">CATEGORIES:</div>
+                    <a class="item active" href="categories/Javascript">
+                        JS</a>
+
+
+                    <a class="item" href="categories/ES5">
+                        ES5
+                    </a>
+                    <a class="item" href="categories/ES6">
+                        ES6
+                    </a>
+                    <a class="item" href="categories/ES7">
+                        ES7
+                    </a>
+                    <a class="item" href="categories/Technology">
+                       Technology
+                    </a>
+                            <a class="item" href="categories/Software">
+                                Software
+                            </a>
+                            <a class="item" href="categories/Other">
+                                Other
+                    </a>
+
+
+                </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="ui relaxed middle aligned divided list">
+
+                    <!--<div id="post-async-js" class="header" itemscope itemprop="blogPost">-->
+
+<div class="item">
+
+  <div class="right floated content" style="margin-top:5px">
+    
+  </div>
+
+<div class="content">
+
+    
+  
+    <h1 class="art" itemprop="name">
+      Async
+    </h1>
+  
+
+
+
+  
+  <div class="meta" style="margin-top: -10px">
+    
+  <a href="/2016/10/12/async-js/" class=""></a>
+</span>
+<span><i class="github icon"></i> Edit</span> &nbsp; &#183; &nbsp;
+  <span style="color: #999">
+        <i><time datetime="2016-10-12T05:00:00.000Z" itemprop="datePublished">October 12, 2016</time></i>
+</span>
+ <i><span style="float:right; margin-right:15px"> <span style="color:#999">words</span></i>
+
+
+    </div>
+
+    <div class="article-author"></div>
+
+  
+
+
+
+
+      
+  <br/>
+        <p>I’ve been ruminating over asynchronous JavaScript and pondering over how it’s evolved and how we arrived at the state of our ecosytem as it stands today. The way we write asynchronous code has evolved drastically over the past years, and we need to wrap our heads around newer syntax and specifications, where we’ve come from and where we’re going. I’d like to do that syntactically with some useful examples that you can follow in our short journey in this post.</p>
+<p>Before starting I’d like to explicitly state some points to remember, especially for those who are used to writing in a more synchronous way. After all, not everyone is lucky enough to write Node code day in and out.</p>
+<ul>
+<li>Wrapping your head around asynchronous JavaScript can be challenging because our minds think an sequential manner - the term multitasking is really our minds switching between tasks so quickly that we don’t register it as a sequential step of tasks. Therefore it takes practice so be patient and work through clickable examples when learning.</li>
+<li>Asynchronous development in the browser happens:<ul>
+<li>Browser API calls like setInterval(), setTimeout(), <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/setImmediate" target="_blank" rel="external">setImmediate</a>()</li>
+<li>DOM Events</li>
+<li>XHR (XML HTTP Requests), or Ajax calls</li>
+</ul>
+</li>
+<li>If you’re aspiring to be a universal JavaScript developer an understanding of asynchronous processes that happen in modern day web applications is a must with Node on the rise.</li>
+<li>If JavaScript functions were not first-class citizens of the language and could be passed around like any other variable or value we would not be here today. </li>
+</ul>
+<h2 id="Asynchronous-vs-Synchronous-amp-Callbacks"><a href="#Asynchronous-vs-Synchronous-amp-Callbacks" class="headerlink" title="Asynchronous vs Synchronous &amp; Callbacks"></a>Asynchronous vs Synchronous &amp; Callbacks</h2><p>In the browser mostly a direct style of programming is synchronous where each taks follows another task until the tasks are complete. Execution is returned from the first task before the next can begin.</p>
+<p>It’s quite straightforward to follow the steps and the chain of execution:</p>
+<pre><code class="language-javascript">function start() {
+  console.log('Im starting');
+}
+
+function cont() {
+  console.log('continuing...');
+}
+
+function end() {
+  var arr = [1, 2, 3, 4, 5];
+  console.log('The end: ' + arr);
+}
+
+start();
+cont();
+end();
+// ==> 'I'm starting' 
+// ==> 'continuing...'
+// ==> 'The end: [1, 2, 3, 4, 5]
+</code></pre>
+
+<p>We can take the above sequential code and introduce a delayed execution of commands by using setTimeout or even setInterval, a native JS function.</p>
+<pre><code class="language-javascript">function start() {
+  console.log('Im starting');
+}
+
+function cont() {
+  console.log('continuing...');
+}
+
+function end() {
+  var timer = setTimeout(function() {
+  var arr = [1, 2, 3, 4, 5];
+  console.log('The end: ' + arr);
+  }), 3000);
+}
+
+start();
+end();
+cont();
+// ==> 'I'm starting' 
+// ==> 'continuing...'
+// ..console waits three seconds
+// ==> 'The end: [1, 2, 3, 4, 5]
+</code></pre>
+
+<p>Welcome to your first callback using setTimeout! Notice the order of invocation first and take away that even though end() is invoked before cont() it <strong>doesn’t block the sequence of events</strong> - I’ll leave that upto you to figure out why. I can hint the above code worked because we used setTimeout, an async callback, to enact a delayed execution.   </p>
+<p>We can even write our own callbacks:</p>
+<pre><code class="language-javascript">// Call our main function. Pass it a URI and a callback function
+getData('https://fakeapi/some-end-point', renderData );
+
+function getData(uri, callback) {
+
+    // Simulate a 3 second delay, re-enacting the server response
+    var timer = setTimeout(function () {
+
+        // here's the array of data
+        var dataArr = [1000, 10000, 100000, 1000000];
+
+          //our callback function
+        callback(dataArr);
+
+    }, 3000);
+}
+
+function renderData(myData) {
+    console.log(myData);
+}
+</code></pre>
+
+<p>So, this is how we’ve been writing asychronous JavaScript for 15 years, you should note some of the drawbacks of using them:</p>
+<ul>
+<li>If not used properly you can turn your code into spaghetti, the term is called callback hell.</li>
+<li>you can’t use a return statement, nor throw errors</li>
+<li>error handling can become tough</li>
+</ul>
+<h2 id="Promises"><a href="#Promises" class="headerlink" title="Promises"></a>Promises</h2><p>The JavaScript community figured out these limitations which weren’t easy to read or write and therefore introduced Promises. Promises date back a while and have become very popular in modern day applications, you should wrap your head around them. Currently the native specification of Promise API exists in ES6 but there are many other libraries that make them more efficient and offer more functionality. That said, you can pop open your console and write a promise right now.</p>
+<p>Promises give us a handy way of writing asynchronous code in a clearer way to read and write. A promises represents a value that we will handle in the future - in a nutshell you should remember that’s basically it - a promises gives us guarantees about the future of the value.</p>
+<p>Creating a simple immediately resolved promise:</p>
+<pre><code class="language-javascript">var p = Proimise.resolve('norf');
+p.then((result) ==> console.log(result);
+//==> norf
+</code></pre>
+
+<p>A very contrived example indeed, below we look at a more involved piece of code for creating a standard promise:</p>
+<pre><code class="language-javascript">var p = new Promise(function(resolve, reject) {  
+   if (/* condition */) {
+      resolve(/* value */);  // fulfilled successfully
+   }
+   else {
+      reject(/* reason */);  // error, rejected
+   }
+});
+</code></pre>
+
+<p>Typically a promise is created by using the new Promise contructor which accepts a handler that is given two functions as it’s paramaters, resolve and reject. Therefore a promise has the three states:</p>
+<ul>
+<li>Pending</li>
+<li>Fullfilled</li>
+<li>Rejected</li>
+</ul>
+<p>I’ll leave it to you to come to do your research :-)</p>
+<p>..then a consumer of your promise will come along and do something like this:</p>
+<pre><code class="language-javascript">p.then(function() {
+    console.log('success');
+  })
+  .catch(function() {
+    //error handling
+  })
+</code></pre>
+
+<p>Notice a Promises’s .then() method which also takes two paramaters. The first is the function to be clled with then Promise is fullfilled whilst the secons is a function to be called if the promise is rejected. When dealing with errors first remember that throwing an exception in a Promise will automatically reject that Promise.</p>
+<ul>
+<li>Use the idiomatic .catch() for handling errors (see the chained .catch() in the above example)</li>
+<li>Be aware of Promise.race() and Promise.all() </li>
+</ul>
+<p>There is alot more you can learn about Promises, we’ve just touched the tip if the iceberg. I recommend looking at the <a href="https://promisesaplus.com/" target="_blank" rel="external">Promises/A+ specification</a>.</p>
+<h2 id="Generators-Yield"><a href="#Generators-Yield" class="headerlink" title="Generators / Yield"></a>Generators / Yield</h2><p> We’ve covered callbacks and promises, which both have been around for some time. JavaScript Genertors are a relatively new concept and were intorduced in ES6. Generator functions when you execute them cna be paused at any point while you calculate something else, then return and continue from your paused state.</p>
+<p> For example:</p>
+ <pre><code class="language-javascript">function* baz () {  
+   let index = 0;
+   while (index < 2) {
+     yield index++;
+   }
+ }
+ var quux =  baz();
+
+ console.log(quux.next());    // { value: 0, done: false }  
+ console.log(quux.next());    // { value: 1, done: false }  
+ console.log(quux.next());    // { value: undefined, done: true }  
+ </code></pre>
+
+<p> We need to observe that generators differ from normal functions with respect to the run to completion expectation. A fundamental aspect of your functions is that when it starts running, it will always run to completion before any other JS code can run. With generators we have a different type of function, one that can be paused in the middle and resumed later, allowing other code to run during these paused periods.</p>
+<p> The challenges of multi threaded programming - in JavaScript land however we do not have to worry about mulit threads because JS is always single threaded. Simply this means only one function or command will execute at any given time.  </p>
+<h2 id="Async-Await"><a href="#Async-Await" class="headerlink" title="Async / Await"></a>Async / Await</h2><p>Async functions are introduced in ES7, and are only available through a transpiler. With async functions or the async keyword we are essentially doing what we are doing with generators, without the extra fluff.  </p>
+<p>A short example:</p>
+ <pre><code class="language-javascript">
+ async function loadArticle() {
+   try {
+     let story = await getJSON('article.json');
+     addHtmlToPage(article.heading);
+     for (let chapter of story.articleURLs.map(getJSON)) {
+       addHtmlToPage((await snippet).html);
+     }
+     addArticleToPage("Complete");
+   } catch (err) {
+     addArticleToPage("Something broke: " + err.message);
+   }
+   document.querySelector('.spinner').style.display = 'none';
+ }
+ </code></pre>
+      
+
+
+    
+      
+
+    
+
+
+  </div>
+  
+    
+<ul id="article-nav" class="nav nav-pills nav-justified">
+  
+  <li role="presentation">
+    <a href="/2016/10/02/typescript/" id="article-nav-older" class="article-nav-link-wrap">
+      <i class="fa fa-chevron-left pull-left"></i>
+      <span class="article-nav-link-title">Thoughts on TypeScript</span>
+    </a>
+  </li>
+  
+  
+</ul>
+
+
+  
+</div>
+
+
+
+
+
+
+
+
+                </div>
+
+
+            </div>
+        </div>
+        <div class="four wide column" style="background-color: #f2f2f2">
+            <div class="sidebar-wrapper">
+                <a href="/"><img class="ui centered image" src="/images/avatar.png" width="100" height="100"></a>
+                <div class="item">
+                    <br />
+
+                    <div class="content">
+                        <div class="meta">
+                                <span class="intro"><p class="intro">» Web developer inspired by minimalism, elegance and order — I write about modern day JavaScript, tech, software <strike>and desperately try to maintain a linkblog.</strike> and code.</p>
+
+                                        <p class="intro">This is my humble home on the internet - <a href="/about">read more about me</a>.</p></span>
+                        </div>
+
+                    </div>
+
+
+                </div>
+                <div class="ui hidden divider"></div>
+
+                <div class="ui list">
+                    <h4>» OPEN SOURCE PROJECTS</h4>
+                    <a class="item" href="https://github.com/ahadb/es6"> Intro to ES6</a>
+                    <a class="item" href="https://github.com/ahadb/flat-file-cms"> Flat File CMS</a>
+                    <a class="item" href="https://github.com/ahadb/fluke"> Fluke JS (w.i.p.)</a>
+                    <a class="item" href="https://github.com/ahadb/vue-build"> Vue Build w/ Webpack</a>
+                    <a class="item" href="https://github.com/ahadb/is"> is-type (w.i.p.)</a>
+
+                    <h4>» BITE SIZED MODULES</h4>
+                    <a class="item" href="https://github.com/ahadb/node-range"> node-range</a>
+                    <a class="item" href="https://github.com/ahadb/obj-values"> obj-values</a>
+                    <a class="item" href="https://github.com/ahadb/node-camel-case"> node-camel-case</a>
+                    <a class="item" href="https://github.com/ahadb/kebab-caseify"> kebab-caseify</a>
+                    <a class="item" href="https://github.com/ahadb/first-of-array"> first-of-array</a>
+                    <a class="item" href="ahadb/last-of-array"> last-of-array</a>
+
+                </div>
+
+                <div class="ui list">
+                    <h4>» ARTICLES</h4>
+                    <a class="item" href="2010/02/15/ego-information/"> In The Digital World, Information Has No Ego</a>
+                    <a class="item" href="/2015/02/13/why-use-objects/">A Case for Objects {...}</a>
+                    <a class="item" href="/2014/09/29/js-frameworks-libraries/">JavaScript Micro Frameworks, Hypermodularization & Libraries</a>
+                    <a class="item" href="/2014/01/20/fear/">Push Through Fear</a>
+                </div>
+
+                <div class="ui list">
+                    <h4>» MENU</h4>
+                    <a class="item" href="/about">About</a>
+                    <a class="item" href="/linkblog">Linkblog</a>
+                    <a class="item" href="/archives">Archives</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+  <div class="ui text main container footer">
+    <div id="footer-info" class="inner">
+      &copy; 2007 - 2016 &#183; Ahad Bokhari &#183; <a href="mailto:ahadbokhari@gmail.com">ahadbokhari@gmail.com</a>  <br>
+      <i>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>, hosted on <a href="https://github.com/ahadb">Github</a></i>
+    </div>
+  </div>
+</footer>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" integrity="sha384-8gBf6Y4YYq7Jx97PIqmTwLPin4hxIzQw5aDmUg/DDhul9fFpbbLcLh3nTIIDJKhx" crossorigin="anonymous"></script>
+
+<script src="https://use.typekit.net/ncd4ysn.js"></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+
+
+
+<script src="/js/script.js"></script>
+<script src="/js/dropdown.js"></script>
+<script src="/js/custom.js"></script>
+<script src="/js/transition.js"></script>
+<script src="/js/underscore.js"></script>
+<script src="/js/prism.js"></script>
+
+
+</body>
+
+</html>
