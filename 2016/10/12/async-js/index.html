@@ -12,7 +12,7 @@
 <meta property="og:url" content="ahadb.com/2016/10/12/async-js/index.html">
 <meta property="og:site_name" content="Ahad Bokhari - Exploring JavaScript in 2016 & Beyond">
 <meta property="og:description" content="A recollection of different asynchronous techniques in modern day JavaScript with plenty of examples to reflect upon">
-<meta property="og:updated_time" content="2016-10-14T01:46:07.000Z">
+<meta property="og:updated_time" content="2016-10-14T01:48:01.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Async">
 <meta name="twitter:description" content="A recollection of different asynchronous techniques in modern day JavaScript with plenty of examples to reflect upon">
@@ -324,8 +324,7 @@ p.then((result) ==> console.log(result);
 <p> The challenges of multi threaded programming - in JavaScript land however we do not have to worry about mulit threads because JS is always single threaded. Simply this means only one function or command will execute at any given time.  </p>
 <h2 id="Async-Await"><a href="#Async-Await" class="headerlink" title="Async / Await"></a>Async / Await</h2><p>Async functions are introduced in ES7, and are only available through a transpiler. With async functions or the async keyword we are essentially doing what we are doing with generators, without the extra fluff.  </p>
 <p>A short example:</p>
- <pre><code class="language-javascript">
- async function loadArticle() {
+ <pre><code class="language-javascript">async function loadArticle() {
    try {
      let story = await getJSON('article.json');
      addHtmlToPage(article.heading);
