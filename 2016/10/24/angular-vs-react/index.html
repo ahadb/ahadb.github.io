@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  
+  <title>Angular 2 vs. React | Ahad Bokhari - Exploring JavaScript in 2016 &amp; Beyond</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Comparing Angular 2 to the React ecosytem by taking a deeper dive into each technology&apos;s advantages &amp; disadvantages. Note, these two hold the most market value; surprisingly jQuery takes third place i">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Angular 2 vs. React">
+<meta property="og:url" content="ahadb.com/2016/10/24/angular-vs-react/index.html">
+<meta property="og:site_name" content="Ahad Bokhari - Exploring JavaScript in 2016 & Beyond">
+<meta property="og:description" content="Comparing Angular 2 to the React ecosytem by taking a deeper dive into each technology&apos;s advantages &amp; disadvantages. Note, these two hold the most market value; surprisingly jQuery takes third place i">
+<meta property="og:updated_time" content="2016-10-25T00:16:32.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Angular 2 vs. React">
+<meta name="twitter:description" content="Comparing Angular 2 to the React ecosytem by taking a deeper dive into each technology&apos;s advantages &amp; disadvantages. Note, these two hold the most market value; surprisingly jQuery takes third place i">
+  
+    <link rel="alternate" href="/atom.xml" title="Ahad Bokhari - Exploring JavaScript in 2016 &amp; Beyond" type="application/atom+xml">
+  
+  
+  
+
+  
+
+
+
+
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/icon.min.css'>
+
+
+  <link rel="stylesheet" href="/css/semantic-ui.css">
+  <link rel="stylesheet" href="/css/table.min.css">
+  <link rel="stylesheet" href="/css/site.css">
+  <link rel="stylesheet" href="/css/menu.css">
+  <link rel="stylesheet" href="/css/prism.css">
+  
+
+</head>
+
+
+
+<body>
+
+<a href="https://github.com/ahadb"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/a6677b08c955af8400f44c6298f40e7d19cc5b2d/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677261795f3664366436642e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png"></a>
+
+<div class="ui text main container">
+  <div class="ui grid">
+    <div class="left floated twelve wide column">
+      <h1 class="me"><a class="title" href="/">Ahad Bokhari</a></h1>
+      <div class="ui dropdown">
+        <div class="text"><i class="sidebar icon"></i>{<cite style="color:#906;"> Exploring JavaScript, Software and Beyond </cite>} ...</div>
+
+        <div class="menu">
+
+
+          <div class="item">
+            <span class="description">ctrl + o</span><a href="/about"> About</a> </div>
+          <div class="item">
+            <span class="description">ctrl + o</span> <a href="/archives"> Archives</a>
+          </div>
+          <div class="item">
+            <span class="description">ctrl + o</span> <a href="/linkblog"> Linkblog</a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="right floated six wide column">
+
+      <div class="text"></div>
+
+    </div>
+  </div>
+
+
+  <div class="ui divider"></div>
+</div>
+  </div>
+
+
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+</div>
+
+
+<div class="ui text main container">
+    <div class="ui stackable two column divided grid">
+        <!--<div class="blog-header">
+  <h1 class="blog-title">Ahad Bokhari - Exploring JavaScript in 2016 &amp; Beyond</h1>
+  
+</div>
+-->
+        <div class="twelve wide column" style="margin-bottom: 13px">
+            <div class="articles-wrapper">
+                <div class="ui two column divided grid">
+                    <div class="fifteen wide column">
+                <div class="picker">
+                        <div class="ui text menu" style="margin-top: -0.5em">
+                    <div class="header item">CATEGORIES:</div>
+                    <a class="item active" href="categories/Javascript">
+                        JS</a>
+
+
+                    <a class="item" href="categories/ES5">
+                        ES5
+                    </a>
+                    <a class="item" href="categories/ES6">
+                        ES6
+                    </a>
+                    <a class="item" href="categories/ES7">
+                        ES7
+                    </a>
+                    <a class="item" href="categories/Technology">
+                       Technology
+                    </a>
+                            <a class="item" href="categories/Software">
+                                Software
+                            </a>
+                            <a class="item" href="categories/Other">
+                                Other
+                    </a>
+
+
+                </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="ui relaxed middle aligned divided list">
+
+                    <!--<div id="post-angular-vs-react" class="header" itemscope itemprop="blogPost">-->
+
+<div class="item">
+
+  <div class="right floated content" style="margin-top:5px">
+    
+  </div>
+
+<div class="content">
+
+    
+  
+    <h1 class="art" itemprop="name">
+      Angular 2 vs. React
+    </h1>
+  
+
+
+
+  
+  <div class="meta" style="margin-top: -10px">
+    
+  <a href="/2016/10/24/angular-vs-react/" class=""></a>
+</span>
+<span><i class="github icon"></i> Edit</span> &nbsp; &#183; &nbsp;
+  <span style="color: #999">
+        <i><time datetime="2016-10-24T05:00:00.000Z" itemprop="datePublished">October 24, 2016</time></i>
+</span>
+ <i><span style="float:right; margin-right:15px">1200 <span style="color:#999">words</span></i>
+
+
+    </div>
+
+    <div class="article-author"></div>
+
+  
+
+
+
+
+      
+  <br/>
+        <p>Angular 2.0 recently released it’s production ready framework on September 15th, 2016 - it took 2.5 years for the team at Google to reach this milestone and will cause developers to start learning the new framework with emphasis on scalable JavaScript using TypeScript. In Angular 2, Components are the main way we build and specify elements and logic on the page as opposed to in Angular 1, where we achieved this through directives, controllers, and scope. </p>
+<p>That being said, React’s whole ecosystem is built around modular, composable and reusable components that maintain state while passing data down from the parent to child as props. The React way has been loved by many developers across the world, and there is a vibrant open-source community. React has been the golden child for application development in 2015 when compared to other frameworks.</p>
+<h2 id="Comparing-React-to-Angular"><a href="#Comparing-React-to-Angular" class="headerlink" title="Comparing React to Angular"></a>Comparing React to Angular</h2><p>You might wonder that comparning React to Angular 2.0 is like comparing Apples to Oranges as Angular is a full-blown framework and React is just the View in MVVM - a laser focused library if you will. To make it easier, I’ll be discussing advantages / disadvantages<br>between the two and concentrating on the component part of the lifecycle - that should drastically draw the lines closer to a more comperable comparison.</p>
+<h2 id="React-Advantages"><a href="#React-Advantages" class="headerlink" title="React Advantages"></a>React Advantages</h2><p>Let’s look at the advantages that React has as our first look.</p>
+<h3 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h3><p>At the end of the day React is just JavaScript from top to bottom, whatever way you look at it. This is the most important distinction between the two where Angular strives to make HTML more powerful while React relies on plain ole JavaScript. Those who might point fingers at React should likely question their own proficiency as JavaScript developers.</p>
+<h3 id="Functional-JavaScript"><a href="#Functional-JavaScript" class="headerlink" title="Functional JavaScript"></a>Functional JavaScript</h3><p>React will teach you a thing or two about functional JavaScript, pure functions, side effects, etc etc. Overall it will make you a better JavaScript developer and introduces new developers to <code>map</code>, <code>reduce</code> with plenty of usage of the <code>this</code> keyword.</p>
+<h3 id="JSX"><a href="#JSX" class="headerlink" title="JSX"></a>JSX</h3><p>JSX is a big win for React and the JavaScript community. JSX is not an HTML template language, nore  simple token replace and <code>innerHTML = quux</code> dump like other tools out there.</p>
+<p>JSX is a declarative syntax that’s used to express the virtual DOM and get interpreted and converted to virtual DOM, which then gets diffed agains the real DOM. React renders fast because you don’t rewrite the whole DOM tree, only the differences apply.</p>
+<p>Other points about JSX:</p>
+<ul>
+<li>Designers like JSX and design teams adjust quickly since they find it easier to work with</li>
+<li>You get inline styles, style variables, style modules, style inheritance and don’t have to learn a whole new syntax. Just do it in JavaScript.</li>
+<li>Keeps markup organized and DRY</li>
+<li>Easy rendering lists with <code>map</code></li>
+</ul>
+<h3 id="Single-Responsibility-Unix-Philosophy"><a href="#Single-Responsibility-Unix-Philosophy" class="headerlink" title="Single Responsibility / Unix Philosophy"></a>Single Responsibility / Unix Philosophy</h3><p>React embraces the UNIX philosphy, which means that you choose the libraries that you need to get the job done by having the ability to swap out at your free will.</p>
+<h3 id="Vibrant-Tooling-Community-amp-Development-Experience"><a href="#Vibrant-Tooling-Community-amp-Development-Experience" class="headerlink" title="Vibrant Tooling, Community &amp; Development Experience"></a>Vibrant Tooling, Community &amp; Development Experience</h3><p>Tooling will never be a problem with React, there are alot of open source projects that will ramp you up in no time. With hot-reload, support for WebPack and a plethora of options developed by passionate community members </p>
+<h2 id="Angular-2-0-Advantages"><a href="#Angular-2-0-Advantages" class="headerlink" title="Angular 2.0 Advantages"></a>Angular 2.0 Advantages</h2><h3 id="Web-Component-Friendly"><a href="#Web-Component-Friendly" class="headerlink" title="Web Component Friendly"></a>Web Component Friendly</h3><p>Angualar is web componet friendly in terms of native web components - this is a huge strength as the web is evolving towards the latest specifications and will be a big win in the long term as browsers start supporting it.</p>
+<h3 id="TypeScript"><a href="#TypeScript" class="headerlink" title="TypeScript"></a>TypeScript</h3><p>Another huge win for Angular 2.0 is TypeScript - a way to write more scalable JavaScript which addresses the core weaknesses of the language itself. The Angular folks primary documentation uses TypeScript syntax (which is JavaScript at the end of the day, it doesn’t force new features upon you) and recommend it’s use within the lifecycle of your workflow. In turn this will be adopted by folks who develop Angular 2.0 apps and by the community. If you look at React there are multiple ways to create a component and that can lead to confusion for new developers.</p>
+<p>There is something awesome about building a typed function interface and knowing that the next dev who comes along will know how to use your code.</p>
+<h3 id="Less-JavaScript-Fatigue"><a href="#Less-JavaScript-Fatigue" class="headerlink" title="Less JavaScript Fatigue"></a>Less JavaScript Fatigue</h3><p>React’ moves a fast rate causing churn within the ecosystem - what you write today may be out of date tomorrow or require changes within the libraries that you have used today. This can be very frustrating and turns out to be the source of confusion and too much work trying to find the right libraries for the job.</p>
+<p>Adding to this point, Angular forces more opinions on you which helps you get started much quicker without having to make too many decisions up front.</p>
+<h2 id="Other-Points-To-Consider"><a href="#Other-Points-To-Consider" class="headerlink" title="Other Points To Consider"></a>Other Points To Consider</h2><h3 id="Performance"><a href="#Performance" class="headerlink" title="Performance"></a>Performance</h3><p>Performance is a key metric for many people looking at a tech buy in. Angular 1 had performance issues with dirty checking and digest cycles that were mentioned post after post on the internets. It looks like Angular 2 have cleaned it up, so it compares to React quite well where performance is concerned.</p>
+<p>One should also consider team performance as highly as app performance - the team should be able to move fast and make quick changes.</p>
+<h3 id="ng2-Templates-JSX-State"><a href="#ng2-Templates-JSX-State" class="headerlink" title="ng2 Templates / JSX / State"></a>ng2 Templates / JSX / State</h3><ul>
+<li>With ng2 templates you need to learn Angular syntax like <em>ngIf and </em>ngFor. React’s syntax is much more like plain JavaScript</li>
+<li>If you make a mistake with Angular 2 templates they fail silently, compare this with React that notifies you immediately if there is something wrong with your JSX syntax</li>
+<li>Both Angular 2 and React can use whatever data management layer that you like, and you can bring your own state management to ng2.</li>
+</ul>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>I think Angular 2 requires much more tech buy in and alot more boilerplate. However, Angular 2 is a huge improvement over version 1, the new component model is simpler and it uses a virtual DOM offereing. With the use of TypeScript many large corporations that eschew JavaScript’s loose typing will gravitate towards it, making it the number 1 choice in the enterprise and a must have in your arsenal of tricks.</p>
+<p>If you want something slimmer and prefer smaller modules as well as love a superfluous development experience that hits home to JavaScript then have a close look at React. There are alot of projects.</p>
+<p>Keep in mind that there are alot of things in React that you won’t find in Angular 2.0 and vice versa. There are also other options out there, but React and Angular dominate usage and you can find value in a large ecosystem and developer community. If you choose one, stick with it and learn it’s intricacies from the ground up - just don’t lose complete sight of the other.</p>
+
+      
+
+
+    
+      
+
+    
+
+
+  </div>
+  
+    
+<ul id="article-nav" class="nav nav-pills nav-justified">
+  
+  <li role="presentation">
+    <a href="/2016/10/12/async-js/" id="article-nav-older" class="article-nav-link-wrap">
+      <i class="fa fa-chevron-left pull-left"></i>
+      <span class="article-nav-link-title">Asynchronous JavaScript</span>
+    </a>
+  </li>
+  
+  
+</ul>
+
+
+  
+</div>
+
+
+
+
+
+
+
+
+                </div>
+
+
+            </div>
+        </div>
+        <div class="four wide column" style="background-color: #f2f2f2">
+            <div class="sidebar-wrapper">
+                <a href="/"><img class="ui centered image" src="/images/avatar.png" width="100" height="100"></a>
+                <div class="item">
+                    <br />
+
+                    <div class="content">
+                        <div class="meta">
+                                <span class="intro"><p class="intro">» Web developer inspired by minimalism, elegance and order — I write about modern day JavaScript, tech, software <strike>and desperately try to maintain a linkblog.</strike> and code.</p>
+
+                                        <p class="intro">This is my humble home on the internet - <a href="/about">read more about me</a>.</p></span>
+                        </div>
+
+                    </div>
+
+
+                </div>
+                <div class="ui hidden divider"></div>
+
+                <div class="ui list">
+                    <h4>» OPEN SOURCE PROJECTS</h4>
+                    <a class="item" href="https://github.com/ahadb/es6"> Intro to ES6</a>
+                    <a class="item" href="https://github.com/ahadb/flat-file-cms"> Flat File CMS</a>
+                    <a class="item" href="https://github.com/ahadb/is"> is-type</a>
+                    <a class="item" href="https://github.com/ahadb/vue-build"> Vue Build w/ Webpack</a>
+                    <a class="item" href="https://github.com/ahadb/fluke"> Fluke JS (w.i.p.)</a>
+
+                    <h4>» BITE SIZED MODULES</h4>
+                    <a class="item" href="https://github.com/ahadb/node-range"> node-range</a>
+                    <a class="item" href="https://github.com/ahadb/obj-values"> obj-values</a>
+                    <a class="item" href="https://github.com/ahadb/node-camel-case"> node-camel-case</a>
+                    <a class="item" href="https://github.com/ahadb/kebab-caseify"> kebab-caseify</a>
+                    <a class="item" href="https://github.com/ahadb/first-of-array"> first-of-array</a>
+                    <a class="item" href="ahadb/last-of-array"> last-of-array</a>
+
+                </div>
+
+                <div class="ui list">
+                    <h4>» ARTICLES</h4>
+                    <a class="item" href="2010/02/15/ego-information/"> In The Digital World, Information Has No Ego</a>
+                    <a class="item" href="/2015/02/13/why-use-objects/">A Case for Objects {...}</a>
+                    <a class="item" href="/2014/09/29/js-frameworks-libraries/">JavaScript Micro Frameworks, Hypermodularization & Libraries</a>
+                    <a class="item" href="/2014/01/20/fear/">Push Through Fear</a>
+                </div>
+
+                <div class="ui list">
+                    <h4>» MENU</h4>
+                    <a class="item" href="/about">About</a>
+                    <a class="item" href="/linkblog">Linkblog</a>
+                    <a class="item" href="/archives">Archives</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+  <div class="ui text main container footer">
+    <div id="footer-info" class="inner">
+      &copy; 2007 - 2016 &#183; Ahad Bokhari &#183; <a href="mailto:ahadbokhari@gmail.com">ahadbokhari@gmail.com</a>  <br>
+      <i>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>, hosted on <a href="https://github.com/ahadb">Github</a></i>
+    </div>
+  </div>
+</footer>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" integrity="sha384-8gBf6Y4YYq7Jx97PIqmTwLPin4hxIzQw5aDmUg/DDhul9fFpbbLcLh3nTIIDJKhx" crossorigin="anonymous"></script>
+
+<script src="https://use.typekit.net/ncd4ysn.js"></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+
+
+
+<script src="/js/script.js"></script>
+<script src="/js/dropdown.js"></script>
+<script src="/js/custom.js"></script>
+<script src="/js/transition.js"></script>
+<script src="/js/underscore.js"></script>
+<script src="/js/prism.js"></script>
+
+
+</body>
+
+</html>
