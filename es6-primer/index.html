@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  
+  <title>ES6 Primer | Ahad Bokhari - Exploring JavaScript and Software in 2016 &amp; Beyond</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="An introdcutory repo to ramp you up quickly with ES6 features, tools and syntax - there’s even a short section on ES7. Read the contributions section and check back from time to time for intermittent">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ES6 Primer">
+<meta property="og:url" content="ahadb.com/es6-primer/index.html">
+<meta property="og:site_name" content="Ahad Bokhari - Exploring JavaScript and Software in 2016 & Beyond">
+<meta property="og:description" content="An introdcutory repo to ramp you up quickly with ES6 features, tools and syntax - there’s even a short section on ES7. Read the contributions section and check back from time to time for intermittent">
+<meta property="og:updated_time" content="2017-02-09T02:25:53.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ES6 Primer">
+<meta name="twitter:description" content="An introdcutory repo to ramp you up quickly with ES6 features, tools and syntax - there’s even a short section on ES7. Read the contributions section and check back from time to time for intermittent">
+  
+    <link rel="alternate" href="/atom.xml" title="Ahad Bokhari - Exploring JavaScript and Software in 2016 &amp; Beyond" type="application/atom+xml">
+  
+  
+  
+
+  
+
+
+
+
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/icon.min.css'>
+
+
+  <link rel="stylesheet" href="/css/semantic-ui.css">
+  <link rel="stylesheet" href="/css/table.min.css">
+  <link rel="stylesheet" href="/css/site.css">
+  <link rel="stylesheet" href="/css/menu.css">
+  <link rel="stylesheet" href="/css/prism.css">
+  
+
+</head>
+
+
+
+<body>
+
+<a href="https://github.com/ahadb"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/a6677b08c955af8400f44c6298f40e7d19cc5b2d/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677261795f3664366436642e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png"></a>
+
+<div class="ui text main container">
+  <div class="ui grid">
+    <div class="left floated twelve wide column">
+      <h1 class="me"><a class="title" href="/">Ahad Bokhari</a></h1>
+      <div class="ui dropdown">
+        <div class="text"><i class="sidebar icon"></i>{<cite style="color:#906;"> Exploring JavaScript and Software in 2016 & Beyond </cite>} ...</div>
+
+        <div class="menu">
+
+
+          <div class="item">
+            <span class="description">ctrl + o</span><a href="/about"> About</a> </div>
+          <div class="item">
+            <span class="description">ctrl + o</span> <a href="/archives"> Archives</a>
+          </div>
+          <div class="item">
+            <span class="description">ctrl + o</span> <a href="/linkblog"> Linkblog</a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="right floated six wide column">
+
+      <div class="text"></div>
+
+    </div>
+  </div>
+
+
+  <div class="ui divider"></div>
+</div>
+  </div>
+
+
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+</div>
+
+
+<div class="ui text main container">
+    <div class="ui stackable two column divided grid">
+        <!--<div class="blog-header">
+  <h1 class="blog-title">Ahad Bokhari - Exploring JavaScript and Software in 2016 &amp; Beyond</h1>
+  
+</div>
+-->
+        <div class="twelve wide column" style="margin-bottom: 13px">
+            <div class="articles-wrapper">
+                <div class="ui two column divided grid">
+                    <div class="fifteen wide column">
+                <div class="picker">
+                        <div class="ui text menu" style="margin-top: -0.5em">
+                    <div class="header item">CATEGORIES:</div>
+                    <a class="item active" href="categories/Javascript">
+                        JS</a>
+
+
+                    <a class="item" href="categories/ES5">
+                        ES5
+                    </a>
+                    <a class="item" href="categories/ES6">
+                        ES6
+                    </a>
+                    <a class="item" href="categories/ES7">
+                        ES7
+                    </a>
+                    <a class="item" href="categories/Technology">
+                       Technology
+                    </a>
+                            <a class="item" href="categories/Software">
+                                Software
+                            </a>
+                            <a class="item" href="categories/Other">
+                                Other
+                    </a>
+
+
+                </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="ui relaxed middle aligned divided list">
+
+                    <!--<div id="page-undefined" class="header" itemscope itemprop="blogPost">-->
+
+<div class="item">
+
+  <div class="right floated content" style="margin-top:5px">
+    
+  </div>
+
+<div class="content">
+
+    
+  
+    <h1 class="art" itemprop="name">
+      ES6 Primer
+    </h1>
+  
+
+
+
+  
+  <div class="meta" style="margin-top: -10px">
+    
+  <a href="/es6-primer/index.html" class=""></a>
+</span>
+<span><i class="github icon"></i> Edit</span> &nbsp; &#183; &nbsp;
+  <span style="color: #999">
+        <i><time datetime="2017-02-09T02:25:53.000Z" itemprop="datePublished">March 31, 2016</time></i>
+</span>
+ <i><span style="float:right; margin-right:15px"> <span style="color:#999">words</span></i>
+
+
+    </div>
+
+    <div class="article-author"></div>
+
+  
+
+
+
+
+      
+  <br/>
+        <p>An introdcutory repo to ramp you up quickly with <code>ES6</code> features, tools and syntax - there’s even a short section on <code>ES7</code>. Read the <strong>contributions</strong> section and check back from time to time for intermittent updates.</p>
+<h2 id="Table-of-Contents"><a href="#Table-of-Contents" class="headerlink" title="Table of Contents"></a>Table of Contents</h2><ul>
+<li><a href="#history">ECMA Brief History</a></li>
+<li><a href="#es6-introduction">Introduction</a></li>
+<li><a href="#tools">Tools</a></li>
+<li><a href="#block-scoping">Block Scoping</a></li>
+<li><a href="#let-and-const">Let and Const</a></li>
+<li><a href="#destructuring">Destructuring</a></li>
+<li><a href="#string-and-template-literals">String &amp; Template Literals</a></li>
+<li><a href="#numbers-and-strings">Math &amp; Number</a></li>
+<li><a href="#arrays">Arrays</a></li>
+<li><a href="#parameters">Parameters</a></li>
+<li><a href="#modules">Modules</a></li>
+<li><a href="#getters-and-setters">Getters &amp; Setters</a></li>
+<li><a href="#classes">Classes</a></li>
+<li><a href="#symbols">Symbols</a></li>
+<li><a href="#generators">Generators</a></li>
+<li><a href="#arrow-functions">Arrow Functions</a></li>
+<li><a href="#map-and-weakmap">Map &amp; WeakMap</a></li>
+<li><a href="#set-and-weakset">Set &amp; WeakSet</a></li>
+<li><a href="#promises">Promises</a></li>
+<li><a href="#contributions">Contributions</a></li>
+<li><a href="#es7">ES7 - ES2016</a> :star:</li>
+</ul>
+<h2 id="History"><a href="#History" class="headerlink" title="History"></a>History</h2><ul>
+<li>ECMAScript is now 17 years old with it’s birth in 1997 <ul>
+<li>ECMAScript is the standard. <code>JavaScript</code>, <code>ActionScript</code> and <code>JScript</code> are implementations of it</li>
+<li>JavaScript popularized two paradigms on the web, <code>functional programming</code> and <code>prototypal inheritance</code> (objects without classes)</li>
+<li><code>JavaScript</code> first appeared in Navigator 2.0 browser and has appeared in all subsequent browsers from Netscape and in all browsers from Microsoft starting with Internet Explorer 3.0</li>
+<li>JavaScript was designed with C-like syntax with curly braces, the statement/expression dichotmory, dot notation etc</li>
+<li>ECMAScript is designed by <a href="http://www.ecma-international.org/memento/TC39.htm" target="_blank" rel="external">TC39</a> and operates on consensus</li>
+</ul>
+</li>
+</ul>
+<p><em>A brief snapshot of it’s history:</em></p>
+<table>
+<thead>
+<tr>
+<th>Edition</th>
+<th style="text-align:center">Year</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td style="text-align:center">1997</td>
+<td>Oracle (prev. Sun) had trademark to Java, therefore JavaScript</td>
+</tr>
+<tr>
+<td>2</td>
+<td style="text-align:center">1998</td>
+<td>ECMA International creates the ECMA-262 standard</td>
+</tr>
+<tr>
+<td>3</td>
+<td style="text-align:center">1999</td>
+<td>Introduced many features inherint in the language today</td>
+</tr>
+<tr>
+<td>*3.1</td>
+<td style="text-align:center">2008</td>
+<td>Eventually standardized as the 5th of ECMA-262, also described as ECMAScript 5</td>
+</tr>
+<tr>
+<td>*4</td>
+<td style="text-align:center">abandoned</td>
+<td>Abandoned due to political reasons</td>
+</tr>
+<tr>
+<td>5</td>
+<td style="text-align:center">2009</td>
+<td>Added ‘use strict’ ( aligns with 3+ )</td>
+</tr>
+<tr>
+<td>5.1</td>
+<td style="text-align:center">2011</td>
+<td>Maintenance revision (alings with 3+ )</td>
+</tr>
+<tr>
+<td>6</td>
+<td style="text-align:center">2015</td>
+<td>Significant features added, that’s why you’re here</td>
+</tr>
+<tr>
+<td>6</td>
+<td style="text-align:center">unreleased</td>
+<td>Early stages of development</td>
+</tr>
+</tbody>
+</table>
+<p>&#8593; <a href="#table-of-contents">Back to TOC</a></p>
+<h2 id="ES6-Introduction"><a href="#ES6-Introduction" class="headerlink" title="ES6 Introduction"></a>ES6 Introduction</h2><p><code>ES6</code> is the newest addition to the language and adds <strong>significant</strong> new syntax for writing complex JavaScript applications.</p>
+<ul>
+<li>There is 5 years between <code>ES5</code> and <code>ES6</code>.  </li>
+<li>‘ES6’ is the first <strong>ECMAScript Harmony</strong> specification and is also known as <code>ES Harmony</code>, <code>ES2015</code>, <code>ES.next</code> but commonly referred to as <code>ES6</code>.<ul>
+<li>The specification was finalized in <code>June 2015</code>as it reached <code>feature complete</code> status</li>
+<li>Subsequent versions will be released on a 12 month cadence, and will be dubbed <code>ES7</code>, <code>ES2016</code> respectively.</li>
+</ul>
+</li>
+</ul>
+<p><a href="#table-of-contents">&#8593; Back to TOC</a>  </p>
+<h2 id="Tools"><a href="#Tools" class="headerlink" title="Tools"></a>Tools</h2><p>You should want to experiment and play around with code — it’s easy to get up and running. There are several techniques and the premise all these tools are built upon is called <code>transpiling</code>, or <strong>JavaScript to JavaScript</strong> transpiling which compiles the latest version into older versions.</p>
+<ul>
+<li>Transpilation is the future for future ECMAScript such as <code>ES2015</code> and <code>ES2016</code></li>
+<li>The most popular JavaScript transpilers are <code>Babel</code> and was previously known as <code>6to5</code> and <code>traceur</code></li>
+<li>Transpilation is possible to incorporate into your build process using <a href="">Broccoli</a>, <a href="">Gulp</a>, <a href="">Browserify</a>, <a href="">RequireJS</a>, <a href="">Webpack</a> et al and friends.</li>
+</ul>
+<p><em>The easiest way to get up and running in the <code>web browser</code>:</em></p>
+<ul>
+<li>In the web browser you can use the online <code>Babel REPL</code> — this compiles <code>ES6</code> to <code>ES5</code> and you don’t have to install anything.</li>
+<li>Another web based tool is <code>Scratch JS</code> and comes in the form of a chrome extension. This interactive playground let’s you transpile your code in the all familiar <code>dev tools</code> environment.</li>
+</ul>
+<p><em>If you prefer the <code>command line</code>:</em></p>
+<ul>
+<li>Use Node,js v4.x.x or <code>&gt;</code>, they support is in-built for Babel</li>
+<li>Run <code>npm install -g babel&#39; and</code>babel node`</li>
+</ul>
+<p><em>Using an <code>IDE</code>:</em></p>
+<ul>
+<li>You can easily use <code>Babel</code> to transpile your code in <strong>Webstorm</strong>, the setup won’t take more than a couple of moments.</li>
+</ul>
+<p><em>Node has decent built in support for <code>ES6</code> thanks for the <code>V8</code> engine:</em></p>
+<ul>
+<li>Node suports <code>ES6</code> features split into three groups<ul>
+<li>Shipping: which do not require a <strong>runtime flag</strong></li>
+<li>Staged: almost-complete features that are not considered stable</li>
+<li>In progress: features can be individually activated by their respective harmony flag <code>--harmony_destrucuting</code></li>
+</ul>
+</li>
+</ul>
+<p>&#8593; <a href="#table-of-contents">Back to TOC</a></p>
+<h2 id="Block-Scoping"><a href="#Block-Scoping" class="headerlink" title="Block Scoping"></a>Block Scoping</h2><p>ES6 introduces block scoping:</p>
+<ul>
+<li>anything between <code>{</code> … <code>}</code> introduces it’s own scope</li>
+<li>this works like an <code>IIFE</code></li>
+<li>functions are <strong>block scoped</strong> in ES6 <ul>
+<li>this is more mainstream than <strong>function scoping</strong> which makes it easier when coming from or moving to other languages  </li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-javascript">{
+    let quux = "Hello World from ES6";
+    console.log(quux); // => Hello World from ES6
+}
+
+{
+    let foo = "This has a different scope";
+    console.log(foo); // => This has a different scope
+}
+
+console.log(quux); // Reference Error: quux is not defined
+</code></pre>
+
+<blockquote>
+<p>In ES5 you would use the <code>function</code> as the <strong>fundamental construct</strong> for all your variable scoping.</p>
+</blockquote>
+<pre><code class="language-javascript">var x = 7;
+
+(function iife() {
+  var x = 10;
+  console.log( x ); // => 10;
+})();
+
+console.log( x ); // 7  
+</code></pre>
+
+<p>&#8593; <a href="#table-of-contents">Back to TOC</a></p>
+<h2 id="Let-and-Const"><a href="#Let-and-Const" class="headerlink" title="Let and Const"></a>Let and Const</h2><p><code>let</code> and <code>const</code> are two new identifiers for storing values in <code>ES6</code> which you can additionally use to declare variables<br>‘let’ and ‘const’ throw more exceptions as they behave more strictly than ‘var’</p>
+<ul>
+<li><code>let</code> is block scoped and is <strong>hoisted</strong> to the top of it’s block, <strong>unlike</strong> <code>var</code> which is hoisted to the top of it’s <strong>function</strong> or <strong>script</strong></li>
+<li><code>const</code> is also block scoped and is also <strong>hoisted</strong> to the top of it’s block<ul>
+<li>it’s worth noting that in ES6 functions are <strong>block scoped</strong> instead of lexically scoped<br>‘var`</li>
+</ul>
+</li>
+<li><code>let</code> does not create a property on the global object</li>
+<li><code>const</code> creates <strong>immutable</strong> variables, whilst <code>let</code> create <strong>mutable</strong> ones</li>
+<li>a duplicate declaration of <code>let</code> will throw a <strong>Reference Error</strong> within a block or function<ul>
+<li>this is also known as <code>TDZ</code> or temporal dead zone</li>
+</ul>
+</li>
+<li><em>Basic rules to follow</em>: <ul>
+<li>don’t use <code>var</code>, or leave it as a signal in untouched legacy code.</li>
+<li>use <code>let</code> when you want to rebind.</li>
+<li>prefer <code>const</code> for variables that never change.</li>
+<li>don’t blindly refactor legacy code when replacing <code>var</code> with <code>let</code> and <code>const</code>.</li>
+</ul>
+</li>
+</ul>
+<p>How <code>let</code> works: </p>
+<pre><code class="language-javascript">function myfunc() {
+   if ( true ) {
+     let x = 54321;
+   }
+   console.log( x ); // => ReferenceError: x is not defined  
+ }
+</code></pre>
+
+<pre><code class="language-javascript">// legacy ES5
+ function myfunc() {
+   if ( true ) {
+     var x = 54321;
+   }
+   console.log( x ); // => 54321 
+ }
+</code></pre>
+
+<p>Using block scoped <code>let</code>:</p>
+<pre><code class="language-javascript">let outer = "outer";
+{
+  let inner = "inner";
+    { 
+      let nested = "nested"
+    }
+  console.log( inner ); // => you can access `inner`
+  console.log( nested ) // => throws error  
+} 
+// you can access `outer` here
+// you cannot access `inner` and `nested` here 
+</code></pre>
+
+<p>More scoping rules for variables declared by <code>let</code>. you can clearly see that when refactoring:</p>
+<pre><code class="language-javascript">function letBlocks {
+  let a = 23;
+  if ( true ) {
+    let a = 56;
+    console.log( a ); // => 56
+  }  
+  console.log( a ); // => 23
+}  
+</code></pre>
+
+<p>How <code>const</code> works. Variables declared with <code>const</code> are immutable, but note that the values aren’t just the declarations:</p>
+<pre><code class="language-javascript">const foo = '123';
+foo = '321';
+console.log( foo ); // TypeError
+
+// changing const values
+const myarr = [1,2,3,4];
+myarr.push(5);
+console.log( myarr ); // => 1, 2, 3, 4, 5
+
+const obj = {};
+obj.prop = 123;
+console.log( obj ); // => { Object: prop: 123 }
+</code></pre>
+
+<p>&#8593; <a href="#table-of-contents">Back to TOC</a></p>
+<h2 id="Destructuring"><a href="#Destructuring" class="headerlink" title="Destructuring"></a>Destructuring</h2><p>Just like an object literal is a convenient way to construct an object, ES6 destructing allows you to extract values from data stored in objects or arrays.</p>
+<ul>
+<li>You can assign to more than just <strong>variables</strong></li>
+<li>Destructuring can be used in <strong>assignments</strong>, <strong>variable declarations</strong> and <strong>parameters</strong></li>
+<li><code>spread</code> and <code>rest</code> operators work with destructuring</li>
+<li>You can destructure a <code>for-of</code> loop</li>
+</ul>
+<p>Objects:</p>
+<pre><code class="language-javascript">const myObj = { firstname: 'Ahad', lastname: 'Bokhari' };
+const { firstName: fname, lastName: lname }; = myObj
+console.log( fname, lname ); // => Ahad Bokhari
+
+let a, b;
+({ a, b } = {a: 1, b: 2});
+console.log(a, b);
+
+// deeper objects
+const {
+  prop1: z,
+  prop2: {
+    prop2: {
+      nested: [ , , c]
+    }
+  }
+} = { prop1: "Hello", prop2: { prop2: { nested: ["a", "b", "c"] }}};
+console.log(z, c);
+</code></pre>
+
+<p>Arrays:</p>
+<pre><code class="language-javascript">const myArr = [ 'y', 'z'];
+const [ a, b ] = myArr;
+console.log( a, b ); // => y, z
+
+let [ a, , b ] = [ 'x', 'y', 'z' ];
+console.log( a, b );
+
+// deeper arrays
+const [ a, [b, [c, d]]] = [1, [2, [[[3, 4], 5], 6 ]]];
+console.log("a:", a, "b:", b, "c:", c, "d:", d); // => a: 1 b: 2 c: [ [ 3, 4 ], 5 ] d: 6
+</code></pre>
+
+<p>&#8593; <a href="#table-of-contents">Back to TOC</a></p>
+<h2 id="String-and-Template-Literals"><a href="#String-and-Template-Literals" class="headerlink" title="String and Template Literals"></a>String and Template Literals</h2><p>We all know that JavaScript <code>strings</code> are limited and lacking in capabality, especially if you’re coming from <strong>Ruby</strong> or <strong>Python</strong>. Template literals are a feature that developers will love and are basically just <code>string literals</code> allowing <code>embedded expressions</code>.</p>
+<ul>
+<li><code>ES6</code> introduces <code>string interpolation</code>, <code>string formatting</code>, <code>multiline strings</code> and <code>embedded expressions</code> with template literals</li>
+<li>Template strings use (``) rather than single or double quotes used with regular strings</li>
+<li>Placeholders using the <code>${ }</code> syntax are used from string substition and works fine with any kind of <strong>expression</strong><ul>
+<li>expressions in between the placeholders (${expression}) and text b/w them get passed to a function</li>
+</ul>
+</li>
+</ul>
+<p>Familiarizing yourself with the <code>syntax</code>:</p>
+<pre><code class="language-javascript">const a = `this is a template literal`;
+console.log( typeof a ); // => string
+
+const b = `You can use template literals in multiline
+statements without using \\n`;
+console.log( b ); // => yup, it works!
+
+const c = `Some string text ${expression}`;
+</code></pre>
+
+<p>Use the following syntax to <code>embed</code> expressions within template literals</p>
+<pre><code class="language-javascript">const a = 100,
+      b = 100;
+console.log(`The sum of ${a} * ${b} is ${a * b}`); 
+// => The sum of 100 * 100 is 1000
+
+const user = { name: `Ahad Bokhari` };
+console.log(`You are now logged in, ${ user.name.toUpperCase() }. `);
+// => You are now logged in AHAD BOKHARI
+</code></pre>
+
+<p>&#8593; <a href="#table-of-contents">Back to TOC</a></p>
+<h2 id="Math-and-Number"><a href="#Math-and-Number" class="headerlink" title="Math and Number"></a>Math and Number</h2><ul>
+<li>Additions to <code>integer literals</code> have been added included <code>octal</code> and <code>binary</code> literals</li>
+<li>Methods that have been added to <code>Number</code> apart from the usual four suspects are, <code>Number.EPSILON</code>, <code>Number.isInteger</code>, <code>Number.isNaN</code>, <code>Number.isFinite</code>, <code>number.isSafeInteger</code></li>
+<li><code>Number.MAX_SAFE_INTEGER</code>, <code>Number.MIN_SAFE_INTEGER</code> are the largest and smalled integer that are represented in JavaScript</li>
+<li>The math object has also received some useful methods in <code>ES6</code>, <code>Math.sign</code>, <code>Math.trunc</code>, <code>Math.cbrt</code></li>
+</ul>
+<p>&#8593; <a href="#table-of-contents">Back to TOC</a></p>
+<h2 id="Arrays"><a href="#Arrays" class="headerlink" title="Arrays"></a>Arrays</h2><p><code>ES6</code> brings an abundance of new Array methods</p>
+<ul>
+<li>Array: <code>from</code>, <code>of</code></li>
+<li>Array.prototype: <code>findIndex()</code>, <code>fill()</code>, <code>find()</code>, <code>copyWithin()</code>, <code>keys()</code>, <code>values()</code>, <code>entries()</code></li>
+</ul>
+<p>Using <code>Array.from</code> we create a new array instance from an <code>array-like</code> or <code>iterable object</code> </p>
+<pre><code class="language-javascript">var doc = document.querySelectorAll('*');
+Array.from(doc).forEach(function(nodes) {
+  console.log(nodes);
+});
+</code></pre>
+
+<p>Using <code>Array.of</code> we create an array of variable arguments passed to the function</p>
+<pre><code class="language-javascript">var arr = Array.of(true, null, undefined, `some message`, 50);
+console.log( arr ); //[ true, null, undefined, "some message", 50]
+</code></pre>
+
+<p>Examples of additional <code>array</code> methods:</p>
+<pre><code class="language-javascript">// copyWithin()
+[1, 2, 3, 4, 5].copyWithin(0, 3); // => [4, 5, 3, 4, 5]
+
+let letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"];
+letters.copyWithin(4, 0); // => there is an optional parameter copyWithin(4, 0, 2)
+console.log(letters); // ["A", "B", "C", "D", "A", "B", "C", "D", "E", "F"]
+
+// find()
+let cities = ["Beirut", "Karachi", "Islamabad", "Athens", "Kabul", "Tapei", "Bucharest"];
+
+let t = cities.find(char => char.endsWith("t"));
+console.log( t ); 
+
+// keys()
+let people = ["Ahad", "Moe", "Zoey", "Snaey"];
+
+for( let entry of fruits.entries() ) {
+  console.log(entry[0]);
+  // 0
+  // 1
+  // 2
+  // 3
+
+  console.log(entry[1]);
+  // Ahad
+  // Moe
+  // Zoey
+  // Snaey
+}
+</code></pre>
+
+<p>&#8593; <a href="#table-of-contents">Back to TOC</a></p>
+<h2 id="Parameters"><a href="#Parameters" class="headerlink" title="Parameters"></a>Parameters</h2><p>In ES6 we have a standardized and more laconic way to handle parameters ( /i.e: defaults, parameters and arguments ) which greatly reduces boilerplate code.</p>
+<p>In <code>ES5</code> you could do something like this to handle <code>default parameters</code>:</p>
+<pre><code class="language-javascript">function multiply(x, y) {
+    y = y || 10; // Default to 1
+    return x * y;
+}
+</code></pre>
+
+<p>It’s counterpart in ‘ES6’:</p>
+<pre><code class="language-javascript">function multiply(x, y = 10) {
+  return x*y;
+}
+
+multiply(10); // => 100
+</code></pre>
+
+<p>The <code>rest</code> parameter has been added into the spec, which also reduces the boilerplate code for handling arguments:</p>
+<pre><code class="language-javascript">function f(...theArgs) {
+  console.log(theArgs.length);
+}
+
+f1();  // => 0
+f1(5); // => 1
+f1(5, 6, 7); // => 3
+</code></pre>
+> note: the arguments object is not a real array - rest params are instances of `Array` so you can call methods like **map**, **forEach** directly
+
+Another example of using `rest`, note how we collected arguments into a real array and not an arguments object:
+
+<pre><code class="language-javascript">function logEach(...stuff) {
+    stuff.forEach(function (stuff) {
+        console.log(stuff);
+    });
+}
+logEach("a", "b", "c");
+</code></pre>
+
+<p>The <code>...</code> construct in <code>ES6</code> is also used to provide “spread” for both function calls and array literals:</p>
+<pre><code class="language-javascript">// => in `ES5' we'd do this
+function fnes5(a, b, c) {
+    console.log(a, b, c); // 1, 2, 3
+}
+var args = [1, 2, 3];
+fnes5.apply(null, args);
+
+// in `ES6` we avoid the use of `apply`
+function fnes6(a, b, c) {
+    console.log(a, b, c); // 1, 2, 3
+}
+var args = [1, 2, 3];
+fnes6(...args); // => 1, 2, 3
+</code></pre>
+
+<h2 id="Modules"><a href="#Modules" class="headerlink" title="Modules"></a>Modules</h2><p>At the core of modularity developers need a module system — a way to spread their work across numerous files and directories with access to each other. Without support for modules natively in ECMAScript there has been a community created effort to implement work-arounds — CommonJS and AMD being the most prevelant as<br>they both have communities that rally around them, but are incompatible with each other. The good news is ES6, ( TC39 group ) has finalized a module syntax which developers can greatly benefit from using the best from both worlds.</p>
+<ul>
+<li>The goal of modules in <code>ES6</code> is to keep <strong>both</strong> <code>CommonJS</code> and <code>AMD</code> user happy with a single format and borrows the best from both worlds<ul>
+<li><code>ES6</code> modules will have a compact syntax with a preference for a single exports ( such as CommonJS )</li>
+<li>direct support for asynchronous and configurable module loading is supported</li>
+</ul>
+</li>
+<li>There are two types of exports, <code>named</code> exports and <code>default</code> exports<ul>
+<li><strong>named exports</strong> can be used to export multiple things using the keyword <code>export</code></li>
+<li><strong>default exports</strong> used to export a default single value</li>
+</ul>
+</li>
+<li>To import functions, objects and primitives that have been exported from an external module use the <code>import</code> statement<ul>
+<li>you may <code>import</code> an entire modules contents, a single member or multiple members in a module</li>
+</ul>
+</li>
+</ul>
+<p>A convenient way to specify <code>named</code> exports as below:</p>
+<pre><code class="language-javascript">// lib.js
+// -------
+export const quux = Math.sqrt( 2 ); // => exports a constant
+export function multiply( x, y ) {
+  return x * y;
+} // => exports a function
+
+export function addContact( id, callback ) {
+  callback();
+} // => exports a function
+
+export function refreshContact() {
+  alert( `Hello ES6 Modules` );
+} // => exports a function
+</code></pre>
+> And of course `import` them into another file:
+
+<pre><code class="language-javascript">// main.js
+// -------
+import quux from 'lib';
+import { multiply, addContact, refreshContact } from 'lib';
+
+console.log( quux ); // => 1.4142135623730951
+console.log( multiply(10, 10); // => 1000
+console.log(addContact(1, refreshContact)); // => alerts `Hello ES6 Modules`
+// app.js
+// ------
+// import the whole module
+import * as lib from 'lib'
+
+console.log(lib.quux); // => 1.4142135623730951
+console.log(lib.refreshContact()); // => alerts `Hello ES6 Modules`
+</code></pre>
+
+<p>Another technique in a module, we could use the following:</p>
+<pre><code class="language-javascript">const quatro = 10 * 10 * 10 * 10;
+export { quatro }; 
+</code></pre>
+
+<blockquote>
+<p><code>default</code> exports is simple one module that you want to export as the default ( like CommonJS ) and it turns out you can use <code>default</code> exports and <code>named</code> exports both in your module. There is alot more on <code>modules</code> in <code>ES6</code> including <code>script</code> tags, using <code>promises</code> and <code>module loading</code> which is an API that allows you to programmatically work with modules and configure module loading. </p>
+</blockquote>
+<p>&#8593; <a href="#table-of-contents">Back to TOC</a></p>
+<h2 id="Getters-and-Setters"><a href="#Getters-and-Setters" class="headerlink" title="Getters and Setters"></a>Getters and Setters</h2><p>Getters and setters allow you to use standard property access notation for reads and writes. In <code>ES6</code> there is a much cleaner way than using <code>Object.defineProperty</code> to do achieve this.</p>
+<ul>
+<li><code>Getting</code> and <code>Setting</code> helps you organize functionality associated with direct access</li>
+</ul>
+<pre><code class="language-javascript">class Employee {
+
+    constructor(name) {
+        this._name = name;
+    }
+
+    get name() {
+        return `Employees name is: ` + this._name.toUpperCase();
+    }
+
+    set name(newName){
+        if(newName){ 
+            this._name = newName;
+        }
+    }
+}
+
+let developer = new Employee("Sophia");
+console.log(developer.name); // => Sophia
+developer.name = "Dania";
+console.log(developer.name); // => Dania
+</code></pre>
+
+<h2 id="Classes"><a href="#Classes" class="headerlink" title="Classes"></a>Classes</h2><p>Classes are a welcome addition in <code>ES6</code> however do not introduce a new OO model and rather are just <code>syntactical sugar</code> over JavaScript’s existing prototype-based-inheritance model.</p>
+<ul>
+<li>To declare a <strong>class</strong> simply use the <code>class</code> keyword<ul>
+<li>There are two ways to define a class by using either <code>class declarations</code> or <code>class expressions</code></li>
+<li><code>class declarations</code> are not hoisted</li>
+<li><code>class expressions</code> can be <strong>named</strong> or <strong>unnamed</strong></li>
+</ul>
+</li>
+<li>The <code>constructor</code> creates and initializes an object created with a <code>class</code> and their <code>bodies</code> are executed in <strong>strict mode</strong></li>
+<li>The <code>extends</code> keyword is used to create a <code>class</code> that is a child of another class</li>
+<li>The <code>static</code> keyword is used to define a <strong>static</strong> method of a <code>class</code></li>
+</ul>
+<pre><code class="language-javascript">class Atom {
+  constructor( name, mass, neutrons ) {
+    this._name = name;
+    this._mass = mass;
+    this._neutrons = neutrons;
+  }
+  // using get     
+  get name() {
+    return this._name;
+  }
+
+  get mass() {
+    return this._mass;
+  }
+
+  get neutrons() {
+    return this._neutrons;
+  }
+
+  toString() {
+    return `${this.name}'s mass index is ${this.mass}, and is composed of ${this.neutrons} neutrons` ;
+  }
+}
+
+const particle = new Atom('Mote', 100000, 1000);
+
+console.log(particle.mass); 
+console.log(particle.neutrons);
+console.log(particle.toString());
+</code></pre>
+
+<p>There can only be one special method with the name<code>constructor</code> however you can have many <code>prototype</code> methods in your class </p>
+<pre><code class="language-javascript">class Atom {
+  constructor( mass, neutrons) {
+    this.mass = mass;
+    this.neutrons = neutrons;
+  }
+
+  // prototype method
+  get printMass() {
+    return this.calcMass();
+  }
+
+  calcMass() {
+     return `Atom's mass is ${this.mass}`;
+
+  }
+
+  // prototype method
+  get printSize() {
+    return this.calcSize();
+  }
+
+  calcSize() {
+    return `Atom's size is ${this.mass * this.neutrons}`;
+  }
+}
+
+const square = new Atom(1000, 10);
+console.log(square.printMass);
+console.log(square.printSize);
+</code></pre>
+
+<h2 id="Symbols"><a href="#Symbols" class="headerlink" title="Symbols"></a>Symbols</h2><p>We now have a public interface to use symbols in <code>ES6</code>. A symbol is a unique and immutable <code>primitive data type</code>.</p>
+<ul>
+<li>Their main purpose is <code>interoperability</code> and to avoid name clashes between properties - you can use symbols as identifiers when adding props to an object</li>
+<li>Don’t use the <code>new</code> operator when creating a symbol, just invoke the function</li>
+<li>Symbols are <strong>unique</strong>, you cannot alter them ( which is the whole point )</li>
+<li>Interestingly symbols used as <code>keys</code> to an object will not appear as part of the object when using a <code>for in</code> loop</li>
+</ul>
+<p>Syntax for creating a symbol, <code>Symbol</code> or Symbol( description )`:</p>
+<pre><code class="language-javascript">let sym1 = new Symbol(); // => throws an error
+
+let sym2 = Symbol( "symbol description" ); // => you can add a optional description
+let sym3 = Symbol( "symbol description" ); // => both `sym1` and `sym2` are unique
+</code></pre>
+
+<blockquote>
+<p>Using symbols as keys into an object, when you iterate with <code>for in</code> your symbol identifier will be hidden:</p>
+</blockquote>
+<pre><code class="language-javascript">const phoneNo = Symbol();
+
+const employee = {
+  firstName: "Moe",
+  lastName: "Khan",
+  [ phoneNo ]: 555-555-5555
+}  
+
+for (const key in employee) {
+  if (employee.hasOwnProperty(key)) {
+    alert(key + " -> " + employee[key]);
+  } // => key -> firstName: Moe, key -> lastName: Khan
+}
+</code></pre>
+
+<p>Symbols can be useful for hiding information in an object, and there is a new <strong>object method</strong> named <code>getOwnPropertySymbols</code> that will help you reflect into symbol props:</p>
+<pre><code class="language-javascript">const phoneNo = Symbol();
+let symbol0 = Object.getOwnPropertySymbols(employee);
+
+const employee = {
+  firstName: "Moe",
+  lastName: "Khan",
+  [ phoneNo ]: 5555555555
+}  
+
+for (const key in employee) {
+  if (employee.hasOwnProperty(key)) {
+    alert(key + " -> " + employee[key]);
+  }
+  if (symbol0) {
+    alert("Hidden symbol " + " -> " + employee[ phoneNo ]);
+  }
+} 
+</code></pre>
+
+<h2 id="Generators"><a href="#Generators" class="headerlink" title="Generators"></a>Generators</h2><p>Generators are an exciting new feature and can be used as <code>iterators</code> as well as drastically help us write <strong>asynchronous code</strong></p>
+<ul>
+<li>When you <code>invoke</code> a function it runs till completion before any other code can run because JS is always <strong>single threaded</strong></li>
+<li>Generator functions allow you to <strong>pause</strong> a functions execution in a <code>synchronous</code> manner and return the value of an expression</li>
+<li>Inside the generator function body use the new <code>yield</code> keyword to pause the function intrinsically</li>
+<li>Use the <code>*</code> symbol to denote a generator function</li>
+</ul>
+<p>Take a rudimentary example:</p>
+<pre><code class="language-javascript">function *myGenerator() {
+  yield '1: First stab at generators';
+  yield 2;
+  yield '3: Use next() to start iterating';
+  yield 4
+  yield "5: Normal functions 'run to completion'";
+}
+
+let step = myGenerator();
+
+console.log( step.next() ); // => { value: "1: First stab at generators", done: false }
+console.log( step.next() ); // => { value: 2, done: false }
+console.log( step.next() ); // => { value: "3: Use next() to start iterating", done: false }
+console.log( step.next() ); // => { value: 4, done: false }
+console.log( step.next() ); // => { value: "5: Normal functions 'run to completion'", done: false }
+console.log( step.next() ); // => { value: undefined, done: true }
+</code></pre>
+
+<p>Furthering on our example and passing values into next(‘some value’); This might be a little confusing at first:</p>
+<pre><code class="language-javascript">function *personFullName() {
+    var fName = yield 'first name';
+    var lName = yield 'second name';
+    console.log(fName + lName);
+}
+
+var myGenerator = personFullName();
+
+myGenerator.next(); //{ value: 'first name', done: 'false' }
+myGenerator.next('Maya '); //{ value: 'second name', done: 'false' }
+myGenerator.next('Bethea') // { value:'undefined', done: 'true' }
+
+// => Maya Bethea
+</code></pre>
+
+<h2 id="Arrow-Functions"><a href="#Arrow-Functions" class="headerlink" title="Arrow Functions"></a>Arrow Functions</h2><p>Arrow functions are one of the more popular features of <code>ES6</code> saving developer time and simplifying function scope. </p>
+<ul>
+<li>The arrow <code>(=&gt;)</code> or <code>fat arrow</code> provides a shorthand for the function keyword with lexical <code>this</code> binding<ul>
+<li>Arrow functions change the way <code>this</code> binds in functions</li>
+<li>They work much like <code>lambdas</code> in languages like <code>C#</code> or <code>Python</code><ul>
+<li><code>lambda</code> expressions are are often passed as arguments to <strong>higher order functions</strong></li>
+</ul>
+</li>
+<li>we avoid the <code>function</code> keyword, <code>return</code> keyword and <code>curly brackets</code> when using arrow functions</li>
+</ul>
+</li>
+<li>Arrow functions allow developers to remove boilerplate, however you shouldn’t remain ignorant of how ‘lexical<code>scoping</code>this` works </li>
+<li>Be careful when using <code>arrow functions</code> as they aren’t applicable everywhere, <strong>use cases</strong> will depend from situation to situation</li>
+</ul>
+<p>For the sake of simplicity, we could do the following:</p>
+<pre><code class="language-javascript">const msg = () => alert("Hello Arrow Function");
+console.log(msg());
+</code></pre>
+
+<pre><code class="language-javascript">let square = ( a, b ) => a * b; 
+console.log(square(5, 5)); // 25
+</code></pre>
+
+<pre><code class="language-javascript">let x = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let z = x.map(x => x); 
+console.log(z); // [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]
+</code></pre>
+
+<p>Every new function defines it’s own <code>this</code> value, yet <code>arrow</code> functions <strong>close</strong> over the <code>this</code> value</p>
+<pre><code class="language-javascript">// in ES5
+function Tree() {
+  that = this;
+  that.age = 0;
+
+  setInterval(function growOld() {
+    that.age++;
+  }, 1000);  
+}
+
+var t = new Tree();
+
+// in ES6
+function Tree() {
+  this.age = 0;
+
+  setInterval(() => {
+    this.age++;
+     5000);
+  }
+}
+
+var t = new Tree();
+</code></pre>
+
+<p>&#8593; <a href="#table-of-contents">Back to TOC</a></p>
+<h2 id="Map-and-WeakMap"><a href="#Map-and-WeakMap" class="headerlink" title="Map and WeakMap"></a>Map and WeakMap</h2><p>With the addition of new data structures that are new to <code>ES6</code>, <code>Map</code> has been sorely awaited by developers to map values to values - <code>Objects</code> have been used as <code>maps</code> historically</p>
+<ul>
+<li>The <code>Map</code> object is a simple key/value map and is deemed an <code>iterable</code></li>
+<li><code>for...of</code> loop returns an array of [key, value] for each <strong>iteration</strong></li>
+<li>While similar, there are certain distinctions between <strong>Objects</strong> and <strong>Maps</strong> and therefore are certain use-cases<ul>
+<li>Most importantly <code>Map</code> instances are <strong>only</strong> useful for collections and <code>Objects</code> used as records with fields and methods</li>
+</ul>
+</li>
+</ul>
+<p>At a fundamental level when working with maps you could do the following:</p>
+<pre><code class="language-javascript">let map = new Map();    
+map.set( 'min', Number.MIN_SAFE_INTEGER );
+map.set( 'max', Number.MAX_SAFE_INTEGER );
+map.has('baz'); // => false
+map.size; 2
+console.log( map ); // => Map { "min" => -9007199254740991, "max" => 9007199254740991 }
+map.delete( 'max' );
+console.log( map ); // => Map { "min" => -9007199254740991 }
+map.clear()
+map.size; // => 0
+</code></pre>
+
+<p>Another way to set a <code>map</code> via <strong>iterable</strong> `key-value “pairs”. Notice that you can any value as the key:</p>
+<pre><code class="language-javascript"> let hash = new Map([
+        [ 'age', 1 ],
+        [ false, 'true' ],
+        [ function () {}, 'function' ],
+        [ {}, 'object' ], 
+        [ 5, 'five' ],
+        [ undefined, 'undefined'],
+        [ null, 'null'],
+              [ Symbol(), 'Symbol']
+    ]);
+
+for ( let key of hash.keys()) {
+  console.log( typeof key ); 
+} // => string, boolean, function, object, number, undefined, object, symbol
+</code></pre>
+
+<blockquote>
+<p>Note: The <code>for...of</code> statement creates a loop iterating only over <code>iterable objects&#39; (Array, Map, Set, String, etc). You can also use the built in</code>forEach` to iterate over map collection</p>
+</blockquote>
+<h2 id="Set-and-WeakSet"><a href="#Set-and-WeakSet" class="headerlink" title="Set and WeakSet"></a>Set and WeakSet</h2><p>…</p>
+<h2 id="Promises"><a href="#Promises" class="headerlink" title="Promises"></a>Promises</h2><p>Promise objects help us with asynchronous programming, espercially deferring async operations. Think of functions that return their results asychronously ( heard of callback hell? ).</p>
+<ul>
+<li>ES6 has adopted <code>[PromiseA+](https://promisesaplus.com/)</code> spec, but there are other libraries out there as such as RSVP, Bluebird, Q</li>
+<li>This allows you to create handlers to asynchronous actions’s eventual success or failure in a synchronous way</li>
+<li>So, promises have a sense of <code>state</code> which is either fullfilled, pending, or rejected</li>
+</ul>
+<p>An example of <strong>callback hell</strong>, also known as the <strong>pyramid of doom</strong></p>
+<pre><code class="language-javascript">asyncFn1(function(err, result) {  
+  asyncFn2(function(err, result) {
+    asyncFn3(function(err, result) {
+      asyncFn4(function(err, result) {
+       asyncFn5(function(err, result) {
+         // Do something
+       });
+      });
+    });
+  });
+});
+</code></pre>
+
+<p><code>Promises</code> help flatten our structures, a most welcome <strong>struct</strong>:</p>
+<pre><code class="language-javascript">asyncFn1(value1)
+.then(asyncFn2)
+.then(asyncFn3)
+.then(asyncFn4)
+.then(asycnFn5, value5 => {
+    // Do something with value5
+})
+.catch(function (error) {
+    // Handle any error from all above steps
+})
+.done();
+</code></pre>
+
+<p>An example of what a native <code>promise</code> looks like:</p>
+<pre><code class="language-javascript">var p = new Promise(function(resolve, reject) {  
+   if (/* condition */) {
+      resolve(/* value */);  // fulfilled successfully
+   }
+   else {
+      reject(/* reason */);  // error, rejected
+   }
+});
+</code></pre>
+
+<h2 id="ES7"><a href="#ES7" class="headerlink" title="ES7"></a>ES7</h2><p>Proposals for the ES2017, ES7 specification can be found here:  <a href="https://github.com/tc39/ecma262" target="_blank" rel="external">https://github.com/tc39/ecma262</a> - definitely check the spec when in doubt.</p>
+<p>Some of the features might include:</p>
+<ul>
+<li><code>Array.prototype.includes</code><ul>
+<li>myArr.includes(value) // nice! </li>
+</ul>
+</li>
+<li><code>Async</code> and <code>Generator</code> functions</li>
+<li>Exponential Operators</li>
+</ul>
+<h2 id="Contributions"><a href="#Contributions" class="headerlink" title="Contributions"></a>Contributions</h2><p>Contributions in the form of code samples and syntax are welcome - if you spot errors in example code or feel you have a better use case for a given feature issue a pull request. Typos and formatting requests will also be considered.</p>
+
+      
+
+
+    
+      
+
+    
+
+
+  </div>
+  
+    
+
+  
+</div>
+
+
+
+
+
+
+
+                </div>
+
+
+            </div>
+        </div>
+        <div class="four wide column" style="background-color: #f2f2f2">
+            <div class="sidebar-wrapper">
+                <a href="/"><img class="ui centered image" src="/images/avatar.png" width="100" height="100"></a>
+                <div class="item">
+                    <br />
+
+                    <div class="content">
+                        <div class="meta">
+                                <span class="intro"><p class="intro">» Web developer inspired by minimalism, elegance and order — I write about modern day JavaScript, tech, software <strike>and desperately try to maintain a linkblog.</strike> and code.</p>
+
+                                        <p class="intro">This is my humble home on the internet - <a href="/about">read more about me</a>.</p></span>
+                        </div>
+
+                    </div>
+
+
+                </div>
+                <div class="ui hidden divider"></div>
+
+                <div class="ui list">
+                    <h4>» OPEN SOURCE PROJECTS</h4>
+                    <a class="item" href="https://github.com/ahadb/es6"> Intro to ES6</a>
+                    <a class="item" href="https://github.com/ahadb/flat-file-cms"> Flat File CMS</a>
+                    <a class="item" href="https://github.com/ahadb/is"> is-type</a>
+                    <a class="item" href="https://github.com/ahadb/vue-build"> Vue Build w/ Webpack</a>
+                    <a class="item" href="https://github.com/ahadb/fluke"> Fluke JS (w.i.p.)</a>
+
+                    <a class="item" href="https://github.com/ahadb/node-range"> node-range</a>
+                    <a class="item" href="https://github.com/ahadb/obj-values"> obj-values</a>
+                    <a class="item" href="https://github.com/ahadb/node-camel-case"> node-camel-case</a>
+                    <a class="item" href="https://github.com/ahadb/kebab-caseify"> kebab-caseify</a>
+                    <a class="item" href="https://github.com/ahadb/first-of-array"> first-of-array</a>
+                    <a class="item" href="ahadb/last-of-array"> last-of-array</a>
+
+                </div>
+
+                <div class="ui list">
+                    <h4>» ARTICLES</h4>
+                    <a class="item" href="2010/02/15/ego-information/"> In The Digital World, Information Has No Ego</a>
+                    <a class="item" href="/2015/02/13/why-use-objects/">A Case for Objects {...}</a>
+                    <a class="item" href="/2014/09/29/js-frameworks-libraries/">JavaScript Micro Frameworks, Hypermodularization & Libraries</a>
+                    <a class="item" href="/2014/01/20/fear/">Push Through Fear</a>
+                </div>
+
+                <div class="ui list">
+                    <h4>» MENU</h4>
+                    <a class="item" href="/about">About</a>
+                    <a class="item" href="/linkblog">Linkblog</a>
+                    <a class="item" href="/archives">Archives</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+  <div class="ui text main container footer">
+    <div id="footer-info" class="inner">
+      &copy; 2007 - 2017 &#183; Ahad Bokhari &#183; <a href="mailto:ahadbokhari@gmail.com">ahadbokhari@gmail.com</a>  <br>
+      <i>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>, hosted on <a href="https://github.com/ahadb">Github</a></i>
+    </div>
+  </div>
+</footer>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" integrity="sha384-8gBf6Y4YYq7Jx97PIqmTwLPin4hxIzQw5aDmUg/DDhul9fFpbbLcLh3nTIIDJKhx" crossorigin="anonymous"></script>
+
+<script src="https://use.typekit.net/ncd4ysn.js"></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+
+
+
+<script src="/js/script.js"></script>
+<script src="/js/dropdown.js"></script>
+<script src="/js/custom.js"></script>
+<script src="/js/transition.js"></script>
+<script src="/js/underscore.js"></script>
+<script src="/js/prism.js"></script>
+
+
+</body>
+
+</html>

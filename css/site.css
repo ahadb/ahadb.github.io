@@ -275,3 +275,16 @@ a.title {
     color: #906;
     color: #484848;
 }
+
+
+code {
+    font-family: proxima-nova;
+    font-size: 18px;
+    padding-right: 0.3em;
+    padding-left: 0.3em;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    margin: 0;
+    background-color: rgba(0,0,0,0.04);
+    border-radius: 3px;
+}
