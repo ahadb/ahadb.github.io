@@ -4,17 +4,18 @@
   <meta charset="utf-8">
 
   
-  <title>Category: Javascript | Ahad Bokhari - Exploring JavaScript and Software in 2016 &amp; Beyond</title>
+  <title>Classes vs. Prototype | Ahad Bokhari - Exploring JavaScript and Software in 2016 &amp; Beyond</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Ahad Bokhari - Exploring JavaScript and Software in 2016 & Beyond">
-<meta property="og:url" content="ahadb.com/categories/Javascript/index.html">
+  <meta name="description" content="JavaScript uses prototypes, but with new ES6 implementations also uses the traditional class keyword. What&apos;s the difference between the two?">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Classes vs. Prototype">
+<meta property="og:url" content="ahadb.com/2017/03/24/classes-vs-prototype/index.html">
 <meta property="og:site_name" content="Ahad Bokhari - Exploring JavaScript and Software in 2016 & Beyond">
-<meta property="og:description">
+<meta property="og:description" content="JavaScript uses prototypes, but with new ES6 implementations also uses the traditional class keyword. What&apos;s the difference between the two?">
+<meta property="og:updated_time" content="2017-03-26T05:14:23.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ahad Bokhari - Exploring JavaScript and Software in 2016 & Beyond">
-<meta name="twitter:description">
+<meta name="twitter:title" content="Classes vs. Prototype">
+<meta name="twitter:description" content="JavaScript uses prototypes, but with new ES6 implementations also uses the traditional class keyword. What&apos;s the difference between the two?">
   
     <link rel="alternate" href="/atom.xml" title="Ahad Bokhari - Exploring JavaScript and Software in 2016 &amp; Beyond" type="application/atom+xml">
   
@@ -130,134 +131,116 @@
                 </div>
                 <div class="ui relaxed middle aligned divided list">
 
-                    
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <header class="archive-article-header">
-    
-  
+                    <!--<div id="post-classes-vs-prototype" class="header" itemscope itemprop="blogPost">-->
 
-      <a class="<header" href="/2016/04/10/node-thoughts/"><h2 class="post-title">Thoughts on Node</h2></a>
+<div class="item">
 
+  <div class="right floated content" style="margin-top:5px">
+    
+  </div>
+
+<div class="content">
+
+    
+  
+    <h1 class="art" itemprop="name">
+      Classes vs. Prototype
+    </h1>
   
 
 
+
+  
+  <div class="meta" style="margin-top: -10px">
     
-  <a href="/2016/04/10/node-thoughts/" class="archive-article-date"></a>
+  <a href="/2017/03/24/classes-vs-prototype/" class=""></a>
 </span>
 <span><i class="github icon"></i> Edit</span> &nbsp; &#183; &nbsp;
   <span style="color: #999">
-        <i><time datetime="2016-04-10T04:00:00.000Z" itemprop="datePublished">April 10, 2016</time></i>
+        <i><time datetime="2017-03-24T04:00:00.000Z" itemprop="datePublished">March. 24, 2017</time></i>
 </span>
- <i><span style="float:right; margin-right:15px">1,009 <span style="color:#999">words</span></i>
+ <i><span style="float:right; margin-right:15px">Mix { ... } / 336 <span style="color:#999">words</span></i>
 
 
-  </header>
-</article>
+    </div>
 
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <header class="archive-article-header">
-    
-  
-
-      <a class="<header" href="/2016/01/12/learn-js/"><h2 class="post-title">Learn JavaScript in 2016 - Emphasize on Focus</h2></a>
+    <div class="article-author"></div>
 
   
 
 
-    
-  <a href="/2016/01/12/learn-js/" class="archive-article-date"></a>
-</span>
-<span><i class="github icon"></i> Edit</span> &nbsp; &#183; &nbsp;
-  <span style="color: #999">
-        <i><time datetime="2016-01-12T05:00:00.000Z" itemprop="datePublished">January 02, 2016</time></i>
-</span>
- <i><span style="float:right; margin-right:15px">683 <span style="color:#999">words</span></i>
 
 
-  </header>
-</article>
+      
+  <br/>
+        <p>In a traditional programming language a class is an entity responsible for creating objects and defining the behavior of objects. Though they might be objects in their own right, they’re certainly different from other types of objects. A <code>Class</code> then in the classical sense is an object whose Class is <code>Class</code>. </p>
+<p>A simple demonstration would be as follows:</p>
+<pre><code class="language-javascript">function MyClass() {}
+typeof MyClass
+// => "function"
 
-  
-    
+class SomeClass {}
+typeof SomeClass
+// => "function"
+</code></pre>
+
+<p>In the JavaScript world, we have constructors and prototypes. Thus we can use JavaScript like a classical language, and it has enough expressive power to simulate a classical system. Embracing the prototypal nature of the language objects inherit from other objects.</p>
+<p>The <code>new</code> keyword:</p>
+<pre><code class="language-javascript">new Foo();
+</code></pre>
+
+<p>…creates a new object that inherits from:</p>
+<pre><code class="language-javascript">foo.prototype
+</code></pre>
+
+<p>We all know that JavaScript instances are created with a constructor and the constructor of an instance is a function that was invoked with the new operator. As a matter of fact any function can be a prototype. There is a stark difference here where a <code>Class</code> is a special type of object that creates new instances.<br>Classes in traditional languages have special methods attached to them.</p>
+<p>In JavaScript we see no such mechanism, there is nothing special about a prototype object, no special class methods or constructors:</p>
+<pre><code class="language-javascript">function norf() {}
+norf.prototype
+// => {}
+</code></pre>
+
+<h2 id="In-Short"><a href="#In-Short" class="headerlink" title="In Short"></a>In Short</h2><ul>
+<li>“Classes” are objects in most “classical” languages, but they are special in the sense that they have methods associate with them. In JavaScript, prototypes aren’t special, they’re just objects (as seen above)</li>
+<li>JavaScript takes the responsibility for instances into separate processes, a constructor and a prototype. A constructor in JavaScript can be any function and are responsible for creating new instances.</li>
+</ul>
+<p>So when we say JavaScript has “Classes”, we really mean that we have something that works just like a simple class-based system, with the constructor function and its prototype acting as the “Class.”</p>
+
+      
+
+
     
       
-        </div></section>
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2015" class="archive-year">2015</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <header class="archive-article-header">
-    
-  
-
-      <a class="<header" href="/2015/03/25/signal-3/"><h2 class="post-title">Signal - The State of JavaScript III</h2></a>
-
-  
-
 
     
-  <a href="/2015/03/25/signal-3/" class="archive-article-date"></a>
-</span>
-<span><i class="github icon"></i> Edit</span> &nbsp; &#183; &nbsp;
-  <span style="color: #999">
-        <i><time datetime="2015-03-25T04:00:00.000Z" itemprop="datePublished">03/25/15&#39;</time></i>
-</span>
- <i><span style="float:right; margin-right:15px">188 <span style="color:#999">words</span></i>
 
 
-  </header>
-</article>
-
+  </div>
   
     
-    
-    <article class="archive-article archive-type-post">
-  <header class="archive-article-header">
-    
+<ul id="article-nav" class="nav nav-pills nav-justified">
   
-
-      <a class="<header" href="/2015/03/09/signal-2/"><h2 class="post-title">Signal - The State of JavaScript II</h2></a>
-
-  
-
-
-    
-  <a href="/2015/03/09/signal-2/" class="archive-article-date"></a>
-</span>
-<span><i class="github icon"></i> Edit</span> &nbsp; &#183; &nbsp;
-  <span style="color: #999">
-        <i><time datetime="2015-03-09T04:00:00.000Z" itemprop="datePublished">January 03, 2015</time></i>
-</span>
- <i><span style="float:right; margin-right:15px">453 <span style="color:#999">words</span></i>
-
-
-  </header>
-</article>
-
+  <li role="presentation">
+    <a href="/2017/03/08/gorilla-banana/" id="article-nav-older" class="article-nav-link-wrap">
+      <i class="fa fa-chevron-left pull-left"></i>
+      <span class="article-nav-link-title">The Gorilla, Banana Problem</span>
+    </a>
+  </li>
   
   
-    </div></section>
+  <li role="presentation">
+    <a href="/2017/03/27/knowledge-provocateur/" id="article-nav-newer" class="article-nav-link-wrap">
+      <span class="article-nav-link-title">The Knowledge Provocateur</span>
+      <i class="fa fa-chevron-right pull-right"></i>
+    </a>
+  </li>
   
+</ul>
+
+
+  
+</div>
+
 
 
 
