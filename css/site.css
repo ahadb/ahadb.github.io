@@ -153,7 +153,6 @@ p.date {
 .ui.list .list > a.item, .ui.list > a.item {
     cursor: pointer;
     color: #4183c4;
-    text-decoration: underline red;
 }
 
 .ui.divided.list > .item {
@@ -196,7 +195,6 @@ p.date {
 .ui.list .list > a.item, .ui.list > a.item {
     cursor: pointer;
     color: #333;
-    text-decoration: underline red;
 }
 
 .ui.grid > .column:not(.row) {
