@@ -4,18 +4,17 @@
   <meta charset="utf-8">
 
   
-  <title>Classes vs. Prototype | Ahad Bokhari - Exploring JavaScript and Software in 2016 &amp; Beyond</title>
+  <title>Ahad Bokhari - Exploring JavaScript and Software in 2016 &amp; Beyond</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="JavaScript uses prototypes, but with new ES6 implementations also uses the traditional class keyword. What&apos;s the difference between the two?">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Classes vs. Prototype">
-<meta property="og:url" content="ahadb.com/2017/03/26/classes-vs-prototype/index.html">
+  <meta name="description">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ahad Bokhari - Exploring JavaScript and Software in 2016 & Beyond">
+<meta property="og:url" content="ahadb.com/page/5/index.html">
 <meta property="og:site_name" content="Ahad Bokhari - Exploring JavaScript and Software in 2016 & Beyond">
-<meta property="og:description" content="JavaScript uses prototypes, but with new ES6 implementations also uses the traditional class keyword. What&apos;s the difference between the two?">
-<meta property="og:updated_time" content="2017-03-26T05:14:23.000Z">
+<meta property="og:description">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Classes vs. Prototype">
-<meta name="twitter:description" content="JavaScript uses prototypes, but with new ES6 implementations also uses the traditional class keyword. What&apos;s the difference between the two?">
+<meta name="twitter:title" content="Ahad Bokhari - Exploring JavaScript and Software in 2016 & Beyond">
+<meta name="twitter:description">
   
     <link rel="alternate" href="/atom.xml" title="Ahad Bokhari - Exploring JavaScript and Software in 2016 &amp; Beyond" type="application/atom+xml">
   
@@ -50,7 +49,7 @@
     <div class="left floated twelve wide column">
       <h1 class="me"><a class="title" href="/">Ahad Bokhari</a></h1>
       <div class="ui dropdown">
-        <div class="text"><i class="sidebar icon"></i><cite style="color:#906;"> ...eating JavaScript and exploring Software in 2017 & Beyond </cite></div>
+        <div class="text"><i class="sidebar icon"></i><cite style="color:#906;"> ...eating JavaScript and exploring software in 2017 & beyond </cite></div>
 
         <div class="menu">
 
@@ -131,11 +130,15 @@
                 </div>
                 <div class="ui relaxed middle aligned divided list">
 
-                    <!--<div id="post-classes-vs-prototype" class="header" itemscope itemprop="blogPost">-->
+                    
+  
+    <!--<div id="post-people" class="header" itemscope itemprop="blogPost">-->
 
 <div class="item">
 
   <div class="right floated content" style="margin-top:5px">
+    
+    <i><p class="word-count">553 <span style="color:#999">words</span></p></i>
     
   </div>
 
@@ -143,28 +146,12 @@
 
     
   
-    <h1 class="art" itemprop="name">
-      Classes vs. Prototype
-    </h1>
-  
 
-
+      <a class="<header" href="/2007/06/16/people/"><h2 class="post-title">Dealing With People</h2></a>
 
   
-  <div class="meta" style="margin-top: -10px">
-    
-  <a href="/2017/03/26/classes-vs-prototype/" class=""></a>
-</span>
-<span><i class="github icon"></i> Edit</span> &nbsp; &#183; &nbsp;
-  <span style="color: #999">
-        <i><time datetime="2017-03-26T04:00:00.000Z" itemprop="datePublished">March. 24, 2017</time></i>
-</span>
- <i><span style="float:right; margin-right:15px">Mix { ... } / 336 <span style="color:#999">words</span></i>
 
 
-    </div>
-
-    <div class="article-author"></div>
 
   
 
@@ -172,40 +159,11 @@
 
 
       
-  <br/>
-        <p>In a traditional programming language a class is an entity responsible for creating objects and defining the behavior of objects. Though they might be objects in their own right, they’re certainly different from other types of objects. A <code>Class</code> then in the classical sense is an object whose Class is <code>Class</code>. </p>
-<p>A simple demonstration would be as follows:</p>
-<pre><code class="language-javascript">function MyClass() {}
-typeof MyClass
-// => "function"
-
-class SomeClass {}
-typeof SomeClass
-// => "function"
-</code></pre>
-
-<p>In the JavaScript world, we have constructors and prototypes. Thus we can use JavaScript like a classical language, and it has enough expressive power to simulate a classical system. Embracing the prototypal nature of the language objects inherit from other objects.</p>
-<p>The <code>new</code> keyword:</p>
-<pre><code class="language-javascript">new Foo();
-</code></pre>
-
-<p>…creates a new object that inherits from:</p>
-<pre><code class="language-javascript">foo.prototype
-</code></pre>
-
-<p>We all know that JavaScript instances are created with a constructor and the constructor of an instance is a function that was invoked with the new operator. As a matter of fact any function can be a prototype. There is a stark difference here where a <code>Class</code> is a special type of object that creates new instances.<br>Classes in traditional languages have special methods attached to them.</p>
-<p>In JavaScript we see no such mechanism, there is nothing special about a prototype object, no special class methods or constructors:</p>
-<pre><code class="language-javascript">function norf() {}
-norf.prototype
-// => {}
-</code></pre>
-
-<h2 id="In-Short"><a href="#In-Short" class="headerlink" title="In Short"></a>In Short</h2><ul>
-<li>“Classes” are objects in most “classical” languages, but they are special in the sense that they have methods associate with them. In JavaScript, prototypes aren’t special, they’re just objects (as seen above)</li>
-<li>JavaScript takes the responsibility for instances into separate processes, a constructor and a prototype. A constructor in JavaScript can be any function and are responsible for creating new instances.</li>
-</ul>
-<p>So when we say JavaScript has “Classes”, we really mean that we have something that works just like a simple class-based system, with the constructor function and its prototype acting as the “Class.”</p>
-
+        
+      <div class="description"><span class="time" style="
+      float: left; color:#999">June 16, 2007&nbsp; &#183;</span>
+        <p class="desc-snippet">Abraham Lincoln, the founding father of this country began his carrier by forging political relationships. He was a great communicator and recognized early in his career that words have a powerful impact on people</p>
+        </div>
       
 
 
@@ -217,22 +175,16 @@ norf.prototype
 
   </div>
   
-    
-<ul id="article-nav" class="nav nav-pills nav-justified">
-  
-  <li role="presentation">
-    <a href="/2017/03/08/gorilla-banana/" id="article-nav-older" class="article-nav-link-wrap">
-      <i class="fa fa-chevron-left pull-left"></i>
-      <span class="article-nav-link-title">The Gorilla, Banana Problem</span>
-    </a>
-  </li>
-  
-  
-</ul>
-
-
-  
 </div>
+
+
+
+  
+
+
+  <div id="pager" style="float:right; margin-right:20px; margin-top:15px;">
+    <a class="page-prev" rel="prev" href="/page/4/">&#8592; Previous</a><a class="page-number" href="/">&nbsp;&nbsp;1</a><li class="disabled"><span class="page-space">&hellip;</span></li><a class="page-number" href="/page/3/">&nbsp;&nbsp;3</a><a class="page-number" href="/page/4/">&nbsp;&nbsp;4</a><span class="page-number">&nbsp;&nbsp;5</span><span class="page-next">&nbsp; Next &#8594;</a>
+  </div>
 
 
 

@@ -4,18 +4,18 @@
   <meta charset="utf-8">
 
   
-  <title>Metaprogramming in JavaScript | Ahad Bokhari - Exploring JavaScript and Software in 2016 &amp; Beyond</title>
+  <title>State | Ahad Bokhari - Exploring JavaScript and Software in 2016 &amp; Beyond</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="ES6 comes with a set of features that aid in metaprogramming, but not much has been written about them. I&apos;d like to briefly touch base on reflection and introspection whilst opening doors for further">
+  <meta name="description" content="Managing application state, a problem and challenge everyone has.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Metaprogramming in JavaScript">
-<meta property="og:url" content="ahadb.com/2017/04/15/metaprogramming/index.html">
+<meta property="og:title" content="State">
+<meta property="og:url" content="ahadb.com/2017/06/15/state/index.html">
 <meta property="og:site_name" content="Ahad Bokhari - Exploring JavaScript and Software in 2016 & Beyond">
-<meta property="og:description" content="ES6 comes with a set of features that aid in metaprogramming, but not much has been written about them. I&apos;d like to briefly touch base on reflection and introspection whilst opening doors for further">
-<meta property="og:updated_time" content="2017-04-15T23:27:18.000Z">
+<meta property="og:description" content="Managing application state, a problem and challenge everyone has.">
+<meta property="og:updated_time" content="2017-07-15T21:37:46.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Metaprogramming in JavaScript">
-<meta name="twitter:description" content="ES6 comes with a set of features that aid in metaprogramming, but not much has been written about them. I&apos;d like to briefly touch base on reflection and introspection whilst opening doors for further">
+<meta name="twitter:title" content="State">
+<meta name="twitter:description" content="Managing application state, a problem and challenge everyone has.">
   
     <link rel="alternate" href="/atom.xml" title="Ahad Bokhari - Exploring JavaScript and Software in 2016 &amp; Beyond" type="application/atom+xml">
   
@@ -131,7 +131,7 @@
                 </div>
                 <div class="ui relaxed middle aligned divided list">
 
-                    <!--<div id="post-metaprogramming" class="header" itemscope itemprop="blogPost">-->
+                    <!--<div id="post-state" class="header" itemscope itemprop="blogPost">-->
 
 <div class="item">
 
@@ -144,7 +144,7 @@
     
   
     <h1 class="art" itemprop="name">
-      Metaprogramming in JavaScript
+      State
     </h1>
   
 
@@ -153,11 +153,11 @@
   
   <div class="meta" style="margin-top: -10px">
     
-  <a href="/2017/04/15/metaprogramming/" class=""></a>
+  <a href="/2017/06/15/state/" class=""></a>
 </span>
 <span><i class="github icon"></i> Edit</span> &nbsp; &#183; &nbsp;
   <span style="color: #999">
-        <i><time datetime="2017-04-15T04:00:00.000Z" itemprop="datePublished">April 15, 2017</time></i>
+        <i><time datetime="2017-06-15T04:00:00.000Z" itemprop="datePublished">April 15, 2017</time></i>
 </span>
  <i><span style="float:right; margin-right:15px">422 <span style="color:#999">words</span></i>
 
@@ -173,21 +173,12 @@
 
       
   <br/>
-        <h2 id="Discovering-Metaprogramming"><a href="#Discovering-Metaprogramming" class="headerlink" title="Discovering Metaprogramming"></a>Discovering Metaprogramming</h2><p>You probably use meta programming everyday without even realizing it, so let’s take a brief few moments to discover the basic concepts behind the world of metaprogramming. Metaprogramming is is all about what’s under the hood, as opposed to the higher levels of programming like business logic or data modelling. Metaprogramming can be described as “making programs making programs” or something similar. </p>
-<p>Imagine a guy who builds cars. Say it’s the same thing as using a computer. At some point he realizes he’s always doing the same thing, more or less. So he builds factories to build cars, and it’s much better. He’s now programming! Nevertheless, once again, at some point, he realizes he’s always doing the same thing, to some extent. Now he decides to build factories that build factories that build cars. </p>
-<p>That’s metaprogramming.</p>
-<h2 id="Metaprogramming-in-JavaScript-ES6"><a href="#Metaprogramming-in-JavaScript-ES6" class="headerlink" title="Metaprogramming in JavaScript / ES6"></a>Metaprogramming in JavaScript / ES6</h2><p>One feature of metaprogramming is code generation, like for example <code>eval</code> (JavaScript has had <code>eval</code> since ES1) - it’s worth noting that most programming languages have code generation features. Another feature of metaprogramming is Reflection - finding out about and adjusting the structure and semantics of your application. JavaScript has some tools for Reflection….</p>
-<p>Functions have:</p>
-<ul>
-<li>Function#name</li>
-<li>Function#length</li>
-<li>Function#bind</li>
-<li>Function#call </li>
-<li>Function#apply </li>
-</ul>
-<p>Also, all of the available methods on Object are Reflection, <code>Object.getOwnProperties</code>. Let me remind you that Reflection tools that don’t alter code, but instead gather information are often called Introspection). Also we have Reflection/Introspection operators, like <code>typeof</code>, <code>instanceof<code>, and <code>delete</code>.</code></code></p>
-<p>So without further ado, the new APIs in ES6 come in three: <code>Symbol</code>, <code>Reflect</code>, and <code>Proxy</code>. Symbols are all about Reflection within implementation - you dabble them on your existing classes and objects to change the behavior. Reflect is all about Reflection through introspection which is used to discover very low level information about your code. Proxy is all about Reflection through intercession and wrapping objects &amp; intercepting their behaviours through traps.</p>
-<p>Quite obviously we have just touched the surface of metaprogramming in JavaScript, but the above information will be useful to you. In the next couple of posts I’d like to talk about Symbols, Reflection and Proxy in more detail with syntactical examples.</p>
+        <p>If you’ve been working in JavaScript within modern day applications, then you might have heard of the concept of <strong>state</strong>. If you haven’t then I suggest your familiarize yourself with it - modern day applications are all incorporating this concept into their applications and it’s an emerging category in JavaScript. Some people say it’s not necessarily something every developer needs a tool to work with, but if you’ve been following along with industry news then you’d want to understand the basic concepts behind state management in an application.</p>
+<p>We’ll explore they why we need to touch three files to get a simple feature working in upcoming posts.</p>
+<h2 id="What-is-State"><a href="#What-is-State" class="headerlink" title="What is State?"></a>What is State?</h2><p>State in an application can be described as any data that can change. For several years, this was overly complex in JavaScript because the only thing we could really track was function calls, so early versions of libraries included requiring all state changes to be invoked via calls to get and set methods. Early implementations of watching and observing property changes were cumbersom and often brittle. Native getters and setters eventually arrived to the language which made this a bit easier to manage. Later a proposal was made for <code>Object.observe</code>, but it was withdrawn as a proposal as it had too many issues. In parallel, as reactive programming emerged, the ES8 Observables feature has become the standardized form of RxJS Observables, providing a very efficient way to track changes.</p>
+<p>React and first Flux and then Redux have recently got everyone thinking about how to manage state in a predictable manner for JavaScript applications. Angular 2 can be used with Redux, there’s a version of Redux for Vue.js users. Whether you follow this approach or one of many others, it’s become clear that state is a big challenge to get right in application architecture, and we’re still in the early stages of having an approach that makes a lot of sense. We’re at the point of having some very nice native language improvements, coupled with strong influences from other functional languages like Elm and PureScript.</p>
+<h2 id="Community-Interest"><a href="#Community-Interest" class="headerlink" title="Community Interest"></a>Community Interest</h2><p>That being said, developer interest is pretty high in all of these tools, especially Redux (81% of people who know about it wanting to try it), which fits the narrative of increasingly complex front-end applications. Given most of these tools didn’t exist two years ago, it’s clearly a rapidly changing landscape. It’s especially interesting seeing the high level of interest in Redux, given that Redux creator Dan Abramov repeatedly stresses that not every app needs it, and that users should wait until they run into problems before building an app with Redux.</p>
+<p>Overall, Redux users are happy users with one of the highest satisfaction ratings of any library; MobX and Relay are middling in this respect and we can perhaps expect to see other competitors emerge in the months to come in this rapidly changing area.<br>I’m betting that we’ll see a big difference in interest and usage in the future.</p>
 
       
 
@@ -204,19 +195,12 @@
 <ul id="article-nav" class="nav nav-pills nav-justified">
   
   <li role="presentation">
-    <a href="/2017/03/30/tools/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2017/04/15/metaprogramming/" id="article-nav-older" class="article-nav-link-wrap">
       <i class="fa fa-chevron-left pull-left"></i>
-      <span class="article-nav-link-title">Eking Out New Tools</span>
+      <span class="article-nav-link-title">Metaprogramming in JavaScript</span>
     </a>
   </li>
   
-  
-  <li role="presentation">
-    <a href="/2017/06/15/state/" id="article-nav-newer" class="article-nav-link-wrap">
-      <span class="article-nav-link-title">State</span>
-      <i class="fa fa-chevron-right pull-right"></i>
-    </a>
-  </li>
   
 </ul>
 

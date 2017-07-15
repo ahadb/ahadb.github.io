@@ -4,18 +4,17 @@
   <meta charset="utf-8">
 
   
-  <title>Metaprogramming in JavaScript | Ahad Bokhari - Exploring JavaScript and Software in 2016 &amp; Beyond</title>
+  <title>Archives | Ahad Bokhari - Exploring JavaScript and Software in 2016 &amp; Beyond</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="ES6 comes with a set of features that aid in metaprogramming, but not much has been written about them. I&apos;d like to briefly touch base on reflection and introspection whilst opening doors for further">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Metaprogramming in JavaScript">
-<meta property="og:url" content="ahadb.com/2017/04/15/metaprogramming/index.html">
+  <meta name="description">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ahad Bokhari - Exploring JavaScript and Software in 2016 & Beyond">
+<meta property="og:url" content="ahadb.com/archives/page/5/index.html">
 <meta property="og:site_name" content="Ahad Bokhari - Exploring JavaScript and Software in 2016 & Beyond">
-<meta property="og:description" content="ES6 comes with a set of features that aid in metaprogramming, but not much has been written about them. I&apos;d like to briefly touch base on reflection and introspection whilst opening doors for further">
-<meta property="og:updated_time" content="2017-04-15T23:27:18.000Z">
+<meta property="og:description">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Metaprogramming in JavaScript">
-<meta name="twitter:description" content="ES6 comes with a set of features that aid in metaprogramming, but not much has been written about them. I&apos;d like to briefly touch base on reflection and introspection whilst opening doors for further">
+<meta name="twitter:title" content="Ahad Bokhari - Exploring JavaScript and Software in 2016 & Beyond">
+<meta name="twitter:description">
   
     <link rel="alternate" href="/atom.xml" title="Ahad Bokhari - Exploring JavaScript and Software in 2016 &amp; Beyond" type="application/atom+xml">
   
@@ -131,100 +130,51 @@
                 </div>
                 <div class="ui relaxed middle aligned divided list">
 
-                    <!--<div id="post-metaprogramming" class="header" itemscope itemprop="blogPost">-->
-
-<div class="item">
-
-  <div class="right floated content" style="margin-top:5px">
+                    
+  
+  
     
-  </div>
-
-<div class="content">
-
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2007" class="archive-year">2007</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <header class="archive-article-header">
     
   
-    <h1 class="art" itemprop="name">
-      Metaprogramming in JavaScript
-    </h1>
-  
 
-
+      <a class="<header" href="/2007/06/16/people/"><h2 class="post-title">Dealing With People</h2></a>
 
   
-  <div class="meta" style="margin-top: -10px">
+
+
     
-  <a href="/2017/04/15/metaprogramming/" class=""></a>
+  <a href="/2007/06/16/people/" class="archive-article-date"></a>
 </span>
 <span><i class="github icon"></i> Edit</span> &nbsp; &#183; &nbsp;
   <span style="color: #999">
-        <i><time datetime="2017-04-15T04:00:00.000Z" itemprop="datePublished">April 15, 2017</time></i>
+        <i><time datetime="2007-06-16T04:00:00.000Z" itemprop="datePublished">June 16, 2007</time></i>
 </span>
- <i><span style="float:right; margin-right:15px">422 <span style="color:#999">words</span></i>
+ <i><span style="float:right; margin-right:15px">553 <span style="color:#999">words</span></i>
 
 
-    </div>
+  </header>
+</article>
 
-    <div class="article-author"></div>
-
+  
+  
+    </div></section>
   
 
 
-
-
-      
-  <br/>
-        <h2 id="Discovering-Metaprogramming"><a href="#Discovering-Metaprogramming" class="headerlink" title="Discovering Metaprogramming"></a>Discovering Metaprogramming</h2><p>You probably use meta programming everyday without even realizing it, so let’s take a brief few moments to discover the basic concepts behind the world of metaprogramming. Metaprogramming is is all about what’s under the hood, as opposed to the higher levels of programming like business logic or data modelling. Metaprogramming can be described as “making programs making programs” or something similar. </p>
-<p>Imagine a guy who builds cars. Say it’s the same thing as using a computer. At some point he realizes he’s always doing the same thing, more or less. So he builds factories to build cars, and it’s much better. He’s now programming! Nevertheless, once again, at some point, he realizes he’s always doing the same thing, to some extent. Now he decides to build factories that build factories that build cars. </p>
-<p>That’s metaprogramming.</p>
-<h2 id="Metaprogramming-in-JavaScript-ES6"><a href="#Metaprogramming-in-JavaScript-ES6" class="headerlink" title="Metaprogramming in JavaScript / ES6"></a>Metaprogramming in JavaScript / ES6</h2><p>One feature of metaprogramming is code generation, like for example <code>eval</code> (JavaScript has had <code>eval</code> since ES1) - it’s worth noting that most programming languages have code generation features. Another feature of metaprogramming is Reflection - finding out about and adjusting the structure and semantics of your application. JavaScript has some tools for Reflection….</p>
-<p>Functions have:</p>
-<ul>
-<li>Function#name</li>
-<li>Function#length</li>
-<li>Function#bind</li>
-<li>Function#call </li>
-<li>Function#apply </li>
-</ul>
-<p>Also, all of the available methods on Object are Reflection, <code>Object.getOwnProperties</code>. Let me remind you that Reflection tools that don’t alter code, but instead gather information are often called Introspection). Also we have Reflection/Introspection operators, like <code>typeof</code>, <code>instanceof<code>, and <code>delete</code>.</code></code></p>
-<p>So without further ado, the new APIs in ES6 come in three: <code>Symbol</code>, <code>Reflect</code>, and <code>Proxy</code>. Symbols are all about Reflection within implementation - you dabble them on your existing classes and objects to change the behavior. Reflect is all about Reflection through introspection which is used to discover very low level information about your code. Proxy is all about Reflection through intercession and wrapping objects &amp; intercepting their behaviours through traps.</p>
-<p>Quite obviously we have just touched the surface of metaprogramming in JavaScript, but the above information will be useful to you. In the next couple of posts I’d like to talk about Symbols, Reflection and Proxy in more detail with syntactical examples.</p>
-
-      
-
-
-    
-      
-
-    
-
-
+  <div id="pager" style="float:right; margin-right:20px; margin-top:15px;">
+    <a class="page-prev" rel="prev" href="/archives/page/4/">&#8592; Previous</a><a class="page-number" href="/archives/">&nbsp;&nbsp;1</a><li class="disabled"><span class="page-space">&hellip;</span></li><a class="page-number" href="/archives/page/3/">&nbsp;&nbsp;3</a><a class="page-number" href="/archives/page/4/">&nbsp;&nbsp;4</a><span class="page-number">&nbsp;&nbsp;5</span><span class="page-next">&nbsp; Next &#8594;</a>
   </div>
-  
-    
-<ul id="article-nav" class="nav nav-pills nav-justified">
-  
-  <li role="presentation">
-    <a href="/2017/03/30/tools/" id="article-nav-older" class="article-nav-link-wrap">
-      <i class="fa fa-chevron-left pull-left"></i>
-      <span class="article-nav-link-title">Eking Out New Tools</span>
-    </a>
-  </li>
-  
-  
-  <li role="presentation">
-    <a href="/2017/06/15/state/" id="article-nav-newer" class="article-nav-link-wrap">
-      <span class="article-nav-link-title">State</span>
-      <i class="fa fa-chevron-right pull-right"></i>
-    </a>
-  </li>
-  
-</ul>
-
-
-  
-</div>
-
-
 
 
 
