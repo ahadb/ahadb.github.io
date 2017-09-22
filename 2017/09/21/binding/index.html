@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  
+  <title>Data Binding, One-Time, One-Way &amp; Two-Way | Ahad Bokhari - Exploring JavaScript and Software in 2016 &amp; Beyond</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Understanding data binding is fundamental to building SPA&apos;s. Some prefer two-way data binding, while others hate it. Learn a little more about the binding techniques in modern javascript applications">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Data Binding, One-Time, One-Way & Two-Way">
+<meta property="og:url" content="ahadb.com/2017/09/21/binding/index.html">
+<meta property="og:site_name" content="Ahad Bokhari - Exploring JavaScript and Software in 2016 & Beyond">
+<meta property="og:description" content="Understanding data binding is fundamental to building SPA&apos;s. Some prefer two-way data binding, while others hate it. Learn a little more about the binding techniques in modern javascript applications">
+<meta property="og:updated_time" content="2017-09-22T00:55:42.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Data Binding, One-Time, One-Way & Two-Way">
+<meta name="twitter:description" content="Understanding data binding is fundamental to building SPA&apos;s. Some prefer two-way data binding, while others hate it. Learn a little more about the binding techniques in modern javascript applications">
+  
+    <link rel="alternate" href="/atom.xml" title="Ahad Bokhari - Exploring JavaScript and Software in 2016 &amp; Beyond" type="application/atom+xml">
+  
+  
+  
+
+  
+
+
+
+
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/icon.min.css'>
+
+
+  <link rel="stylesheet" href="/css/semantic-ui.css">
+  <link rel="stylesheet" href="/css/table.min.css">
+  <link rel="stylesheet" href="/css/site.css">
+  <link rel="stylesheet" href="/css/menu.css">
+  <link rel="stylesheet" href="/css/prism.css">
+  
+
+</head>
+
+
+
+<body>
+
+<a href="https://github.com/ahadb"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/a6677b08c955af8400f44c6298f40e7d19cc5b2d/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677261795f3664366436642e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png"></a>
+
+<div class="ui text main container">
+  <div class="ui grid">
+    <div class="left floated twelve wide column">
+      <h1 class="me"><a class="title" href="/">Ahad Bokhari</a></h1>
+      <div class="ui dropdown">
+        <div class="text"><i class="sidebar icon"></i><cite style="color:#906;"> ...eating JavaScript and exploring software in 2017 & beyond </cite></div>
+
+        <div class="menu">
+
+
+          <div class="item">
+            <span class="description">ctrl + o</span><a href="/about"> About</a> </div>
+          <div class="item">
+            <span class="description">ctrl + o</span> <a href="/archives"> Archives</a>
+          </div>
+          <div class="item">
+            <span class="description">ctrl + o</span> <a href="/linkblog"> Linkblog</a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="right floated six wide column">
+
+      <div class="text"></div>
+
+    </div>
+  </div>
+
+
+  <div class="ui divider"></div>
+</div>
+  </div>
+
+
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+</div>
+
+
+<div class="ui text main container">
+    <div class="ui stackable two column divided grid">
+        <!--<div class="blog-header">
+  <h1 class="blog-title">Ahad Bokhari - Exploring JavaScript and Software in 2016 &amp; Beyond</h1>
+  
+</div>
+-->
+        <div class="twelve wide column" style="margin-bottom: 13px">
+            <div class="articles-wrapper">
+                <div class="ui two column divided grid">
+                    <div class="fifteen wide column">
+                <div class="picker">
+                        <div class="ui text menu" style="margin-top: -0.5em">
+                    <div class="header item">CATEGORIES:</div>
+                    <a class="item active" href="categories/Javascript">
+                        JS</a>
+
+
+                    <a class="item" href="categories/ES5">
+                        ES5
+                    </a>
+                    <a class="item" href="categories/ES6">
+                        ES6
+                    </a>
+                    <a class="item" href="categories/ES7">
+                        ES7
+                    </a>
+                    <a class="item" href="categories/Technology">
+                       Technology
+                    </a>
+                            <a class="item" href="categories/Software">
+                                Software
+                            </a>
+                            <a class="item" href="categories/Other">
+                                Other
+                    </a>
+
+
+                </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="ui relaxed middle aligned divided list">
+
+                    <!--<div id="post-binding" class="header" itemscope itemprop="blogPost">-->
+
+<div class="item">
+
+  <div class="right floated content" style="margin-top:5px">
+    
+  </div>
+
+<div class="content">
+
+    
+  
+    <h1 class="art" itemprop="name">
+      Data Binding, One-Time, One-Way &amp; Two-Way
+    </h1>
+  
+
+
+
+  
+  <div class="meta" style="margin-top: -10px">
+    
+  <a href="/2017/09/21/binding/" class=""></a>
+</span>
+<span><i class="github icon"></i> Edit</span> &nbsp; &#183; &nbsp;
+  <span style="color: #999">
+        <i><time datetime="2017-09-21T04:00:00.000Z" itemprop="datePublished">September 10, 2017</time></i>
+</span>
+ <i><span style="float:right; margin-right:15px">1,114 <span style="color:#999">words</span></i>
+
+
+    </div>
+
+    <div class="article-author"></div>
+
+  
+
+
+
+
+      
+  <br/>
+        <h2 id="TL-DR"><a href="#TL-DR" class="headerlink" title="TL:DR"></a>TL:DR</h2><p>Data binding is an important tool used by developers to populate user interfaces with model data. There are many ways to bind data, each with their own benefits and costs. Important factors include performance, data flow, and code complexity. There are many frameworks and libraries that provide various approaches to the data binding, including Handlebars, KnockoutJS, Angular 1 &amp; 2, and React.</p>
+<p>Each of these frameworks and libraries are very opinionated about how to bind data, including how model changes are detected and data is propagated. Handlebars (and similar template systems) are great for one-time data binding, React is great for one-way data binding, and Angular 2 provides the right mix of data binding options through one-way for components and two-way within components. Regardless of the method used, the key is to understand the concepts and ideas behind data binding, and how the library you choose approaches this important and complex topic.</p>
+<h2 id="Data-Binding-What-is-it"><a href="#Data-Binding-What-is-it" class="headerlink" title="Data Binding, What is it?"></a>Data Binding, What is it?</h2><p>Data binding is the mechanism that connects a data model to the user interface (UI). While any kind of code can be used to data bind, for the purposes of this posting, data binding refers to a library or framework that provides data binding services through an API. This does not require the developer to manually retrieve model values, nor perform some kind of DOM or other template string manipulations to populate the UI with model data. Data binding services are very popular with developers because they greatly simplify the process of updating the UI and reduce the amount of boiler plate code in applications.</p>
+<p>The data model, the user interface, and the binding mechanism can take many forms, but ultimately the goal is to connect the user interface with some kind of model. There are three primary forms of data binding: one-time, one-way, and two-way. Choosing one over the others involves many factors.</p>
+<h2 id="One-Time-Data-Binding"><a href="#One-Time-Data-Binding" class="headerlink" title="One-Time Data Binding"></a>One-Time Data Binding</h2><p>One-time data binding occurs one time between the model and the UI. Typically, when the UI is initially created, the values of the model data at that particular moment in time are used to populate the newly created UI. The binding occurs once and there is no automated mechanism to update the UI when future changes to the model occur. </p>
+<p>From a performance perspective, one-time is the highest performance because it happens once; therefore, it does not require any <strong>change detection</strong> mechanisms to detect changes to the underlying model or in the UI. Change detection mechanisms introduce potential performance problems into a web page because blocking code must be executed to determine if model changes need to be propagated to the UI.</p>
+<p>One-time data binding is practical when the data never or very rarely changes. When data changes regularly or very frequently, one-time data binding becomes a hindrance to simple and efficient UI updates. To solve the problem of UI updates for regularly changing model data, one-way (or two-way) data binding is used.</p>
+<h2 id="Change-Detection"><a href="#Change-Detection" class="headerlink" title="Change Detection"></a>Change Detection</h2><p>From the perspective of one-way data binding, change detection involves two aspects: knowing when the model has changed, and knowing what changed in the UI as a result of the model changes.</p>
+<p>To detect model changes, there are three fundamental patterns that are available: manual, publisher subscriber, and asynchronous wrappers. Manual change detection can occur in two forms – explicit and implicit. Explicit manual change detection is when the developer must tell the library or framework explicitly that a change has occurred (or potentially occurred) and update the UI with the new model data, as appropriate.</p>
+<h2 id="UI-Updates"><a href="#UI-Updates" class="headerlink" title="UI Updates"></a>UI Updates</h2><p>Once a model change has been detected, then the UI needs to be updated and the second phase of change detection occurs. With most one-time data binding, and even many one-way data binding systems, the DOM is updated inefficiently to reflect the model changes. Typically, the inefficiency presents itself as destroying the branch of the DOM tree being updated and completely recreating and rendering it again. Generally, this is not the most efficient way to update the UI, but it is the easiest way for a developer to code the UI update process.</p>
+<h2 id="One-Way-Data-Binding"><a href="#One-Way-Data-Binding" class="headerlink" title="One-Way Data Binding"></a>One-Way Data Binding</h2><p>One-way data binding creates an ongoing connection between the model and the UI. Changes to the model are reflected in the UI through some kind of process controlled by a library or framework. One-way data binding only propagates changes from the model to the UI, not vice versa. Central to the implementation of one-way (and two-way) data binding is an automated mechanism to determine if changes to the model have occurred. This process is called change detection.</p>
+<h2 id="Two-Way-Data-Binding"><a href="#Two-Way-Data-Binding" class="headerlink" title="Two-Way Data Binding"></a>Two-Way Data Binding</h2><p>One-time and one-way data bindings flow from the model to the UI. Two-way includes one-way, but it also facilitates the flow of data from the UI to the model. Whether a library or framework explicitly supports two-way data binding, the only means by which to retrieve new data from the UI is through UI events such as key up, input or click.</p>
+<p>Updating the model from the UI is implemented using one of two paths: UI element to UI event to model or UI event to model to UI element. Typically, the former describes two-way data binding, while the latter is a form of one-way data binding. The difference is how the UI element is updated. Does the UI element have two sources of data or one source? When the UI element is updated from the model and user input, it has two sources of data. When the UI element is always updated only from the model, it has one source of data. The one source of data results from UI events triggered by user interaction which update the model first, and then the model updates the UI element. The element itself is not directly updated by the triggered event.</p>
+<p>Even though both React and Angular 2 update the UI element from user interaction, React forces the model to be updated first, and then the UI element is updated. In contrast Angular 2 (from the developer’s perspective) updates the UI element and then triggers the update of the model. This is why people consider React to be one-way binding, and Angular 2 to use two-way data binding (Angular 1 works the same way as Angular 2 in this regard as well).</p>
+<h2 id="One-Way-versus-Two-Way-Which-is-Better"><a href="#One-Way-versus-Two-Way-Which-is-Better" class="headerlink" title="One-Way versus Two-Way, Which is Better?"></a>One-Way versus Two-Way, Which is Better?</h2><p>On a conceptual level, two sources of data sounds problematic and generally it is. So the the argument of two-way data binding typically falls in favor of opposing it in favor of one-way data binding. Unfortunately, the argument is not that simple. The context or scope of the data binding must be considered as well. When considering the flow of data and data binding, the question must be asked: how is the data flowing and what is being bound?</p>
+<p>UI data changes can occur within two scopes within a single component or between components. Using two-way data binding between components results in components receiving data from multiple sources, and this can be problematic. Using two-way data binding strictly within a component is not nearly as problematic.</p>
+<p>Take typing into an input field: the updating of the input field occurs locally within a component; it does not affect other components directly. So the argument against two-way data binding does not apply in this situation. The two-way data bind is trivial and controlled completely within the context of one component.</p>
+<p>Understanding the scope of the data binding is essential to understanding the benefits and risks of each approach, not just assessing it based upon two sources of truth.</p>
+<p>Using two-way data binding between components can results in components transitioning into undesired states because of conflicting data being propagated from multiple sources. Therefore, one-way data binding is preferred even though it will require a more complicated data flow and more coding on the part of the developer.</p>
+<p>Avoiding two-way data binding within a component, and implementing the structures needed for one-way data binding for trivial operations such as entering text into an input element, adds unneeded complexity with almost no practical gain. React suffers from this problem of requiring the creation of event handlers, updating of state, and re-rendering of the user interface to allow the simple act of typing text into an input element.</p>
+<p>This is where Angular 2 shines: it encourages the use of two-way data binding techniques within a component for trivial model-UI updates, while requiring more one-way data binding interactions between components. This is the best of both worlds.</p>
+
+      
+
+
+    
+      
+
+    
+
+
+  </div>
+  
+    
+<ul id="article-nav" class="nav nav-pills nav-justified">
+  
+  <li role="presentation">
+    <a href="/2017/06/15/state/" id="article-nav-older" class="article-nav-link-wrap">
+      <i class="fa fa-chevron-left pull-left"></i>
+      <span class="article-nav-link-title">State</span>
+    </a>
+  </li>
+  
+  
+</ul>
+
+
+  
+</div>
+
+
+
+
+
+
+
+
+                </div>
+
+
+            </div>
+        </div>
+        <div class="four wide column" style="background-color: #f2f2f2">
+            <div class="sidebar-wrapper">
+                <a href="/"><img class="ui centered image" src="/images/avatar.png" width="100" height="100"></a>
+                <div class="item">
+                    <br />
+
+                    <div class="content">
+                        <div class="meta">
+                                <span class="intro"><p class="intro">» Web developer inspired by minimalism, elegance and order — I write about modern day JavaScript, software and code.</p>
+
+                                        <p class="intro">This is my humble home on the internet - <a href="/about">read more about me</a>.</p></span>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+                <div class="ui hidden divider"></div>
+
+                <div class="ui list">
+                    <h4>» LEARNING</h4>
+                    <a class="item" href="https://github.com/ahadb/es6"> ES6 Primer</a>
+                    <a class="item" href="https://github.com/ahadb/flat-file-cms"> JavaScript Patterns</a>
+
+                </div>
+
+                <div class="ui list">
+                    <h4>» ARTICLES</h4>
+                    <a class="item" href="2010/02/15/ego-information/"> In The Digital World, Information Has No Ego</a>
+                    <a class="item" href="/2015/02/13/why-use-objects/">A Case for Objects {...}</a>
+                    <a class="item" href="2016/05/11/some-laws/">Some Laws of Software Development</a>
+                    <a class="item" href="/2014/01/20/fear/">Push Through Fear</a>
+                </div>
+
+                <div class="ui list">
+                    <h4>» OPEN SOURCE PROJECTS</h4>
+
+                    <a class="item" href="https://github.com/ahadb/is"> is-type</a>
+                    <a class="item" href="https://github.com/ahadb/flat-file-cms"> Flat File CMS</a>
+                    <a class="item" href="https://github.com/ahadb/vue-build"> Vue Build w/ Webpack</a>
+                    <a class="item" href="https://github.com/ahadb/fluke"> Fluke JS (w.i.p.)</a>
+                    <a class="item" href="#"> List Builder v. 0.1 (w.i.p.)</a>
+
+                </div>
+
+                <div class="ui list">
+                    <h4>» NPM SIZED MODULES</h4>
+
+                    <a class="item" href="https://github.com/ahadb/node-range"> node-range</a>
+                    <a class="item" href="https://github.com/ahadb/obj-values"> obj-values</a>
+                    <a class="item" href="https://github.com/ahadb/node-camel-case"> node-camel-case</a>
+                    <a class="item" href="https://github.com/ahadb/kebab-caseify"> kebab-caseify</a>
+                    <a class="item" href="https://github.com/ahadb/first-of-array"> first-of-array</a>
+                    <a class="item" href="ahadb/last-of-array"> last-of-array</a>
+
+                </div>
+
+                <div class="ui list">
+                    <h4>» MENU</h4>
+                    <a class="item" href="/about">About</a>
+                    <a class="item" href="/linkblog">Linkblog</a>
+                    <a class="item" href="/archives">Archives</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+  <div class="ui text main container footer">
+    <div id="footer-info" class="inner">
+      &copy; 2007 - 2017 &#183; Ahad Bokhari &#183; <a href="mailto:ahadbokhari@gmail.com">ahadbokhari@gmail.com</a>  <br>
+      <i>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>, hosted on <a href="https://github.com/ahadb">Github</a></i>
+    </div>
+  </div>
+</footer>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" integrity="sha384-8gBf6Y4YYq7Jx97PIqmTwLPin4hxIzQw5aDmUg/DDhul9fFpbbLcLh3nTIIDJKhx" crossorigin="anonymous"></script>
+
+<script src="https://use.typekit.net/ncd4ysn.js"></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+
+
+
+<script src="/js/script.js"></script>
+<script src="/js/dropdown.js"></script>
+<script src="/js/custom.js"></script>
+<script src="/js/transition.js"></script>
+<script src="/js/underscore.js"></script>
+<script src="/js/prism.js"></script>
+
+
+</body>
+
+</html>
