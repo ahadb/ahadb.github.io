@@ -4,17 +4,18 @@
   <meta charset="utf-8">
 
   
-  <title>Category: JavaScript | Ahad Bokhari - Exploring JavaScript and Software in 2016 &amp; Beyond</title>
+  <title>Testing &amp; Analysis Paralysis | Ahad Bokhari - Exploring JavaScript and Software in 2016 &amp; Beyond</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Ahad Bokhari - Exploring JavaScript and Software in 2016 & Beyond">
-<meta property="og:url" content="ahadb.com/categories/JavaScript/index.html">
+  <meta name="description" content="Prefer simplicity and use TAP (Test Anything Protocol) to minimize analysis paralysis. Just get on with it">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Testing & Analysis Paralysis">
+<meta property="og:url" content="ahadb.com/2018/11/03/analysis-paralysis/index.html">
 <meta property="og:site_name" content="Ahad Bokhari - Exploring JavaScript and Software in 2016 & Beyond">
-<meta property="og:description">
+<meta property="og:description" content="Prefer simplicity and use TAP (Test Anything Protocol) to minimize analysis paralysis. Just get on with it">
+<meta property="og:updated_time" content="2018-11-15T19:00:03.586Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ahad Bokhari - Exploring JavaScript and Software in 2016 & Beyond">
-<meta name="twitter:description">
+<meta name="twitter:title" content="Testing & Analysis Paralysis">
+<meta name="twitter:description" content="Prefer simplicity and use TAP (Test Anything Protocol) to minimize analysis paralysis. Just get on with it">
   
     <link rel="alternate" href="/atom.xml" title="Ahad Bokhari - Exploring JavaScript and Software in 2016 &amp; Beyond" type="application/atom+xml">
   
@@ -110,31 +111,29 @@
                     </div>
                 </div>
                 <div class="ui relaxed middle aligned divided list">
-                    
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <header class="archive-article-header">
-    
-  
+                    <!--<div id="post-analysis-paralysis" class="header" itemscope itemprop="blogPost">-->
 
-      <a class="<header" href="/2018/11/03/analysis-paralysis/"><h2 class="post-title">Testing &amp; Analysis Paralysis</h2></a>
+<div class="item">
 
+  <div class="right floated content" style="margin-top:5px">
+    
+  </div>
+
+<div class="content">
+
+    
+  
+    <h1 class="art" itemprop="name">
+      Testing &amp; Analysis Paralysis
+    </h1>
   
 
 
+
+  
+  <div class="meta" style="margin-top: -10px">
     
-  <a href="/2018/11/03/analysis-paralysis/" class="archive-article-date"></a>
+  <a href="/2018/11/03/analysis-paralysis/" class=""></a>
 </span>
 <span><i class="github icon"></i> Edit</span> &nbsp; &#183; &nbsp;
   <span style="color: #999">
@@ -143,173 +142,51 @@
  <i><span style="float:right; margin-right:15px">296 <span style="color:#999">words</span></i>
 
 
-  </header>
-</article>
+    </div>
+
+    <div class="article-author"></div>
 
   
-    
+
+
+
+
+      
+  <br/>
+        <p>Much of my time is spent on unit testing my code and I’ve been sinking needless unecessary hours into configuration and then reading through the documentation to figure things out. Then I have to assess out what matchers I’ll need, and whether i should use a mock from the plethora of choices. All of this is way too much cognitive load, I’d much rather choose a simple set of tools, /e: Tape and start writing my tests immediately - all i have to do is <code>require ‘file.js’</code> and begin.</p>
+<p>Jest, Mocha and the likes of which give me too many choices and I suffer from analysis paralysis when trying to find the best path. I’d rather spend that time writing my tests and being done with it. After all you don’t want to spend more time configuring your environment for testing, then writing you tests as you do writing good software for your application.</p>
+<p>I should be able to write simple tests based on pure functions quickly that act as documentation to me or anyone when my tests fail. To this end I have started using tape based on TAP (Test Anyting Protocol) for my testing and love the workflow - I only need a couple of assertions that cover most anything.</p>
+<p>I encourage others to use this simple yet effective technique. No clutter and quick results, I’m in test bliss and can add in tape modules where i need. I really feel the rest is overkill - if you’re just learning how to unit test, starting with a fancy library can be overwhelming. TAP is the way you should go, otherwise you’ll tend to lose yourself to the configuration and setting up the environment instead of concentrating on what’s important.</p>
+<p>Writing good software and testing.</p>
+
+      
+
+
     
       
-        </div></section>
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <header class="archive-article-header">
-    
-  
-
-      <a class="<header" href="/2016/09/11/repos/"><h2 class="post-title">Lesser Known Github Repositories &amp; Node Modules You Should Know About</h2></a>
-
-  
-
 
     
-  <a href="/2016/09/11/repos/" class="archive-article-date"></a>
-</span>
-<span><i class="github icon"></i> Edit</span> &nbsp; &#183; &nbsp;
-  <span style="color: #999">
-        <i><time datetime="2016-09-11T04:00:00.000Z" itemprop="datePublished">Sept. 11, 2016</time></i>
-</span>
- <i><span style="float:right; margin-right:15px">255 <span style="color:#999">words</span></i>
 
 
-  </header>
-</article>
-
+  </div>
   
     
-    
-      
-        </div></section>
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2015" class="archive-year">2015</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <header class="archive-article-header">
-    
+<ul id="article-nav" class="nav nav-pills nav-justified">
   
-
-      <a class="<header" href="/2015/07/14/angular-vs-jquery/"><h2 class="post-title">Stop Comparing jQuery to AngularJS</h2></a>
-
-  
-
-
-    
-  <a href="/2015/07/14/angular-vs-jquery/" class="archive-article-date"></a>
-</span>
-<span><i class="github icon"></i> Edit</span> &nbsp; &#183; &nbsp;
-  <span style="color: #999">
-        <i><time datetime="2015-07-14T04:00:00.000Z" itemprop="datePublished">July 14, 2015</time></i>
-</span>
- <i><span style="float:right; margin-right:15px">624 <span style="color:#999">words</span></i>
-
-
-  </header>
-</article>
-
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <header class="archive-article-header">
-    
-  
-
-      <a class="<header" href="/2015/02/19/fizzbuzz/"><h2 class="post-title">The Lowest Level of JavaScript Comprehension</h2></a>
-
-  
-
-
-    
-  <a href="/2015/02/19/fizzbuzz/" class="archive-article-date"></a>
-</span>
-<span><i class="github icon"></i> Edit</span> &nbsp; &#183; &nbsp;
-  <span style="color: #999">
-        <i><time datetime="2015-02-19T05:00:00.000Z" itemprop="datePublished">February 19, 2015</time></i>
-</span>
- <i><span style="float:right; margin-right:15px">200 <span style="color:#999">words</span></i>
-
-
-  </header>
-</article>
-
-  
-    
-    
-      
-        </div></section>
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2014" class="archive-year">2014</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <header class="archive-article-header">
-    
-  
-
-      <a class="<header" href="/2014/03/11/spaced-repetition/"><h2 class="post-title">Spaced Repetition to Learn How to Program Effectively</h2></a>
-
-  
-
-
-    
-  <a href="/2014/03/11/spaced-repetition/" class="archive-article-date"></a>
-</span>
-<span><i class="github icon"></i> Edit</span> &nbsp; &#183; &nbsp;
-  <span style="color: #999">
-        <i><time datetime="2014-03-11T04:00:00.000Z" itemprop="datePublished">February 19, 2015</time></i>
-</span>
- <i><span style="float:right; margin-right:15px">697 <span style="color:#999">words</span></i>
-
-
-  </header>
-</article>
-
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <header class="archive-article-header">
-    
-  
-
-      <a class="<header" href="/2014/03/08/sublime-plugins/"><h2 class="post-title">Sublime Plugins for Front End Devs</h2></a>
-
-  
-
-
-    
-  <a href="/2014/03/08/sublime-plugins/" class="archive-article-date"></a>
-</span>
-<span><i class="github icon"></i> Edit</span> &nbsp; &#183; &nbsp;
-  <span style="color: #999">
-        <i><time datetime="2014-03-08T05:00:00.000Z" itemprop="datePublished">March 08, 2015</time></i>
-</span>
- <i><span style="float:right; margin-right:15px">309 <span style="color:#999">words</span></i>
-
-
-  </header>
-</article>
-
+  <li role="presentation">
+    <a href="/2018/09/12/pressure/" id="article-nav-older" class="article-nav-link-wrap">
+      <i class="fa fa-chevron-left pull-left"></i>
+      <span class="article-nav-link-title">Software Programming Under Pressure</span>
+    </a>
+  </li>
   
   
-    </div></section>
+</ul>
+
+
   
+</div>
+
 
 
 
