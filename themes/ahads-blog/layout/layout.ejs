@@ -1,7 +1,9 @@
 <%- partial('_partial/head') %>
 
-
 <body>
+
+<a href="https://github.com/ahadb"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/a6677b08c955af8400f44c6298f40e7d19cc5b2d/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677261795f3664366436642e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png"></a>
+
 <%- partial('_partial/masthead') %>
 <div class="ui text main container">
     <div class="ui stackable two column divided grid">
@@ -10,43 +12,24 @@
             <div class="articles-wrapper">
                 <div class="ui two column divided grid">
                     <div class="fifteen wide column">
-                <div class="picker">
-                        <div class="ui text menu" style="margin-top: -0.5em">
-                    <div class="header item">CATEGORIES:</div>
-                    <a class="item active" href="categories/JavaScript">
-                        JS</a>
-
-
-                    <a class="item" href="categories/ES5">
-                        ES5
-                    </a>
-                    <a class="item" href="categories/ES6">
-                        ES6
-                    </a>
-                    <a class="item">
-                        ES7
-                    </a>
-                    <a class="item">
-                        Ramblings
-                    </a>
-                            <a class="item">
-                                Other
-                            </a>
-
-                </div>
+                        <div class="picker">
+                            <div class="ui text menu" style="margin-top: -0.5em; color: #906">
+                                <div class="header item" style="color: #906">MENU:</div>
+                                <a class="item active" href="/">
+                                    HOME</a>
+                                <a class="item" href="/about">
+                                    HISTORY
+                                </a>
+                                <a class="item" href="categories/ES6">
+                                    CONTACT
+                                </a>
+                            </div>
                         </div>
-
                     </div>
                 </div>
                 <div class="ui relaxed middle aligned divided list">
-
                     <%- body %>
-
-
-
                 </div>
-
-
             </div>
         </div>
         <div class="four wide column" style="background-color: #f2f2f2">
@@ -57,36 +40,41 @@
 
                     <div class="content">
                         <div class="meta">
-                                <span class="intro"><p class="intro">» Web developer inspired by minimalism, and order — I write about modern day JavaScript and ramble on occasion.</p></span>
+                            <span class="intro"><p class="intro"><span style="color: #904">»</span> Full stack, front-end engineer inspired by minimalism, elegance and order — I write about modern day JavaScript and software.</p>
+
+                                        <!--<p class="intro">This is my humble home on the internet - <a href="/about">read more about me</a>.</p></span>-->
                         </div>
-
                     </div>
-
-
                 </div>
-                <div class="ui hidden divider"></div>
 
                 <div class="ui list">
-                    <h4>» PROJECTS</h4>
-                    <a class="item" href="https://github.com/ahadb/es6"> Intro to ES6</a>
+                    <h4>» OPEN SOURCE (Github, NPM)</h4>
+                    <a class="item" href="https://github.com/ahadb/invoked-once"> invoked-once</a>
+                    <a class="item" href="https://github.com/ahadb/r-genie"> rgenie</a>
+                    <a class="item" href="https://github.com/jsinfin/fincli"> @jsinfin/fincli</a>
+                    <a class="item" href="https://github.com/jsinfin/server-status"> @jsinfin/server-status</a>
+                    <a class="item" href="https://github.com/ahadb/node-range"> node-range</a>
+                    <a class="item" href="https://github.com/ahadb/cli-sizes"> cli-sizes</a>
+                    <a class="item" href="https://github.com/ahadb/vanilla-node-server"> vanilla-node-server</a>
+                    <a class="item" href="https://github.com/ahadb/vanilla-js"> vanilla-js</a>
+                    <a class="item" href="https://github.com/ahadb/javascript-interview-questions"> js-interview-questions</a>
                     <a class="item" href="https://github.com/ahadb/flat-file-cms"> Flat File CMS</a>
+                    <a class="item" href="https://github.com/ahadb/vue-build"> Vue Build w/ Webpack</a>
+                    <a class="item" href="https://github.com/ahadb/modern-javascript">Modern JavaScript</a>
+                    <a class="item" href="https://github.com/ahadb/es7-es8"> ES7/8</a>
                 </div>
 
                 <div class="ui list">
-                    <h4>» ARTICLES</h4>
+                    <h4>» GOOD READS</h4>
                     <a class="item" href="2010/02/15/ego-information/"> In The Digital World, Information Has No Ego</a>
                     <a class="item" href="/2015/02/13/why-use-objects/">A Case for Objects {...}</a>
-                    <a class="item" href="/2014/09/29/js-frameworks-libraries/">JavaScript Micro Frameworks, Hypermodularization & Libraries</a>
+                    <a class="item" href="2016/05/11/some-laws/">Some Laws of Software Development</a>
                     <a class="item" href="/2014/01/20/fear/">Push Through Fear</a>
+                    <a class="item" href="/2016/04/10/node-thoughts/">Thoughts on Node</a>
+                    <a class="item" href="/2015/02/19/fizzbuzz/">The Lowest Level of JavaScript Comprehension</a>
+                    <a class="item" href="/2016/05/21/modern-js-madness/">Modern JavaScript Madness</a>
+                    <a class="item" href="/2007/10/22/visicalc/">VisiCalc</a>
                 </div>
-
-                <div class="ui list">
-                    <h4>» MENU</h4>
-                    <a class="item" href="/about">About</a>
-                    <a class="item" href="/linkblog">Linkblog</a>
-                    <a class="item" href="/archives">Archives</a>
-                </div>
-
             </div>
         </div>
     </div>

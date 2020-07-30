@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Let and Const
+title: ES6 - Let and Const
 description: ES6 brings us two new keywords for variables which provide us a way to define block scoped variables and constants
 category: ES6
 manualdate: December 28, 2015

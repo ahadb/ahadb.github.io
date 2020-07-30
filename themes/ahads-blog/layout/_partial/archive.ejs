@@ -24,10 +24,10 @@
   <% } %>
 <% } %>
 <% if (page.total > 1){ %>
-  <div id="page-nav">
+  <div id="pager" style="float:right; margin-right:20px; margin-top:15px;">
     <%- bs_paginator({
-      prev_text: '<i class="fa fa-chevron-left"></i> Prev',
-      next_text: 'Next <i class="fa fa-chevron-right"></i>'
+      prev_text: '&#8592; Previous',
+      next_text: '&nbsp; Next &#8594;'
     }) %>
   </div>
 <% } %>

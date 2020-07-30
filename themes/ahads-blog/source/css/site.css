@@ -139,7 +139,7 @@ header .room {
 
 h2.post-title {
     font-size: 25px;
-    color: #906;
+    color: #484848;
     font-weight: 600;
 
 }
@@ -153,7 +153,6 @@ p.date {
 .ui.list .list > a.item, .ui.list > a.item {
     cursor: pointer;
     color: #4183c4;
-    text-decoration: underline red;
 }
 
 .ui.divided.list > .item {
@@ -196,7 +195,6 @@ p.date {
 .ui.list .list > a.item, .ui.list > a.item {
     cursor: pointer;
     color: #333;
-    text-decoration: underline red;
 }
 
 .ui.grid > .column:not(.row) {
@@ -251,10 +249,11 @@ p.desc-snippet {
 }
 
 h1.me {
-    font-family: Serif;
-    margin-bottom: -2px;
 
-    font-size: 2em;
+    margin-bottom: -2px;
+    font-weight: 600;
+    font-size: 2.2em;
+    color: #333;
 }
 
 .picker {
@@ -264,4 +263,27 @@ h1.me {
 .description {
     margin-right: 20px;
     text-align: justify;
+}
+
+h1.art {
+    font-size: 31px;
+}
+
+a.title {
+    color: #906;
+    color: #484848;
+}
+
+
+code {
+    font-family: proxima-nova;
+    font-size: 18px;
+    padding-right: 0.3em;
+    padding-left: 0.3em;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    margin: 0;
+    background-color: rgba(0,0,0,0.04);
+    border-radius: 3px;
+    color: #906;
 }

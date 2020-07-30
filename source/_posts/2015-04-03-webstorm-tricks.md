@@ -4,6 +4,7 @@ title: Rudimentary Webstorm Tips
 description: Random thoughts on Webstorm, hands downs the the ultimate IDE for JavaScript
 wordcount: 573
 manualdate: March 04, 2015'
+Category: Javascript
 ---
 
 I switched over to Webstorm recently by JetBrains and am in awe of this fantastic IDE for JavaScript. Being well aware of all the classic debates I chose Webstorm mostly because of value, capabilities with ease of use coming in as a close second. Sure Sublime Text has an edge over Webstorm over performance, and it's a superb editor with some great plugins - that said I don't feel it's as assistive an editor in these days of modern front-end development.

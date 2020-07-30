@@ -21,27 +21,27 @@ function bsPaginatorHelper(options){
 
   if (!current) return '';
 
-  var currentPage = '<li class="active"><span class="page-number">' +
+  var currentPage = '<span class="page-number">&nbsp;&nbsp;' +
     (transform ? transform(current) : current) +
-    '</span></li>';
+    '</span>';
 
   function link(i){
     return self.url_for(i === 1 ? base : base + format.replace('%d', i));
   }
 
   function pageLink(i){
-    return '<li><a class="page-number" href="' + link(i) + '">' +
+    return '<a class="page-number" href="' + link(i) + '">&nbsp;&nbsp;' +
       (transform ? transform(i) : i) +
-      '</a></li>';
+      '</a>';
   }
 
   // Display the link to the previous page
   if (prevNext){
     if (current > 1) {
-      result += '<li><a class="page-prev" rel="prev" ' +
-              'href="' + link(current - 1) + '">' + prevText + '</a></li>';
+      result += '<a class="page-prev" rel="prev" ' +
+              'href="' + link(current - 1) + '">' + prevText + '</a>';
     } else {
-      result += '<li class="disabled"><span class="page-prev">' + prevText + '</a></li>';
+      result += '<span class="page-prev">' + prevText + '</a>';
     }
   }
 
@@ -107,14 +107,14 @@ function bsPaginatorHelper(options){
   // Display the link to the next page
   if (prevNext){
     if (current < total) {
-      result += '<li><a class="page-next" rel="next" ' +
-              'href="' + link(current + 1) + '">' + nextText + '</a></li>';
+      result += '<a class="page-next" rel="next" ' +
+              'href="' + link(current + 1) + '">' + nextText + '</a>';
     } else {
-      result += '<li class="disabled"><span class="page-next">' + nextText + '</a></li>';
+      result += '<span class="page-next">' + nextText + '</a>';
     }
   }
 
-  return '<nav><ul class="pagination">' + result + '</ul></nav>';
+  return result;
 }
 
 hexo.extend.helper.register('bs_paginator', bsPaginatorHelper);
