@@ -13,18 +13,6 @@ For those of us who have been blogging for some time now, you know exactly what 
 
 It took a couple of lines of code to start this blog. After typing these easy commands I never looked back:
 
-{% codeblock javascript %}
-
-~ gem install jekyll
-
-~ jekyll new addy-bokhari
-
-~ cd addy-bokhari
-
-~ jekyll serve --watch // the watch flag regenerates your site on the fly
-
-{% endcodeblock %}
-
 That was the beginning and the end for me. My previous blogs used wordpress and text pattern as their engine, but nothing has appealled to me more than Jekyll. Of course there is alot out there were blogging is concerned if you do your research, but one of the main reasons that compelled me to switch my engine were the aformentioned commands.
 
 ## What else in Jekyll appealed to me?
