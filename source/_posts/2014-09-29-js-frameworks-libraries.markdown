@@ -27,8 +27,7 @@ The concept has been around for a while now, so let's consider some of the basic
 Zepto matches it's jQuery counterpart and the goal here is to have a small modular library that downloads and executes fairly fast with a flexible and versatile API. It's lean, a third of the size of jQuery and loads much faster.
 
  As usual the Zepto collection is an array-like object that has chainable methods for manipulating the DOM nodes it references. The following should look familiar:
-
- {% codeblock javascript %}
+ 
  $('div')  //=> all DIV elements on the page
  $('#foo') //=> element with ID "foo"
 
@@ -43,25 +42,15 @@ Zepto matches it's jQuery counterpart and the goal here is to have a small modul
    alert('Ready to Zepto!')
  })
 
- {% endcodeblock %}
-
- Zepto is good for browser extensions and to develop HTML-based views within native app frameworks, such as PhoneGap. Note that it doesn't support old Internet Explorer versions < 10.
+Zepto is good for browser extensions and to develop HTML-based views within native app frameworks, such as PhoneGap. Note that it doesn't support old Internet Explorer versions < 10.
 
 ##Vanilla JS
 
 If you're not using jQuery Vanilla JS is a great alternative with fewer requests and better performance. If you're building a small to medium sized application this could be a logical choice for you. Note that if you're reliant on element selectors this would be a good option, whereas jQuery is great for heavy animations. Vanilla JS is really fast, for example retrieving DOM elements when comparing with jQuery makes it worth competitor:
 
- {% codeblock javascript %}
-
  document.getElementById('test-table');         // vanilla js in 12,137211 ops / sec
 
- {% endcodeblock %}
-
-  {% codeblock javascript %}
-
-  $('#test-table');                             // jQuery in 350, 557 ops / sec
-
-  {% endcodeblock %}
+ $('#test-table');                             // jQuery in 350, 557 ops / sec
 
 ##Micro Libraries
 
