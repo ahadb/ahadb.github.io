@@ -39,8 +39,6 @@ aren’t good examples of code generation … just that, as a concept, it scares
 
 If you're a CSS guru and have worked with a preprocessor before then the code below should not scare you:
 
-{% codeblock css %}
-
 @the-border: 1px;
 @base-color: #111;
 @red:        #842210;
@@ -54,8 +52,6 @@ If you're a CSS guru and have worked with a preprocessor before then the code be
   color: (@base-color + #003300);
   border-color: desaturate(@red, 10%);
 }
-
-{% endcodeblock %}
 
 #What Other Skills Could Hybrids Have?
 
