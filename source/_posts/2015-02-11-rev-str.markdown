@@ -9,7 +9,6 @@ Just for a little fun, I was thinking of a couple of ways to reverse a string. T
 
 The first implementation one could think of would be relatively easy:
 
-{% codeblock javascript %}
 function reverseStr(s) {
 	return s.split('').reverse.join('');
 }
@@ -23,11 +22,9 @@ String.prototype.reverse = function() {
 
 var str = 'using String.prototype to reverse a string';
 str.reverse();
-{% endcodeblock %}
 
 The second implementation I thought of was using charat and length, which can be considered quite a crude method.
 
-{% codeblock javascript %}
 var string = "Having fun with reversing strings!!";
 
 var i = string.length;
@@ -36,22 +33,18 @@ i =  i -1;
 for (var x = i; x > 0; x--) {
 	console.log(string.charAt(x));
 }
-{% endcodeblock %}
 
 Perhaps a third implementation that's pretty fast is using a simple for loop
 
-{% codeblock javascript %}
 function reverseStr(s) {
   for (var i = s.length - 1, o = ''; i >= 0; o += s[i--]) { }
   return o;
 }
 
 console.log(reverseStr("Isn't this fun?"));
-{% endcodeblock %}
 
 So I did a little more research and went over to a post on Stack Overflow where there were quite a few implementations with solid examples. Turns out that the first implementation should not be used:
 
-{% codeblock javascript %}
 // never use this or a similar method!!
 function reverseStr(s) {
 	return s.split('').reverse.join('');
@@ -60,7 +53,6 @@ function reverseStr(s) {
 // using a good string to test our reverse function: 'foo 𝌆 bar mañana mañana'
 console.log reverseStr('foo 𝌆 bar mañana mañana')
 → 'anãnam anañam'
-{% endcodeblock %}
 
 The simple reason being is explained quite well:
 

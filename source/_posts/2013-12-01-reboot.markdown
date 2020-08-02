@@ -1,0 +1,38 @@
+---
+title: Reboot, Welcome to Jekyll
+description: Every once in while one needs to refresh or reboot their online existence, especially including the area probably frequented most during a netizen’s day.
+manualdate: December, 01, 2013
+wordcount: 461
+---
+
+Every once in while one needs to refresh or reboot their online existence, especially including the area probably frequented most during a netizen's day. The blog, your online playground, your private so-called repository where you are completely free to speak and do as your little heart desires.
+
+For those of us who have been blogging for some time now, you know exactly what I mean :)
+
+## The simple commands that got me here
+
+It took a couple of lines of code to start this blog. After typing these easy commands I never looked back:
+
+That was the beginning and the end for me. My previous blogs used wordpress and text pattern as their engine, but nothing has appealled to me more than Jekyll. Of course there is alot out there were blogging is concerned if you do your research, but one of the main reasons that compelled me to switch my engine were the aformentioned commands.
+
+## What else in Jekyll appealed to me?
+
+Jekyll powers Github pages and is used quite freqently in the open source community. My reasons for choosing it is my default blogging platform are as follows:
+
+* Simplicity: First and foremost I wanted a simple platform to launch my thoughts, code, etc - one which performed the task it was set out to perform well.
+* Control: I wanted total control of everything from the way my blog was presented to predefined variables to tweak it further.
+* Open Source: It had to be an open-sourced project on Github.
+* Markdown: I wanted a new and easy way to transform my text when publishing. Using built in text editors was really never my cup of coffee, rather I prefer staring into a blank screen and using simple markdown elements. For some reason which I can't explain my thoughts flow much easier. Perhaps there are no little distractions? :)
+* Ruby: Behind Jekyll is Ruby software that powers it. I've been spending some time learning Ruby so it just went hand in hand.
+
+
+## Saying goodbye to Wordpress
+
+So it's goodbye to Wordpress (at least for now) as my default blogging platform. I've spent alot of time working with you and have the utmost amount of respect for you. You started as a simple blogging engine and transformed into a Content Management System powering anything from individual sites to corporate and university online presences.
+
+I just don't need you anymore for my blogging purposes, I eschew many of the out-of-the-box features that you have which I really don't need. I could name them, but the list is long and distinguished.
+
+I would like to thank you as a technology, a platform with a vibrant community and wish you all the best in the future.
+
+
+

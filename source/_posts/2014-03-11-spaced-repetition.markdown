@@ -37,14 +37,10 @@ What is the syntax of a function expression?
 
 <strong>The back of your flash card would therefore read:</strong>
 
-{% codeblock JavaScript %}
-
 var yourFunction = function () {
   // do stuff
   yourFunction = function() {return false;}
 };
-
-{% endcodeblock %}
 
 And so on and so forth. I would detail more flash cards but I really don't have the time and am sure if you've gottent this far you can figure that part out yourself. For most efficient results you have to fire up your spaced repetition program daily and spend about 20 mins goign through the flash cards (even on weekends).
 

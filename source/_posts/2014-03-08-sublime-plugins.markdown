@@ -11,12 +11,8 @@ Sublime Text, a text editor we all love. Blazingly fast, has a HUD for goto anyt
 
 <strong>Package Control:</strong> [Install first](https://sublime.wbond.net/installation). It allows users to manage packages very easily, with one shortcut you have access to a long list of plugins available to install and update is automaticly handled. Click View > Show Console and type in:
 
-{% codeblock bash %}
-
 
 import urllib2,os; pf='Package Control.sublime-package'; ipp=sublime.installed_packages_path(); os.makedirs(ipp) if not os.path.exists(ipp) else None; urllib2.install_opener(urllib2.build_opener(urllib2.ProxyHandler())); open(os.path.join(ipp,pf),'wb').write(urllib2.urlopen('http://sublime.wbond.net/'+pf.replace(' ','%20')).read()); print('Please restart Sublime Text to finish installation')
-
-{% endcodeblock %}
 
 <strong>Live Reload:</strong>  No need to hit the pesky refresh button in your browser with this time saving plugin. Just hit save and your browser will refresh automatically.
 

@@ -15,16 +15,12 @@ We're not just talking about one single function here. Many designers will argue
 #CSS Designers Think Like Developers
 Often CSS designers or CSS gurus who can code well in CSS are usually inclined towards development as opposed to just visual design. Still the assumption remains that if you can code CSS you must be a web designer. Look at the folks at  [Bootstrap](http://www.getbootrap), [Foundation](https://github.com/zurb/foundation) or [Semantic](https://github.com/jlukic/Semantic-UI‎). They can be classified as web designers, but the following commands will not be alien to them:
 
-{% codeblock bash %}
-
 $ sudo gem install less -s http://gemcutter.org
 $ sass --watch style.scss:style.css
 $ npm install less
 $ ssh username@hostname
 $ grep
 $ git push origin master
-
-{% endcodeblock %}
 
 Case in point. A pure graphical or visual designer will find the above counterproductive and will never take interest in coding, commands or the command line. [SASS](http://sass-lang.com/), [Compass](http://compass-style.org/) and [LESS](http://www.lesscss.org/) as well as other CSS preprocessors are also increasingly popular by talented designers around the world. Moreover these designers use programmer like principles when writing CSS; conditionals and loops, variables and mixins and other logic built into their CSS code.
 
@@ -43,8 +39,6 @@ aren’t good examples of code generation … just that, as a concept, it scares
 
 If you're a CSS guru and have worked with a preprocessor before then the code below should not scare you:
 
-{% codeblock css %}
-
 @the-border: 1px;
 @base-color: #111;
 @red:        #842210;
@@ -58,8 +52,6 @@ If you're a CSS guru and have worked with a preprocessor before then the code be
   color: (@base-color + #003300);
   border-color: desaturate(@red, 10%);
 }
-
-{% endcodeblock %}
 
 #What Other Skills Could Hybrids Have?
 
